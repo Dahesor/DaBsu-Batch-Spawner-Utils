@@ -1,0 +1,1 @@
+execute unless score #loaded calc.dabsu matches 1.. run return fail

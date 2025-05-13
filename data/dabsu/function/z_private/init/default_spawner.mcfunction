@@ -1,0 +1,1 @@
+data modify storage dabsu:run defaultSpawner set value {Delay:2s,MaxNearbyEntities:6s,MaxSpawnDelay:800s,MinSpawnDelay:200s,RequiredPlayerRange:16s,SpawnCount:4s}

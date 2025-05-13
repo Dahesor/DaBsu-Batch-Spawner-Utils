@@ -1,0 +1,14 @@
+enum(string) lang{
+    en = "en",
+    zh_cn = "zh_cn",
+}
+
+enum(string) key{
+    not_spawn_egg = "not_spawn_egg",
+    no_spawner_raycast = "no_spawner_raycast",
+    no_entity_raycast = "no_entity_raycast",
+}
+
+struct lines{
+    [key]?: string
+}

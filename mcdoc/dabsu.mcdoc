@@ -1,0 +1,37 @@
+use::java::util::text::Text
+use::java::world::item::ItemStack
+use::java::world::entity::EntityBase
+use::java::world::entity::mob::MobBase
+use::java::world::block::spawner::Spawner
+use::java::world::block::spawner::SpawnPotential
+use::java::util::slot::SlottedItem
+
+use::mcdoc::dabsu_lang::lang
+use::mcdoc::dabsu_lang::key
+use::mcdoc::dabsu_lang::lines
+
+dispatch mcdoc:custom_data["weapon_type"] to string
+
+dispatch minecraft:storage["dabsu:run"] to struct {
+    item?: SlottedItem<byte @ -106..200>,
+    lang?: struct{[lang]?: lines, this?:lines},
+    tellraw?: Text,
+    text?: Text,
+    run?: any,
+    entity_data?: #[canonical] AnyEntity,
+    entity_list?: [AnyEntity],
+    spawner?: Spawner,
+    element?: SpawnPotential,
+    defaultSpawner?: Spawner,
+    defaultElement?: SpawnPotential,
+    id?: #[id="entity_type"] string,
+    translate?: #[translation_key] string,
+}
+
+struct AnyEntity {
+	/// The ID of this entity. Not present on player entities.
+	id: #[id="entity_type"] string,
+	...minecraft:entity[[id]],
+    ...MobBase,
+}
+

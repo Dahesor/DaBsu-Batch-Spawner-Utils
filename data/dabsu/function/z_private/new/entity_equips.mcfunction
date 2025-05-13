@@ -1,0 +1,22 @@
+data modify storage dabsu:run entity_data.CanPickUpLoot set from storage dabsu:run run.CanPickUpLoot
+data modify storage dabsu:run entity_data.AbsorptionAmount set from storage dabsu:run run.AbsorptionAmount
+data modify storage dabsu:run entity_data.attributes set from storage dabsu:run run.attributes
+data modify storage dabsu:run entity_data.CustomName set from storage dabsu:run run.CustomName
+data modify storage dabsu:run entity_data.CustomNameVisible set from storage dabsu:run run.CustomNameVisible
+data modify storage dabsu:run entity_data.DeathLootTable set from storage dabsu:run run.DeathLootTable
+data modify storage dabsu:run entity_data.DeathLootTableSeed set from storage dabsu:run run.DeathLootTableSeed
+data modify storage dabsu:run entity_data.FallFlying set from storage dabsu:run run.FallFlying
+data modify storage dabsu:run entity_data.Fire set from storage dabsu:run run.Fire
+data modify storage dabsu:run entity_data.Glowing set from storage dabsu:run run.Glowing
+data modify storage dabsu:run entity_data.HasVisualFire set from storage dabsu:run run.HasVisualFire
+data modify storage dabsu:run entity_data.Health set from storage dabsu:run run.Health
+data modify storage dabsu:run entity_data.Invulnerable set from storage dabsu:run run.Invulnerable
+data modify storage dabsu:run entity_data.NoGravity set from storage dabsu:run run.NoGravity
+data modify storage dabsu:run entity_data.NoAI set from storage dabsu:run run.NoAI
+data modify storage dabsu:run entity_data.Passengers set from storage dabsu:run run.Passengers
+data modify storage dabsu:run entity_data.Silent set from storage dabsu:run run.Silent
+data modify storage dabsu:run entity_data.Team set from storage dabsu:run run.Team
+data modify storage dabsu:run entity_data.active_effects set from storage dabsu:run run.active_effects
+data modify storage dabsu:run entity_data.equipment set from storage dabsu:run run.equipment
+data modify storage dabsu:run entity_data.drop_chances set from storage dabsu:run run.drop_chances
+data remove storage dabsu:run entity_data.Passengers[].UUID

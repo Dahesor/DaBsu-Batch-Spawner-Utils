@@ -1,0 +1,1 @@
+data modify storage dabsu:run defaultElement set value {data:{entity:{id:"pig"}},weight:100}

@@ -1,0 +1,1 @@
+execute if score $ray calc.dabsu matches 1 run return run function dabsu:z_private/new/item_from_block
