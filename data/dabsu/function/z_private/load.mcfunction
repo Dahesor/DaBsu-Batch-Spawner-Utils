@@ -1,8 +1,11 @@
 scoreboard objectives add calc.dabsu dummy
 scoreboard objectives add lang.dabsu dummy
 scoreboard objectives add Option.dabsu dummy
+scoreboard objectives add highlight.dabsu dummy
+scoreboard objectives add selected.dabsu dummy
 
 scoreboard players set #loaded calc.dabsu 1
+scoreboard players set #16 calc.dabsu 16
 
 function dabsu:z_private/text/init
 execute unless data storage dabsu:run defaultSpawner run function dabsu:z_private/init/default_spawner
@@ -12,3 +15,8 @@ execute unless score minDefaultBlockLight Option.dabsu matches 0.. run scoreboar
 execute unless score maxDefaultBlockLight Option.dabsu matches 0.. run scoreboard players set maxDefaultBlockLight Option.dabsu 7
 execute unless score minDefaultSkyLight Option.dabsu matches 0.. run scoreboard players set minDefaultSkyLight Option.dabsu 0
 execute unless score maxDefaultSkyLight Option.dabsu matches 0.. run scoreboard players set maxDefaultSkyLight Option.dabsu 15
+
+execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard players set run.SelectionRate Option.dabsu 1000
+
+scoreboard players set run.ChunkReadingRate Option.dabsu 10
+#execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10

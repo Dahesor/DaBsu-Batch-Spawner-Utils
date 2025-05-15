@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=dabsu.marker,distance=..50] at @s run function dabsu:z_private/broke/marker_check

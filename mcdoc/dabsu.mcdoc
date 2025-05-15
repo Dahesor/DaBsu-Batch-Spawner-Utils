@@ -1,4 +1,5 @@
 use::java::util::text::Text
+use ::java::world::component::CustomData
 use::java::world::item::ItemStack
 use::java::world::entity::EntityBase
 use::java::world::entity::mob::MobBase
@@ -6,18 +7,37 @@ use::java::world::block::spawner::Spawner
 use::java::world::block::spawner::SpawnPotential
 use::java::util::slot::SlottedItem
 
+
 use::mcdoc::dabsu_lang::lang
 use::mcdoc::dabsu_lang::key
 use::mcdoc::dabsu_lang::lines
 
-dispatch mcdoc:custom_data["weapon_type"] to string
+dispatch mcdoc:custom_data["spawner"] to Spawner
+dispatch mcdoc:custom_data["UUID"] to #[uuid] [int] @ 4
+dispatch mcdoc:custom_data["in"] to #[id="dimension"] string
+dispatch mcdoc:custom_data["pos"] to Pos
+dispatch mcdoc:custom_data["chunk"] to ChunkCoords
+dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
+    Potential?: SavedPotential,
+    saved_potential?: byte @ 0..,
+    is_wand?: byte @ 0..,
+}
+
+dispatch minecraft:resource[dialogd] to struct{
+    test: int
+}
 
 dispatch minecraft:storage["dabsu:run"] to struct {
     item?: SlottedItem<byte @ -106..200>,
     lang?: struct{[lang]?: lines, this?:lines},
     tellraw?: Text,
     text?: Text,
+    joint?: [Text],
     run?: any,
+    xz?: any,
+    in?: #[id="dimension"] string,
+    temp?: any,
+    test?: any,
     entity_data?: #[canonical] AnyEntity,
     entity_list?: [AnyEntity],
     spawner?: Spawner,
@@ -26,6 +46,27 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     defaultElement?: SpawnPotential,
     id?: #[id="entity_type"] string,
     translate?: #[translation_key] string,
+    Dimensions?: [ObjectDimension],
+    Selected?: [ObjectDimension],
+    buffer?: [#[uuid] [int] @ 4],
+    potential?: [SavedPotential],
+    saved_potential?: SavedPotential,
+    data?: CustomData,
+    exe?: struct{
+        command?: #[command] string,
+    },
+    parsing?: struct{
+        dimension?: [ObjectDimension],
+        chunk?: [ObjectChunk],
+        object?: [SavedSpawner],
+        buffer?: [ObjectChunkForceLoad],
+    },
+    this?: struct{
+        dimension?: ObjectDimension,
+        chunk?: ObjectChunk,
+        object?: SavedSpawner,
+        buffer?: [ObjectChunkForceLoad],
+    }
 }
 
 struct AnyEntity {
@@ -35,3 +76,38 @@ struct AnyEntity {
     ...MobBase,
 }
 
+struct ObjectDimension{
+    in?: #[id="dimension"] string,
+    Chunks?: [ObjectChunk],
+}
+
+struct ObjectChunkForceLoad{
+    ...ObjectChunk,
+    loaded?: byte @ 1,
+}
+
+struct ObjectChunk{
+    ...ChunkCoords,
+    Objects?: [SavedSpawner],
+}
+
+struct SavedSpawner{
+    Pos?: struct Pos{
+        x?: int,
+        y?: int,
+        z?: int,
+    },
+    UUID?: #[uuid] [int] @ 4,
+    sUUID?: #[uuid] string,
+    type?: int,
+}
+
+struct SavedPotential{
+    type?: int,
+    Potential?: [SpawnPotential]
+}
+
+struct ChunkCoords{
+    x?: int,
+    z?: int,
+}

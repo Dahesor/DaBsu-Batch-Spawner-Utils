@@ -1,0 +1,1 @@
+$execute if data storage dabsu:run Dimensions[{in:"$(in)"}] run scoreboard players set $return calc.dabsu 1

@@ -1,0 +1,24 @@
+{
+    "criteria": {
+        "place_spawner":{
+            "trigger": "placed_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": [
+                                    "spawner"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "dabsu:z_private/placed/trigger"
+    }
+}

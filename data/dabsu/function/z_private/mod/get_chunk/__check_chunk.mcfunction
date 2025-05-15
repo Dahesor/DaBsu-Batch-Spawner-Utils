@@ -1,0 +1,1 @@
+$execute if data storage dabsu:run Dimensions[0].Chunks[{x:$(x),z:$(z)}] run scoreboard players set $return calc.dabsu 1

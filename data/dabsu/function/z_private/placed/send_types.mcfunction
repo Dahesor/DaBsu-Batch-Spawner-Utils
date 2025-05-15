@@ -1,0 +1,2 @@
+data modify storage dabsu:run element set from block ~ ~ ~ SpawnPotentials
+execute store result storage dabsu:run Dimensions[0].Chunks[0].Objects[0].type int 1 run function dabsu:z_private/mod/check_type/this

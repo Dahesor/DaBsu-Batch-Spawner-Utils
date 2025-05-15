@@ -1,0 +1,27 @@
+{
+    "criteria": {
+        "used": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "components": {
+                        "custom_data": {
+                            "dabsu": {
+                                "is_wand": 1
+                            }
+                        }
+                    }
+                },
+                "player": {
+                    "type_specific": {
+                        "type": "player",
+                        "gamemode": ["creative"]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "dabsu:z_private/wand/trigger"
+    }
+}

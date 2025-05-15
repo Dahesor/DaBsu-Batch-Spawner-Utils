@@ -1,4 +1,3 @@
-say 1
 function dabsu:z_private/new/get_entity_id
 
 execute if score $ray calc.dabsu matches 1 run function dabsu:z_private/new/entity_equips

@@ -7,6 +7,23 @@ enum(string) key{
     not_spawn_egg = "not_spawn_egg",
     no_spawner_raycast = "no_spawner_raycast",
     no_entity_raycast = "no_entity_raycast",
+    spawner_broke = "spawner_broke",
+    spawner_placed = "spawner_placed",
+    spawner_changed = "spawner_changed",
+    spawner_missed = "spawner_missed",
+    selection_complete = "selection_complete",
+    selected_nothing = "selected_nothing",
+    selection_cleared = "selection_cleared",
+    selecting = "selecting",
+    selection_missing = "selection_missing",
+    batch_edit_inied = "batch_edit_inied",
+    batch_edit_dimension = "batch_edit_dimension",
+    batch_edit_chunks = "batch_edit_chunks",
+    batch_edit_objs = "batch_edit_objs",
+    batch_edit_complete = "batch_edit_complete",
+    wand = "wand",
+    wand_lore = "wand_lore",
+    new_recorded = "new_recorded",
 }
 
 struct lines{

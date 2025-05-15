@@ -19,4 +19,5 @@ data modify storage dabsu:run entity_data.Team set from storage dabsu:run run.Te
 data modify storage dabsu:run entity_data.active_effects set from storage dabsu:run run.active_effects
 data modify storage dabsu:run entity_data.equipment set from storage dabsu:run run.equipment
 data modify storage dabsu:run entity_data.drop_chances set from storage dabsu:run run.drop_chances
+data modify storage dabsu:run entity_data.Item set from storage dabsu:run run.Item
 data remove storage dabsu:run entity_data.Passengers[].UUID
