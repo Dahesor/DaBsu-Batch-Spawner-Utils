@@ -1,0 +1,10 @@
+{
+    "function": "set_name",
+    "entity": "this",
+    "name": {
+        "storage": "dabsu:run",
+        "nbt": "new_name",
+        "interpret": true
+    },
+    "target": "item_name"
+}

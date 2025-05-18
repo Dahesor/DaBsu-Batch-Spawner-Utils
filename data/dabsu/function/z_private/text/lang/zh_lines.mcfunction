@@ -5,7 +5,7 @@ data modify storage dabsu:run lang.zh_cn set value {\
     spawner_broke:"刷怪笼已删除: ",\
     spawner_placed:"已记录刷怪笼: ",\
     spawner_changed:"已修改刷怪笼: ",\
-    spawner_missed:"错误：未能找到您刚刚放置的刷怪笼。这一般是因为视角转动过快导致的",\
+    spawner_missed:"错误：未能找到您刚刚放置的刷怪笼。这一般是因为视角转动过快导致的\n  - 您可以重新放置，或使用刷怪笼法杖手动注册它",\
     selection_complete:"[DaBsu] 已选择指定的刷怪笼",\
     selected_nothing:"[DaBsu] 选择完成，没有选择到任何刷怪笼",\
     selection_cleared:"[DaBsu] 已清除所有选择",\
@@ -18,5 +18,15 @@ data modify storage dabsu:run lang.zh_cn set value {\
     batch_edit_complete:"[DaBsu] 批量操作已完成。耗时：",\
     wand: "刷怪笼操作杖",\
     wand_lore: "手持它右键刷怪笼以查看一系列操作",\
-    new_recorded: "[DaBsu] 已记录此刷怪笼。再次点击可修改",\
+    new_recorded: "已记录此刷怪笼。再次点击可选择",\
+    invalid_pointer:"错误：无效指针。该刷怪笼没有记录。可尝试破坏后重放",\
+    runtime_notice:"[DaBsu] 本库仅为开发用。发布地图前请务必先执行function dabsu:release使其休眠!",\
+    wand_select:"已选择该刷怪笼",\
+    wand_deselect:"已将该刷怪笼从选区移除",\
+    selecting_distance:"[DaBsu] 正在选择附近的已加载刷怪笼……范围：",\
+    count_selected:"[DaBsu] 刷怪笼已选择，数量：",\
+    pos1_set:"第一选取点已设置为：",\
+    pos2_set:"第二选取点已设置为：",\
+    selecting_rectangle:"[DaBsu] 正在选择长方体区域内刷怪笼……维度：",\
+    rectangle_box:" - 区域：",\
 }

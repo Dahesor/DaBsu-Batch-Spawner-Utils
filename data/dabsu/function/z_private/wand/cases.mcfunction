@@ -1,0 +1,2 @@
+execute if entity @e[type=marker,tag=dabsu.marker,distance=..0.1,scores={selected.dabsu=1..}] run return run function dabsu:z_private/wand/deselect
+execute if entity @e[type=marker,tag=dabsu.marker,distance=..0.1] run return run function dabsu:z_private/wand/select

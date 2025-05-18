@@ -33,7 +33,6 @@
                 "tooltip_display": {
                     "hidden_components": ["damage","max_damage","max_stack_size","tool"]
                 },
-
                 "consumable": {
                     "animation": "brush",
                     "consume_seconds": 0,

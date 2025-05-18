@@ -6,6 +6,6 @@ scoreboard players operation #cz2 calc.dabsu *= #16 calc.dabsu
 execute unless score #cx calc.dabsu = #cx2 calc.dabsu run return fail
 execute unless score #cz calc.dabsu = #cz2 calc.dabsu run return fail
 
-setblock ~ ~1 ~ air
+function dabsu:z_private/execute/__run_any with storage dabsu:run exe
 
 scoreboard players add %completed_obj calc.dabsu 1

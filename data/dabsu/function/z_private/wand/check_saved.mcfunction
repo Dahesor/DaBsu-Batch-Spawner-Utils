@@ -1,2 +1,2 @@
-loot replace entity @s weapon.mainhand loot dabsu:wand_
 execute align xyz positioned ~0.5 ~0.5 ~0.5 unless entity @e[type=marker,tag=dabsu.marker,distance=..0.1] run return run function dabsu:z_private/mod/save_new/save
+execute align xyz positioned ~0.5 ~0.5 ~0.5 if entity @e[type=marker,tag=dabsu.marker,distance=..0.1] run return run function dabsu:z_private/wand/cases

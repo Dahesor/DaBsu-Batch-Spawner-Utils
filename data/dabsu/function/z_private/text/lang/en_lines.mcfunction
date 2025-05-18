@@ -5,7 +5,7 @@ data modify storage dabsu:run lang.en set value {\
     spawner_broke:"Spawner Broken: ",\
     spawner_placed:"Spawner Recorded: ",\
     spawner_changed:"Spawner Modified: ",\
-    spawner_missed:"ERROR: Could not find the spawner you just placed most likely due to too rapid mouse movement",\
+    spawner_missed:"ERROR: Could not find the spawner you just placed most likely due to too rapid mouse movement.\n You can replace it, or register it using the wand",\
     selection_complete:"[DaBsu] Selection Complete",\
     selected_nothing:"[DaBsu] Selected Nothing",\
     selection_cleared:"[DaBsu] Selection Cleared",\
@@ -18,5 +18,15 @@ data modify storage dabsu:run lang.en set value {\
     batch_edit_complete:"[DaBsu] Batch Edit Completed in ",\
     wand: "Spawner CTRL Wand",\
     wand_lore: "Right click a spawner with it to see a list of options",\
-    new_recorded: "[DaBsu] New spawner detected and saved. Click again to edit",\
+    new_recorded: "New spawner detected and saved. Click again to select",\
+    invalid_pointer:"[ERROR] Invalid pointer. Is storgae modified? Try breaking and replacing",\
+    runtime_notice:"[DaBsu] This library is for development only. Before releasing the map please remeber to execute function dabsu:release",\
+    wand_select:"Spawner Selected",\
+    wand_deselect:"Spawner De-selected",\
+    selecting_distance:"[DaBsu] Selecting loaded spawners neaby... Range: ",\
+    count_selected:"[DaBsu] Spawners Selected. Count: ",\
+    pos1_set:"Pos 1 has been set to: ",\
+    pos2_set:"Pos 2 has been set to: ",\
+    selecting_rectangle:"[DaBsu] Selecting spawners inside rectangle in dimension: ",\
+    rectangle_box:" - Rectangle Box: ",\
 }

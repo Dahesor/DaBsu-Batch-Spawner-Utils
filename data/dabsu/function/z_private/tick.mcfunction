@@ -1,5 +1,7 @@
 execute unless score #loaded calc.dabsu matches 1.. run return fail
 
+execute as @a unless score @s leave_game.dabsu matches ..0 run function dabsu:z_private/text/notice
+
 scoreboard players add #loop_20 calc.dabsu 1
 execute if score #loop_20 calc.dabsu matches 20.. run scoreboard players set #loop_20 calc.dabsu 0
 scoreboard players add #loop_10 calc.dabsu 1

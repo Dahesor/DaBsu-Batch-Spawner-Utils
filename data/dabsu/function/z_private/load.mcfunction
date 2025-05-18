@@ -3,6 +3,7 @@ scoreboard objectives add lang.dabsu dummy
 scoreboard objectives add Option.dabsu dummy
 scoreboard objectives add highlight.dabsu dummy
 scoreboard objectives add selected.dabsu dummy
+scoreboard objectives add leave_game.dabsu custom:leave_game
 
 scoreboard players set #loaded calc.dabsu 1
 scoreboard players set #16 calc.dabsu 16

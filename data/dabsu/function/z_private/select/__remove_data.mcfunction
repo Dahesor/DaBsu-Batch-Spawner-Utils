@@ -1,0 +1,2 @@
+$data remove storage dabsu:run Selected[0].Chunks[0].Objects[{UUID:$(UUID)}]
+execute unless data storage dabsu:run Selected[0].Chunks[0].Objects[0] run data remove storage dabsu:run Selected[0].Chunks[0]

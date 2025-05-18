@@ -1,0 +1,3 @@
+execute if function dabsu:z_private/select/rectangle/logic/chunk/rx_and if function dabsu:z_private/select/rectangle/logic/chunk/rz_and run return run function dabsu:z_private/select/rectangle/logic/full
+execute if function dabsu:z_private/select/rectangle/logic/chunk/rx_contain if function dabsu:z_private/select/rectangle/logic/chunk/rz_contain run return run function dabsu:z_private/select/rectangle/logic/inside
+execute if function dabsu:z_private/select/rectangle/logic/chunk/rx_or if function dabsu:z_private/select/rectangle/logic/chunk/rz_or run return run function dabsu:z_private/select/rectangle/logic/edge

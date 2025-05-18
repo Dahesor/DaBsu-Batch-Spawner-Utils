@@ -23,15 +23,12 @@ dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
     is_wand?: byte @ 0..,
 }
 
-dispatch minecraft:resource[dialogd] to struct{
-    test: int
-}
-
 dispatch minecraft:storage["dabsu:run"] to struct {
     item?: SlottedItem<byte @ -106..200>,
     lang?: struct{[lang]?: lines, this?:lines},
     tellraw?: Text,
     text?: Text,
+    new_name?: Text,
     joint?: [Text],
     run?: any,
     xz?: any,
@@ -47,6 +44,7 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     id?: #[id="entity_type"] string,
     translate?: #[translation_key] string,
     Dimensions?: [ObjectDimension],
+    Chunks?: [ObjectChunk],
     Selected?: [ObjectDimension],
     buffer?: [#[uuid] [int] @ 4],
     potential?: [SavedPotential],

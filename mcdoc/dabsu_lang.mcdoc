@@ -13,6 +13,8 @@ enum(string) key{
     spawner_missed = "spawner_missed",
     selection_complete = "selection_complete",
     selected_nothing = "selected_nothing",
+    selecting_distance = "selecting_distance",
+    count_selected = "count_selected",
     selection_cleared = "selection_cleared",
     selecting = "selecting",
     selection_missing = "selection_missing",
@@ -24,6 +26,14 @@ enum(string) key{
     wand = "wand",
     wand_lore = "wand_lore",
     new_recorded = "new_recorded",
+    invalid_pointer = "invalid_pointer",
+    runtime_notice = "runtime_notice",
+    wand_select = "wand_select",
+    wand_deselect = "wand_deselect",
+    pos1_set = "pos1_set",
+    pos2_set = "pos2_set",
+    selecting_rectangle = "selecting_rectangle",
+    rectangle_box = "rectangle_box",
 }
 
 struct lines{
