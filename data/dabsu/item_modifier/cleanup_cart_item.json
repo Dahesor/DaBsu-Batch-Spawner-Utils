@@ -1,0 +1,13 @@
+[
+    {
+        "function": "set_custom_data",
+        "tag": "{dabsu:{}}"
+    },
+    {
+        "function": "set_lore",
+        "mode": "replace_section",
+        "offset": 0,
+        "size": 4,
+        "lore": []
+    }
+]

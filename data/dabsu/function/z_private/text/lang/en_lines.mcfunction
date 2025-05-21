@@ -29,4 +29,6 @@ data modify storage dabsu:run lang.en set value {\
     pos2_set:"Pos 2 has been set to: ",\
     selecting_rectangle:"[DaBsu] Selecting spawners inside rectangle in dimension: ",\
     rectangle_box:" - Rectangle Box: ",\
+    no_spawner_below:"[ERROR] You must be standing on a spawner before executing this",\
+    selecting_same_type:"[DaBsu] Selecting all spawners with the same potential...§b§nSee Potential",\
 }

@@ -29,4 +29,6 @@ data modify storage dabsu:run lang.zh_cn set value {\
     pos2_set:"第二选取点已设置为：",\
     selecting_rectangle:"[DaBsu] 正在选择长方体区域内刷怪笼……维度：",\
     rectangle_box:" - 区域：",\
+    no_spawner_below:"错误：必须站在一个特定的刷怪笼上以执行本命令",\
+    selecting_same_type:"[DaBsu] 正在选择所有具有相同生成数据的刷怪笼……§b§n查看生成数据",\
 }

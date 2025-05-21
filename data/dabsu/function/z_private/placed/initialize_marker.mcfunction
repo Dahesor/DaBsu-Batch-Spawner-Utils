@@ -30,6 +30,8 @@ data modify storage dabsu:run data.spawner set from storage dabsu:run spawner
 execute if score $recorded calc.dabsu matches 1 run data modify storage dabsu:run Dimensions[0].Chunks[0].Objects[0].type set from storage dabsu:run item.components."minecraft:custom_data".dabsu.Potential.type
 execute if score $recorded calc.dabsu matches 0 run function dabsu:z_private/placed/send_types
 
+data modify storage dabsu:run data.type set from storage dabsu:run Dimensions[0].Chunks[0].Objects[0].type
+
 data modify entity @s data set from storage dabsu:run data
 
 function dabsu:z_private/text/tellraw {text:{text:"spawner_placed",color:"gray",extra:[{score:{objective:"calc.dabsu",name:"#x"}}," ",{score:{objective:"calc.dabsu",name:"#y"}}," ",{score:{objective:"calc.dabsu",name:"#z"}}]}}

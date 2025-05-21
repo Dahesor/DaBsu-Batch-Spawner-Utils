@@ -3,6 +3,7 @@ use ::java::world::component::CustomData
 use::java::world::item::ItemStack
 use::java::world::entity::EntityBase
 use::java::world::entity::mob::MobBase
+use::java::world::entity::mob::EntityEquipment
 use::java::world::block::spawner::Spawner
 use::java::world::block::spawner::SpawnPotential
 use::java::util::slot::SlottedItem
@@ -15,25 +16,63 @@ use::mcdoc::dabsu_lang::lines
 dispatch mcdoc:custom_data["spawner"] to Spawner
 dispatch mcdoc:custom_data["UUID"] to #[uuid] [int] @ 4
 dispatch mcdoc:custom_data["in"] to #[id="dimension"] string
+dispatch mcdoc:custom_data["type"] to int
 dispatch mcdoc:custom_data["pos"] to Pos
 dispatch mcdoc:custom_data["chunk"] to ChunkCoords
 dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
     Potential?: SavedPotential,
     saved_potential?: byte @ 0..,
     is_wand?: byte @ 0..,
+    cart?: struct{
+        button?: struct{
+            id?: string
+        },
+        stored?: struct{
+            page?: int,
+            slot?: byte,
+        }
+    }
+}
+
+dispatch minecraft:storage["dabsu:save"] to struct {
+    item?: [struct{
+        id?: int,
+        data?: [SlottedItem<byte @ -106..200>]
+    }],
+    run?: any,
+    temp?: any,
+    single?: SlottedItem<byte @ -106..200>,
+    list?: [SlottedItem<byte @ -106..200>],
 }
 
 dispatch minecraft:storage["dabsu:run"] to struct {
+    att?:struct{
+        damage?: double,
+        armor?: double,
+        toughness?: double,
+    },
+    num?:struct{
+        dam_i?: int,
+        dam_f?: int,
+        arm_i?: int,
+        arm_f?: int,
+        amt_i?: int,
+        amt_f?: int,
+        hp?: (int|string),
+    },
     item?: SlottedItem<byte @ -106..200>,
     lang?: struct{[lang]?: lines, this?:lines},
     tellraw?: Text,
     text?: Text,
+    equipment?: EntityEquipment,
     new_name?: Text,
     joint?: [Text],
     run?: any,
     xz?: any,
+    type?: struct{this?:int},
     in?: #[id="dimension"] string,
     temp?: any,
+    hold?: [ObjectDimension],
     test?: any,
     entity_data?: #[canonical] AnyEntity,
     entity_list?: [AnyEntity],
@@ -44,6 +83,7 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     id?: #[id="entity_type"] string,
     translate?: #[translation_key] string,
     Dimensions?: [ObjectDimension],
+    ram?: [ObjectDimension],
     Chunks?: [ObjectChunk],
     Selected?: [ObjectDimension],
     buffer?: [#[uuid] [int] @ 4],

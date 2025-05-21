@@ -1,0 +1,1 @@
+$item modify entity @s container.$(slot) dabsu:cart_item

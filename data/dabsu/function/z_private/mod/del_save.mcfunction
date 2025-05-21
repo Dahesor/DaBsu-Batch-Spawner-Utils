@@ -1,3 +1,2 @@
-#$execute if data storage dabsu:run Dimensions[0].Chunks[0].Objects[{sUUID:"$(out)"}] run say DEL!
 $data remove storage dabsu:run Dimensions[0].Chunks[0].Objects[{sUUID:"$(out)"}]
 execute unless data storage dabsu:run Dimensions[0].Chunks[0].Objects[0] run data remove storage dabsu:run Dimensions[0].Chunks[0]

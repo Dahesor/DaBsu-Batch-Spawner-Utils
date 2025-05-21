@@ -1,0 +1,31 @@
+[
+    {
+        "function": "set_custom_data",
+        "tag": "{dabsu:{cart:{stored:{}}}}"
+    },
+    {
+        "function": "set_lore",
+        "mode": "insert",
+        "offset": 0,
+        "lore": [
+            {"text": "=========[DaBsu]=========","color": "dark_gray","italic": false},
+            [{"text": "/give ","color": "green","italic": false},{"translate": "entity.minecraft.item"},": ",{"keybind": "key.attack"}],
+            [{"translate": "mco.configure.world.buttons.delete","color": "red","italic": false}," ",{"translate": "entity.minecraft.item"},": ",{"keybind": "key.drop"}],
+            {"text": "=========[DaBsu]=========","color": "dark_gray","italic": false}
+        ]
+    },
+    {
+        "function": "copy_custom_data",
+        "source": {
+            "type": "storage",
+            "source": "dabsu:run"
+        },
+        "ops": [
+            {
+                "op": "replace",
+                "source": "run",
+                "target": "dabsu.cart.stored"
+            }
+        ]
+    }
+]

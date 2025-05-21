@@ -1,0 +1,1 @@
+$data remove storage dabsu:save item[0].data[{Slot:$(slot)b}]

@@ -1,0 +1,1 @@
+$execute if data storage dabsu:run Selected[0].Chunks[0].Objects[{sUUID:"$(sUUID)"}] run scoreboard players set $return calc.dabsu 1
