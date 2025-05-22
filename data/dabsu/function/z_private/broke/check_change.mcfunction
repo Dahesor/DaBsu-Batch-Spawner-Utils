@@ -11,6 +11,7 @@ execute store result score $changed calc.dabsu run data modify storage dabsu:run
 execute if score $changed calc.dabsu matches 0 run return fail
 
 
+#Apply Channges
 data modify storage dabsu:run spawner set from block ~ ~ ~
 data remove storage dabsu:run spawner.components
 data remove storage dabsu:run spawner.id

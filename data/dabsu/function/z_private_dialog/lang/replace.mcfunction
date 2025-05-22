@@ -1,0 +1,1 @@
+$data modify storage dabsu:run lines.$(key) set from storage dabsu:run lang.this.$(key)

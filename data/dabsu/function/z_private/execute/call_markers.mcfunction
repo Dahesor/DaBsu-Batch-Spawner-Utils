@@ -1,3 +1,5 @@
+execute unless score %force_select calc.dabsu matches 1 unless score @s selected.dabsu matches 1 run return fail
+
 data modify storage dabsu:run data set from entity @s data
 execute store result score #cx2 calc.dabsu run data get storage dabsu:run data.chunk.x
 execute store result score #cz2 calc.dabsu run data get storage dabsu:run data.chunk.z

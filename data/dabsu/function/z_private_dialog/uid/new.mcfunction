@@ -1,0 +1,2 @@
+data modify storage dabsu:user data prepend value {uid:-1,editing:{}}
+execute store result storage dabsu:user data[0].uid int 1 run scoreboard players get @s uid.dabsu

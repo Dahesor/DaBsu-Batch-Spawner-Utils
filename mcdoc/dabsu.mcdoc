@@ -7,16 +7,20 @@ use::java::world::entity::mob::EntityEquipment
 use::java::world::block::spawner::Spawner
 use::java::world::block::spawner::SpawnPotential
 use::java::util::slot::SlottedItem
+use::java::data::dialog::Dialog
+use ::java::util::InclusiveRange
 
 
 use::mcdoc::dabsu_lang::lang
 use::mcdoc::dabsu_lang::key
 use::mcdoc::dabsu_lang::lines
+use::mcdoc::dabsu_dialog::DialogMix
 
 dispatch mcdoc:custom_data["spawner"] to Spawner
 dispatch mcdoc:custom_data["UUID"] to #[uuid] [int] @ 4
 dispatch mcdoc:custom_data["in"] to #[id="dimension"] string
 dispatch mcdoc:custom_data["type"] to int
+dispatch mcdoc:custom_data["custom_name"] to string
 dispatch mcdoc:custom_data["pos"] to Pos
 dispatch mcdoc:custom_data["chunk"] to ChunkCoords
 dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
@@ -31,7 +35,8 @@ dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
             page?: int,
             slot?: byte,
         }
-    }
+    },
+    is_temp?: byte @ 0..,
 }
 
 dispatch minecraft:storage["dabsu:save"] to struct {
@@ -69,6 +74,7 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     joint?: [Text],
     run?: any,
     xz?: any,
+    temp2?: any,
     type?: struct{this?:int},
     in?: #[id="dimension"] string,
     temp?: any,
@@ -104,7 +110,47 @@ dispatch minecraft:storage["dabsu:run"] to struct {
         chunk?: ObjectChunk,
         object?: SavedSpawner,
         buffer?: [ObjectChunkForceLoad],
-    }
+    },
+    lines?: lines,
+    input?: struct{
+        key?: key
+    },
+    dialog?: struct{
+        [string]?: DialogMix
+    },
+    final?: string,
+    nbt_to_string?: struct{
+        input?: any,
+        output?: string,
+    },
+    form?:struct{
+        ...Spawner,
+        weight?: int @ 0..,
+        data?: struct SpawnEntry{
+            entity: AnyEntity,
+	        custom_spawn_rules?: struct CustomSpawnRules {
+	            block_light_limit?: InclusiveRange<int @ 0..15>,
+	            sky_light_limit?: InclusiveRange<int @ 0..15>,
+            },
+	        equipment?: SpawnEquipment,
+        },
+        entity?: AnyEntity,
+        loot_table?: #[id="loot_table"] string,
+        pos1?: Pos,
+        pos2?: Pos,
+        index?: any,
+        custom_spawn_rules?: CustomSpawnRules
+    },
+    index?: struct{
+        index?: int,
+    },
+    string_to_num?: string,
+    char?: struct{
+        [string]?: string @ 1
+    },
+    run_custom?: struct{
+        run?: #[command] string,
+    },
 }
 
 struct AnyEntity {
@@ -148,4 +194,14 @@ struct SavedPotential{
 struct ChunkCoords{
     x?: int,
     z?: int,
+}
+
+struct SpawnEquipment {
+	loot_table: #[id="loot_table"] string,
+	slot_drop_chances: (
+		float @ 0..1 |
+		struct {
+			[EquipmentSlot]: float @ 0..1,
+		} |
+	),
 }

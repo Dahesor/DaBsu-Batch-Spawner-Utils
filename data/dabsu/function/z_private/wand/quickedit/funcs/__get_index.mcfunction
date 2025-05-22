@@ -1,0 +1,1 @@
+$data modify storage dabsu:run run.cmd set value '$(cmd_pre)$(index)}}'

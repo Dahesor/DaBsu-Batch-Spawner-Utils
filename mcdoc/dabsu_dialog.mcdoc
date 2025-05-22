@@ -1,0 +1,152 @@
+use ::java::util::text::Text
+use ::java::util::text::ClickEvent
+use ::java::data::dialog::Dialog
+use ::java::world::item::ItemStack
+
+struct DialogMix{
+    title?: Text,
+    body?: (DialogBodyMix | [DialogBodyMix]),
+    external_title?: Text,
+    /// Whether the dialog can be closed with ESC key.
+	/// Defaults to `true`.
+	can_close_with_escape?: boolean,
+    type?: #[id="dialog_type"] string,
+    yes?: ClickAction,
+	no?: ClickAction,
+    /// When present, the label of the button in footer will be `gui.cancel`.
+	/// When not present, the label will be `gui.back`.
+	on_cancel?: ClickEvent,
+	/// The number of columns.
+	/// Defaults to 2.
+	columns?: int @ 1..,
+    dialogs?: (
+		[(#[id="dialog"] string | Dialog)] |
+		#[id=(registry="dialog", tags="allowed")] string |
+		Dialog | DialogMix |
+	),
+    inputs?: [InputControl] @ 1..,
+    action?: (ClickAction|SubmitAction|),
+	actions?: ([ClickAction]|[SubmitAction]|),
+}
+
+struct PlainMessage {
+	/// A multiline label.
+	contents?: Text,
+	/// Maximum width of message.
+	/// Defaults to 200.
+	width?: int @ 1..1024,
+}
+
+struct DialogBodyMix{
+    type?: #[id="dialog_body_type"] string,
+    ...PlainMessage,
+    item?: ItemStack,
+	// game code implementation shares the same PlainMessage codec so it's safe to reuse the type
+	/// The description text rendered to the right of item.
+	description?: (PlainMessage | Text),
+	/// Whether count and damage bar are rendered over the item.
+	/// Defaults to `true`.
+	show_decorations?: boolean,
+	/// Whether item tooltip shows up when the item is hovered.
+	/// Defaults to `true`.
+	show_tooltip?: boolean,
+	/// Height of the item.
+	/// Defaults to 16.
+	height?: int @ 1..256,
+    actions?: [ClickAction] @ 1..,
+    button_width?: int @ 1..,
+}
+
+
+struct ButtonBase {
+	label?: Text,
+	tooltip?: Text,
+	/// Width of the button.
+	/// Defaults to 150.
+	width?: int @ 1..1024,
+}
+
+struct ClickAction {
+	...ButtonBase,
+	/// If not present, clicking button will simply close dialog without any action.
+	on_click?: ClickEvent,
+}
+
+
+struct SubmitAction {
+	...ButtonBase,
+	/// Provided to an input with key `action`.
+	id?: string,
+	on_submit?: SubmitMethod,
+}
+
+
+
+
+struct InputControl {
+	type?: #[id="input_control_type"] string,
+	/// The input key.
+	key?: #[match_regex="^[A-Za-z0-9_]*$"] string @ 1..,
+	width?: int @ 1..1024,
+	/// Label displayed to the left of control.
+	label?: Text,
+	/// Defaults to `true`.
+	label_visible?: boolean,
+	/// Initial contents of the text input.
+	/// Defaults to `""` (empty string).
+	initial?: any,
+	/// Maximum length of input
+	/// Defaults to 32.
+	max_length?: int @ 1..,
+	/// If present, allows users to input multiple lines.
+	multiline?: struct MultiLine {
+		max_lines?: int @ 1..,
+		/// Height of the input.
+		/// If this field is not present:
+		/// - If `max_lines` is present, the height will be chosen to fit the maximum number of lines.
+		/// - If `max_lines` is also not present, the height will be chosen to fit 4 lines.
+		height?: int @ 1..512,
+	},
+	on_true?: string,
+	/// String to send when the control is unchecked.
+	/// Defaults to `"false"`.
+	on_false?: string,
+	options?: [(Option | string)] @ 1..,
+	/// The translation to be used for building label.
+	/// `%1$s` is replaced by `label`; `%2$s` is replaced by current value of the slider.
+	/// Defaults to `options.generic_value`.
+	label_format?: #[translation_key] string,
+	/// Start value, inclusive.
+	start?: float,
+	/// End value, inclusive.
+	end?: float,
+	/// Step size of the input.
+	/// If not present, any value from range is allowed.
+	step?: float @ 0<..,
+}
+
+
+
+struct Option {
+	/// String to send on submit.
+	id: string,
+	/// Label displayed on the button.
+	/// When not present, `id` will be used instead.
+	display?: Text,
+	// TODO: implement "one hot" check here if possible
+	/// Whether this option is the initial value.
+	/// Only one option can have this field set to `true`.
+	initial?: boolean,
+}
+
+
+
+
+struct SubmitMethod {
+	type?: #[id="submit_method_type"] string,
+	...minecraft:submit_method[[type]],
+	template?: #[command(macro="implicit")] string,
+	/// ID of a custom action.
+	/// Has no functionality on vanilla servers.
+	id?: #[id] string,
+}

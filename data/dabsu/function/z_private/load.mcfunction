@@ -1,15 +1,24 @@
 scoreboard objectives add calc.dabsu dummy
-scoreboard objectives add lang.dabsu dummy
+scoreboard objectives add lang.dabsu trigger
 scoreboard objectives add Option.dabsu dummy
 scoreboard objectives add highlight.dabsu dummy
 scoreboard objectives add selected.dabsu dummy
 scoreboard objectives add leave_game.dabsu custom:leave_game
-scoreboard objectives add uid.dabsu deathCount
+scoreboard objectives add uid.dabsu dummy
+scoreboard objectives add trigger.dabsu trigger
+scoreboard objectives add input.dabsu trigger
+scoreboard objectives add waiting.dabsu dummy
 
 scoreboard players set #loaded calc.dabsu 1
+scoreboard players set #-1 calc.dabsu -1
 scoreboard players set #10 calc.dabsu 10
 scoreboard players set #16 calc.dabsu 16
 scoreboard players set #50 calc.dabsu 50
+scoreboard players set #100 calc.dabsu 100
+scoreboard players set #10000 calc.dabsu 10000
+scoreboard players set #1000000 calc.dabsu 1000000
+
+data modify storage dabsu:run input set value {key:""}
 
 function dabsu:z_private/text/init
 execute unless data storage dabsu:run defaultSpawner run function dabsu:z_private/init/default_spawner

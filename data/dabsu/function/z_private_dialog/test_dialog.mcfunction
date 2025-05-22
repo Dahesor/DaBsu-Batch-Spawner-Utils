@@ -1,0 +1,1 @@
+dialog show @s minecraft:custom_options

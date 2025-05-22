@@ -5,6 +5,7 @@ scoreboard players set %modifying calc.dabsu 1
 scoreboard players set %modify_loading calc.dabsu 1
 scoreboard players set %forceload calc.dabsu 0
 scoreboard players set %time_cost calc.dabsu 1
+scoreboard players set %force_select calc.dabsu 0
 
 execute store result score %total_obj calc.dabsu if data storage dabsu:run Selected[].Chunks[].Objects[].sUUID
 execute store result score %total_chunks calc.dabsu if data storage dabsu:run Selected[].Chunks[].Objects

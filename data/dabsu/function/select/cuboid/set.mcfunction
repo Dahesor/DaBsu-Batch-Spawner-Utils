@@ -3,6 +3,17 @@ function dabsu:select/empty
 
 data modify storage dabsu:run in set from entity @s Dimension
 
+function dabsu:z_private_dialog/uid/get
+execute unless data storage dabsu:user data[0].select.pos1.x run return fail
+execute unless data storage dabsu:user data[0].select.pos2.y run return fail
+
+execute store result score $x calc.dabsu run data get storage dabsu:user data[0].select.pos1.x
+execute store result score $y calc.dabsu run data get storage dabsu:user data[0].select.pos1.y
+execute store result score $z calc.dabsu run data get storage dabsu:user data[0].select.pos1.z
+execute store result score $dx calc.dabsu run data get storage dabsu:user data[0].select.pos2.x
+execute store result score $dy calc.dabsu run data get storage dabsu:user data[0].select.pos2.y
+execute store result score $dz calc.dabsu run data get storage dabsu:user data[0].select.pos2.z
+
 execute as @a run function dabsu:z_private/text/tellraw_self {text:{text:"selecting_rectangle",color:"gray",extra:[{nbt:"in",storage:"dabsu:run",color:"green"}]}}
 execute as @a run function dabsu:z_private/text/tellraw_self {text:{text:"rectangle_box",color:"gray",extra:[{text:"(",color:"white"},{score:{name:"$x",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$y",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$z",objective:"calc.dabsu"},color:"gold"},{text:")",color:"white"}," ~ ", {text:"(",color:"white"},{score:{name:"$dx",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$dy",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$dz",objective:"calc.dabsu"},color:"gold"},{text:")",color:"white"}]}}
 

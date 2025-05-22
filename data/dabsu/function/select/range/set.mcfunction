@@ -2,4 +2,4 @@
 # 选择距离执行点 $(r) 格子内的刷怪笼。刷怪笼必须处于已加载区块内。
 
 function dabsu:select/empty
-$function dabsu:select/add/range {r:$(r)}
+$function dabsu:select/range/add {r:$(r)}

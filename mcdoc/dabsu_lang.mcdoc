@@ -4,6 +4,7 @@ enum(string) lang{
 }
 
 enum(string) key{
+    none = "",
     not_spawn_egg = "not_spawn_egg",
     no_spawner_raycast = "no_spawner_raycast",
     no_entity_raycast = "no_entity_raycast",

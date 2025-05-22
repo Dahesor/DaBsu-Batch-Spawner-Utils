@@ -1,0 +1,1 @@
+$function dabsu:modify/custom {run:'function dabsu:z_private/modify/new_property {data:$(form)}'}

@@ -1,0 +1,1 @@
+$function dabsu:modify/custom {run:'data modify block ~ ~ ~ Delay set value $(delay)s'}

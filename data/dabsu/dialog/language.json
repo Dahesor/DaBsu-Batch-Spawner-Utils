@@ -1,0 +1,33 @@
+{
+    "type": "multi_action",
+    "title": ["[",{"text": "DaBsu","color": "green"},"] ",{"translate": "options.language.title"}],
+    "can_close_with_escape": true,
+    "body": [
+        {
+            "type": "plain_message",
+            "contents": [
+                "Change the language of DaBsu. Note that this does not affect language of Minecraft.",
+                {"translate": "\nNote that if you are in single player, after you selected an option, you must unpause the game once to be able to select another one, since trigger cannot be enabled during pause.","color": "aqua"},
+                "\n\n更改DaBsu的语言。注意这不会影响Minecraft的语言。",
+                {"translate": "\n注意如果你在单人游戏中，选择一个选项后，你必须先离开暂停屏幕一次才能选择另一个选项，因为触发器在暂停时无法启用。","color": "aqua"}
+            ],
+            "width": 400
+        }
+    ],
+    "actions": [
+        {
+            "label": "English",
+            "on_click": {
+                "action": "run_command",
+                "command": "/trigger lang.dabsu set 0"
+            }
+        },
+        {
+            "label": "简体中文",
+            "on_click": {
+                "action": "run_command",
+                "command": "/trigger lang.dabsu set 1"
+            }
+        }
+    ]
+}
