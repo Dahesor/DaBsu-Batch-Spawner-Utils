@@ -4,7 +4,7 @@ data modify storage dabsu:run Selected set value []
 
 data modify storage dabsu:run in set from entity @s Dimension
 
-function dabsu:z_private_dialog/uid/get
+function dabsu:z_private_d/uid/get
 execute unless data storage dabsu:user data[0].select.pos1.x run return fail
 execute unless data storage dabsu:user data[0].select.pos2.y run return fail
 
@@ -18,9 +18,6 @@ execute store result score $dz calc.dabsu run data get storage dabsu:user data[0
 execute as @a run function dabsu:z_private/text/tellraw_self {text:{text:"selecting_rectangle",color:"gray",extra:[{nbt:"in",storage:"dabsu:run",color:"green"}]}}
 execute as @a run function dabsu:z_private/text/tellraw_self {text:{text:"rectangle_box",color:"gray",extra:[{text:"(",color:"white"},{score:{name:"$x",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$y",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$z",objective:"calc.dabsu"},color:"gold"},{text:")",color:"white"}," ~ ", {text:"(",color:"white"},{score:{name:"$dx",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$dy",objective:"calc.dabsu"},color:"gold"},{text:", ",color:"white"},{score:{name:"$dz",objective:"calc.dabsu"},color:"gold"},{text:")",color:"white"}]}}
 
-
-
-
 scoreboard objectives add z_hold.dabsu dummy
 scoreboard players operation $x z_hold.dabsu = $x calc.dabsu
 scoreboard players operation $y z_hold.dabsu = $y calc.dabsu
@@ -30,7 +27,7 @@ scoreboard players operation $dy z_hold.dabsu = $dy calc.dabsu
 scoreboard players operation $dz z_hold.dabsu = $dz calc.dabsu
 
 function dabsu:z_private/select/rectangle/main
-
+execute if score %select_count calc.dabsu matches 1.. run function dabsu:z_private/mod/buffer_select/start
 function dabsu:z_private/select/merge/enter
 
 scoreboard players operation $x calc.dabsu = $x z_hold.dabsu

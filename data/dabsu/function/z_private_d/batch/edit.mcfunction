@@ -1,0 +1,9 @@
+execute if score !busy calc.dabsu matches 1 run return run function dabsu:z_private_d/batch/settings/system_busy
+
+function dabsu:z_private_d/templates/batch_home
+
+data modify storage dabsu:run dialog.dialog.body[0].contents set value ["Edit Options"]
+execute if entity @s[tag=dabsu._edit] run data remove storage dabsu:run dialog.dialog.on_cancel
+execute if entity @s[tag=dabsu._edit] run data modify storage dabsu:run dialog.dialog.body[0].contents set value ["Edit Options (",{keybind:"key.sneak",color:"green"}," + ",{keybind:"key.drop",color:"green"}," to remove the wand)"]
+
+function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

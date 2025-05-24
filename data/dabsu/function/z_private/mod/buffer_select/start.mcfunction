@@ -4,6 +4,8 @@ data modify storage dabsu:run buffer append from storage dabsu:run Selected[].Ch
 execute store result score #count calc.dabsu if data storage dabsu:run buffer[]
 execute unless score #count calc.dabsu matches 1.. run return fail
 
+scoreboard players set !busy calc.dabsu 1
+
 execute as @a run function dabsu:z_private/text/tellraw_self {text:{text:"selecting",color:"gray",extra:[{score:{objective:"calc.dabsu",name:"#count"}}]}}
 
 scoreboard players set $progress calc.dabsu 0

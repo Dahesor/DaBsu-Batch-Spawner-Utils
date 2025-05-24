@@ -21,6 +21,3 @@ execute if score $z calc.dabsu = $dz calc.dabsu run scoreboard players operation
 data modify storage dabsu:run Chunks set from storage dabsu:run Dimensions[0].Chunks
 scoreboard players set %select_count calc.dabsu 0
 function dabsu:z_private/select/rectangle/loop
-
-execute unless score %select_count calc.dabsu matches 1.. run return fail
-function dabsu:z_private/mod/buffer_select/start

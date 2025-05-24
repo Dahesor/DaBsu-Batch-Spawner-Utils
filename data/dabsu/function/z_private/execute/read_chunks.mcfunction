@@ -1,5 +1,8 @@
 data modify storage dabsu:run parsing.buffer prepend from storage dabsu:run parsing.chunk[0]
 data remove storage dabsu:run parsing.chunk[0]
+
+execute unless data storage dabsu:run parsing.buffer[0].Objects[].sUUID run return run function dabsu:z_private/execute/skip_chunk
+
 data modify storage dabsu:run xz set value {x:0,z:0}
 execute store result storage dabsu:run xz.x int 16 run data get storage dabsu:run parsing.buffer[0].x
 execute store result storage dabsu:run xz.z int 16 run data get storage dabsu:run parsing.buffer[0].z

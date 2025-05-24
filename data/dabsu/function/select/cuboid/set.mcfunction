@@ -3,7 +3,7 @@ function dabsu:select/empty
 
 data modify storage dabsu:run in set from entity @s Dimension
 
-function dabsu:z_private_dialog/uid/get
+function dabsu:z_private_d/uid/get
 execute unless data storage dabsu:user data[0].select.pos1.x run return fail
 execute unless data storage dabsu:user data[0].select.pos2.y run return fail
 
@@ -28,6 +28,7 @@ scoreboard players operation $dy z_hold.dabsu = $dy calc.dabsu
 scoreboard players operation $dz z_hold.dabsu = $dz calc.dabsu
 
 function dabsu:z_private/select/rectangle/main
+execute if score %select_count calc.dabsu matches 1.. run function dabsu:z_private/mod/buffer_select/start
 
 scoreboard players operation $x calc.dabsu = $x z_hold.dabsu
 scoreboard players operation $y calc.dabsu = $y z_hold.dabsu

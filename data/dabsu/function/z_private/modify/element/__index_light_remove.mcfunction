@@ -1,0 +1,1 @@
+$data remove block ~ ~ ~ SpawnPotentials[$(index)].data.custom_spawn_rules

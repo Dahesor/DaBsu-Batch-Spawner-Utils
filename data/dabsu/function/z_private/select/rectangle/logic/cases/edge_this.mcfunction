@@ -8,3 +8,6 @@ execute unless function dabsu:z_private/select/rectangle/logic/point/z run retur
 
 scoreboard players add %select_count calc.dabsu 1
 data modify storage dabsu:run Selected[0].Chunks[0].Objects append from storage dabsu:run Chunks[0].Objects[0]
+
+execute store result score $ThisType selected.dabsu run data get storage dabsu:run Chunks[0].Objects[0].type
+function dabsu:z_private/select/if_same_type

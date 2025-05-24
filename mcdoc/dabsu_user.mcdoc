@@ -32,6 +32,7 @@ struct UserData {
         y?: int,
         z?: int,
         uuid?: #[uuid] [int] @ 4,
+        index?: int,
     },
     select?: struct{
         pos1?: Pos,

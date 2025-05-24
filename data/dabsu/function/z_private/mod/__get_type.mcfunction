@@ -1,0 +1,1 @@
+$data modify storage dabsu:run spawner.SpawnPotentials set from storage dabsu:run potential[{type:$(type)}].Potential

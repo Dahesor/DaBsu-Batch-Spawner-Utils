@@ -23,7 +23,7 @@
             "label": {"translate": "options.y"},
             "on_click": {
                 "action": "run_command",
-                "command": "/function dabsu:z_private_dialog/test_dialog"
+                "command": "/function dabsu:z_private_d/test_dialog"
             }
         }
     ]

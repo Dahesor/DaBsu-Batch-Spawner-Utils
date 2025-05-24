@@ -1,0 +1,1 @@
+$data modify block ~ ~ ~ SpawnPotentials[$(index)].data.custom_spawn_rules set from storage dabsu:run form.custom_spawn_rules

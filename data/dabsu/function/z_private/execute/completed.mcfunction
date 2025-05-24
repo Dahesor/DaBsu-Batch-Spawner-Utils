@@ -1,5 +1,7 @@
+function dabsu:z_private/mod/refactor/reselect/start
 say done!
 scoreboard players set %modifying calc.dabsu 0
+scoreboard players set !busy calc.dabsu 0
 bossbar remove dabsu:modify
 
 function dabsu:z_private/text/tellraw {text:{text:"batch_edit_complete",color:"gray"}}

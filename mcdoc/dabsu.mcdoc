@@ -1,5 +1,5 @@
 use::java::util::text::Text
-use ::java::world::component::CustomData
+use::java::world::component::CustomData
 use::java::world::item::ItemStack
 use::java::world::entity::EntityBase
 use::java::world::entity::mob::MobBase
@@ -8,13 +8,12 @@ use::java::world::block::spawner::Spawner
 use::java::world::block::spawner::SpawnPotential
 use::java::util::slot::SlottedItem
 use::java::data::dialog::Dialog
-use ::java::util::InclusiveRange
-
-
+use::java::util::InclusiveRange
 use::mcdoc::dabsu_lang::lang
 use::mcdoc::dabsu_lang::key
 use::mcdoc::dabsu_lang::lines
 use::mcdoc::dabsu_dialog::DialogMix
+use::mcdoc::dabsu_misc::Misc
 
 dispatch mcdoc:custom_data["spawner"] to Spawner
 dispatch mcdoc:custom_data["UUID"] to #[uuid] [int] @ 4
@@ -39,6 +38,30 @@ dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
     is_temp?: byte @ 0..,
 }
 
+struct form{
+    form?:form,
+    ...Spawner,
+    weight?: int @ 0..,
+    data?: struct SpawnEntry{
+        entity: AnyEntity,
+	    custom_spawn_rules?: struct CustomSpawnRules {
+	        block_light_limit?: InclusiveRange<int @ 0..15>,
+	        sky_light_limit?: InclusiveRange<int @ 0..15>,
+        },
+	    equipment?: SpawnEquipment,
+    },
+    entity?: AnyEntity,
+    loot_table?: #[id="loot_table"] string,
+    pos1?: Pos,
+    pos2?: Pos,
+    index?: any,
+    custom_spawn_rules?: CustomSpawnRules,
+    equipment?: SpawnEquipment,
+    tag?: any,
+    use?: any,
+}
+
+
 dispatch minecraft:storage["dabsu:save"] to struct {
     item?: [struct{
         id?: int,
@@ -51,43 +74,18 @@ dispatch minecraft:storage["dabsu:save"] to struct {
 }
 
 dispatch minecraft:storage["dabsu:run"] to struct {
-    att?:struct{
-        damage?: double,
-        armor?: double,
-        toughness?: double,
-    },
-    num?:struct{
-        dam_i?: int,
-        dam_f?: int,
-        arm_i?: int,
-        arm_f?: int,
-        amt_i?: int,
-        amt_f?: int,
-        hp?: (int|string),
-    },
+    ...Misc,
     item?: SlottedItem<byte @ -106..200>,
     lang?: struct{[lang]?: lines, this?:lines},
-    tellraw?: Text,
-    text?: Text,
     equipment?: EntityEquipment,
-    new_name?: Text,
-    joint?: [Text],
-    run?: any,
-    xz?: any,
-    temp2?: any,
-    type?: struct{this?:int},
-    in?: #[id="dimension"] string,
-    temp?: any,
     hold?: [ObjectDimension],
-    test?: any,
+    result?: [ObjectDimension],
     entity_data?: #[canonical] AnyEntity,
     entity_list?: [AnyEntity],
     spawner?: Spawner,
     element?: SpawnPotential,
     defaultSpawner?: Spawner,
     defaultElement?: SpawnPotential,
-    id?: #[id="entity_type"] string,
-    translate?: #[translation_key] string,
     Dimensions?: [ObjectDimension],
     ram?: [ObjectDimension],
     Chunks?: [ObjectChunk],
@@ -96,9 +94,6 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     potential?: [SavedPotential],
     saved_potential?: SavedPotential,
     data?: CustomData,
-    exe?: struct{
-        command?: #[command] string,
-    },
     parsing?: struct{
         dimension?: [ObjectDimension],
         chunk?: [ObjectChunk],
@@ -118,39 +113,7 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     dialog?: struct{
         [string]?: DialogMix
     },
-    final?: string,
-    nbt_to_string?: struct{
-        input?: any,
-        output?: string,
-    },
-    form?:struct{
-        ...Spawner,
-        weight?: int @ 0..,
-        data?: struct SpawnEntry{
-            entity: AnyEntity,
-	        custom_spawn_rules?: struct CustomSpawnRules {
-	            block_light_limit?: InclusiveRange<int @ 0..15>,
-	            sky_light_limit?: InclusiveRange<int @ 0..15>,
-            },
-	        equipment?: SpawnEquipment,
-        },
-        entity?: AnyEntity,
-        loot_table?: #[id="loot_table"] string,
-        pos1?: Pos,
-        pos2?: Pos,
-        index?: any,
-        custom_spawn_rules?: CustomSpawnRules
-    },
-    index?: struct{
-        index?: int,
-    },
-    string_to_num?: string,
-    char?: struct{
-        [string]?: string @ 1
-    },
-    run_custom?: struct{
-        run?: #[command] string,
-    },
+    form?: form,
 }
 
 struct AnyEntity {
@@ -184,6 +147,7 @@ struct SavedSpawner{
     UUID?: #[uuid] [int] @ 4,
     sUUID?: #[uuid] string,
     type?: int,
+    mark?: byte,
 }
 
 struct SavedPotential{

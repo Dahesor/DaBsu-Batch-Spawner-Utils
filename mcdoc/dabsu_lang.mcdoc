@@ -15,6 +15,7 @@ enum(string) key{
     selection_complete = "selection_complete",
     selected_nothing = "selected_nothing",
     selecting_distance = "selecting_distance",
+    modifying_distance = "modifying_distance",
     count_selected = "count_selected",
     selection_cleared = "selection_cleared",
     selecting = "selecting",
@@ -34,10 +35,13 @@ enum(string) key{
     pos1_set = "pos1_set",
     pos2_set = "pos2_set",
     selecting_rectangle = "selecting_rectangle",
+    modifying_rectangle = "modifying_rectangle",
     rectangle_box = "rectangle_box",
     no_spawner_below = "no_spawner_below",
     selecting_same_type = "selecting_same_type",
+    modifying_same_type = "modifying_same_type",
     selecting_same_type_extra = "selecting_same_type_extra",
+    registering = "registering"
 }
 
 struct lines{

@@ -1,1 +1,0 @@
-return run function dabsu:z_private_dialog/uid/__validate with storage dabsu:user UID_GET_

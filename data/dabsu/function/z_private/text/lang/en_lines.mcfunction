@@ -24,11 +24,15 @@ data modify storage dabsu:run lang.en set value {\
     wand_select:"Spawner Selected",\
     wand_deselect:"Spawner De-selected",\
     selecting_distance:"[DaBsu] Selecting loaded spawners neaby... Range: ",\
+    modifying_distance:"[DaBsu] Modifying selection with loaded spawners neaby... Range: ",\
     count_selected:"[DaBsu] Spawners Selected. Count: ",\
     pos1_set:"Pos 1 has been set to: ",\
     pos2_set:"Pos 2 has been set to: ",\
-    selecting_rectangle:"[DaBsu] Selecting spawners inside rectangle in dimension: ",\
-    rectangle_box:" - Rectangle Box: ",\
+    selecting_rectangle:"[DaBsu] Selecting spawners inside cuboid in dimension: ",\
+    modifying_rectangle:"[DaBsu] Modifying selection with spawners inside cuboid in dimension: ",\
+    rectangle_box:" - Corners: ",\
     no_spawner_below:"[ERROR] You must be standing on a spawner before executing this",\
-    selecting_same_type:"[DaBsu] Selecting all spawners with the same potential...§b§nSee Potential",\
+    selecting_same_type:"[DaBsu] Selecting all spawners with the same potential...",\
+    modifying_same_type:"[DaBsu] Modifying selection with spawners with the same potential...",\
+    registering:"Scanning and Registering Spawners...",\
 }

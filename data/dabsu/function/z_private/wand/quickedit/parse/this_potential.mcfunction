@@ -6,8 +6,8 @@ execute unless data storage dabsu:run form.entity.id run return run tellraw @s [
 
 #loot_table
 data modify storage dabsu:run form.data set value {entity:{id:"pig"}}
-execute unless data storage dabsu:run form{loot_table:""} run data modify storage dabsu:run form.data.equipment.loot_table set from storage dabsu:run form.loot_table
-data remove storage dabsu:run form.loot_table
+execute if data storage dabsu:run form.equipment.loot_table run data modify storage dabsu:run form.data.equipment set from storage dabsu:run form.equipment
+data remove storage dabsu:run form.equipment
 
 #entity
 data modify storage dabsu:run form.data.entity set from storage dabsu:run form.entity

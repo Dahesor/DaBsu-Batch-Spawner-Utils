@@ -6,6 +6,9 @@ data remove storage dabsu:run spawner.components
 data remove storage dabsu:run spawner.id
 data remove storage dabsu:run spawner.Delay
 data remove storage dabsu:run spawner.SpawnData
+
+execute if data storage dabsu:run spawner.SpawnPotentials[0] unless data storage dabsu:run spawner.SpawnPotentials[0].data.entity.id run data remove storage dabsu:run spawner.SpawnPotentials[0]
+
 scoreboard players set $changed calc.dabsu 0
 execute store result score $changed calc.dabsu run data modify storage dabsu:run spawner set from entity @s data.spawner
 execute if score $changed calc.dabsu matches 0 run return fail
@@ -17,6 +20,11 @@ data remove storage dabsu:run spawner.components
 data remove storage dabsu:run spawner.id
 data remove storage dabsu:run spawner.Delay
 data remove storage dabsu:run spawner.SpawnData
+execute if data storage dabsu:run spawner.SpawnPotentials[0] unless data storage dabsu:run spawner.SpawnPotentials[0].data.entity.id run data remove block ~ ~ ~ SpawnPotentials[0]
+execute if data storage dabsu:run spawner.SpawnPotentials[0] unless data storage dabsu:run spawner.SpawnPotentials[0].data.entity.id run data remove storage dabsu:run spawner.SpawnPotentials[0]
+
+execute if data storage dabsu:run spawner.SpawnPotentials[0] run data modify block ~ ~ ~ SpawnData set from storage dabsu:run spawner.SpawnPotentials[0].data
+
 data modify entity @s data.spawner set from storage dabsu:run spawner
 
 execute store result score #x calc.dabsu run data get entity @s Pos[0] 1

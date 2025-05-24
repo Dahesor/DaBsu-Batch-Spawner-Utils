@@ -5,6 +5,8 @@ data remove storage dabsu:run spawner.components
 data remove storage dabsu:run spawner.id
 data remove storage dabsu:run spawner.Delay
 data remove storage dabsu:run spawner.SpawnData
+execute if data storage dabsu:run spawner.SpawnPotentials[0] unless data storage dabsu:run spawner.SpawnPotentials[0].data.entity.id run data remove block ~ ~ ~ SpawnPotentials[0]
+execute if data storage dabsu:run spawner.SpawnPotentials[0] unless data storage dabsu:run spawner.SpawnPotentials[0].data.entity.id run data remove storage dabsu:run spawner.SpawnPotentials[0]
 data modify entity @s data.spawner set from storage dabsu:run spawner
 
 execute store result score #x calc.dabsu run data get entity @s Pos[0] 1

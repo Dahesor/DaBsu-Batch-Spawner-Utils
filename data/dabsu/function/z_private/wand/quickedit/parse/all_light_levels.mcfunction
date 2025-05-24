@@ -1,4 +1,4 @@
-function dabsu:z_private_dialog/uid/get
+function dabsu:z_private_d/uid/get
 data modify storage dabsu:run run set from storage dabsu:user data[0].editing
 scoreboard players remove #input trigger.dabsu 100000000
 

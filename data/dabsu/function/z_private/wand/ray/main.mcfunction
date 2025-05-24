@@ -5,7 +5,7 @@ function dabsu:z_private/wand/ray/get_rotation
 
 scoreboard players set %remainder calc.dabsu 50
 scoreboard players operation %devide calc.dabsu = $gametime calc.dabsu
-execute store result score #var calc.dabsu run data get storage dabsu:run spawner.SpawnPotentials
+execute store result score #var calc.dabsu if data storage dabsu:run spawner.SpawnPotentials[].data.entity.id
 scoreboard players add #var calc.dabsu 1
 execute unless data storage dabsu:run spawner.SpawnPotentials[0] if data storage dabsu:run spawner.SpawnData.entity.id run scoreboard players add #var calc.dabsu 1
 scoreboard players operation %remainder calc.dabsu *= #var calc.dabsu

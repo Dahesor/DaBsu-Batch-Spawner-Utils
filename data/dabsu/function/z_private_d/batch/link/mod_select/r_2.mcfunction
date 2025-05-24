@@ -1,0 +1,1 @@
+$function dabsu:select/range/intersect {r:$(r)}

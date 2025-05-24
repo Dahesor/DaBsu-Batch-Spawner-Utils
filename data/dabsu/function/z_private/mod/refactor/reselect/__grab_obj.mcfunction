@@ -1,0 +1,1 @@
+$data modify storage dabsu:run temp2 set from storage dabsu:run Dimensions[0].Chunks[0].Objects[{sUUID:"$(sUUID)"}]

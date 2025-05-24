@@ -1,0 +1,51 @@
+use::java::util::text::Text
+
+struct Misc{
+    index?: struct{
+        index?: int,
+    },
+    string_to_num?: string,
+    char?: struct{
+        [string]?: string @ 1
+    },
+    run_custom?: struct{
+        run?: #[command] string,
+        args?: struct{[any]?:any},
+    },
+    final?: string,
+    nbt_to_string?: struct{
+        input?: any,
+        output?: string,
+    },
+    exe?: struct{
+        command?: #[command] string,
+        args?: (struct{[any]?:any}|enum(string){NONE="NONE"}),
+    },
+    tellraw?: Text,
+    text?: Text,
+    new_name?: Text,
+    joint?: [Text],
+    run?: any,
+    xz?: any,
+    temp2?: any,
+    type?: struct{this?:int},
+    in?: #[id="dimension"] string,
+    temp?: any,
+    test?: any,
+    att?:struct{
+        damage?: double,
+        armor?: double,
+        toughness?: double,
+    },
+    num?:struct{
+        dam_i?: int,
+        dam_f?: int,
+        arm_i?: int,
+        arm_f?: int,
+        amt_i?: int,
+        amt_f?: int,
+        hp?: (int|string),
+    },
+    id?: #[id="entity_type"] string,
+    translate?: #[translation_key] string,
+}

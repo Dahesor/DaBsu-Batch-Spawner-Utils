@@ -6,3 +6,5 @@ function dabsu:z_private/select/add_self/chunk_main
 function dabsu:z_private/select/__remove_data with entity @s data
 
 scoreboard players reset @s selected.dabsu
+
+execute unless data storage dabsu:run Selected[].Chunks[].Objects[].type run scoreboard players reset * selected.dabsu

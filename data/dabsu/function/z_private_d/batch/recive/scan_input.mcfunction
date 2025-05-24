@@ -1,0 +1,1 @@
+scoreboard players operation @s register_range.dabsu = #input input.dabsu

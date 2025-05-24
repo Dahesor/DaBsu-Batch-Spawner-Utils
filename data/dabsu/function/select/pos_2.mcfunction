@@ -8,7 +8,7 @@ execute store result score $dx calc.dabsu run data get storage dabsu:run run[0]
 execute store result score $dy calc.dabsu run data get storage dabsu:run run[1]
 execute store result score $dz calc.dabsu run data get storage dabsu:run run[2]
 
-function dabsu:z_private_dialog/uid/get
+function dabsu:z_private_d/uid/get
 data modify storage dabsu:user data[0].select.pos2 set value {x:0,y:0,z:0}
 execute store result storage dabsu:user data[0].select.pos2.x int 1 run scoreboard players get $dx calc.dabsu
 execute store result storage dabsu:user data[0].select.pos2.y int 1 run scoreboard players get $dy calc.dabsu
