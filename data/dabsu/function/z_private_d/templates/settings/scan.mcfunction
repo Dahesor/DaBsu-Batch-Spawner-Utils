@@ -8,9 +8,9 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
         {type:"number_range",key:"distance",start:100,end:300,initial:150,label:"Max Ray Distance",step:1,width:260},\
     ],\
     actions:[\
-        {id:"confirm",label:{translate:"gui.done"},on_submit:{type:"command_template",template:"trigger input.dabsu set $(pierce)$(hit_range)$(path_range)$(distance)"}},\
-        {id:"stop",label:"Stop",on_submit:{type:"command_template",template:"say -$(none)"}},\
-        {id:"cancel",label:{translate:"gui.back",color:"aqua"},on_submit:{type:"command_template",template:"say -$(none)"}},\
+        {id:"confirm",label:{translate:"gui.done",color:"aqua"},on_submit:{type:"command_template",template:"trigger input.dabsu set $(pierce)$(hit_range)$(path_range)$(distance)"}},\
+        {id:"stop",label:"Stop Scanning",on_submit:{type:"command_template",template:"trigger trigger.dabsu set 1012$(none)"}},\
+        {id:"cancel",label:{translate:"gui.back"},on_submit:{type:"command_template",template:"say -$(none)"}},\
     ]\
 }
 

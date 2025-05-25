@@ -1,0 +1,2 @@
+execute unless block ^ ^ ^ #dabsu:ray_through run return run execute unless score %pierce calc.dabsu matches 2 run function dabsu:z_private/wand/register/box/hit_pierce
+execute if score %pierce calc.dabsu matches 2 run scoreboard players set %pierce calc.dabsu 1

@@ -11,7 +11,6 @@ scoreboard objectives add waiting.dabsu dummy
 scoreboard objectives add dropWand.dabsu dropped:ghast_tear
 scoreboard objectives add register_range.dabsu trigger
 
-scoreboard players set #loaded calc.dabsu 1
 scoreboard players set #-1 calc.dabsu -1
 scoreboard players set #2 calc.dabsu 2
 scoreboard players set #10 calc.dabsu 10
@@ -21,6 +20,8 @@ scoreboard players set #100 calc.dabsu 100
 scoreboard players set #1000 calc.dabsu 1000
 scoreboard players set #10000 calc.dabsu 10000
 scoreboard players set #1000000 calc.dabsu 1000000
+
+execute unless score #loaded calc.dabsu matches 1.. run function dabsu:z_private/mod/first_load
 
 data modify storage dabsu:run input set value {key:""}
 

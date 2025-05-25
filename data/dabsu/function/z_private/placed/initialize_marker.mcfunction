@@ -21,6 +21,7 @@ execute store result storage dabsu:run data.chunk.x int 1 run scoreboard players
 execute store result storage dabsu:run data.chunk.z int 1 run scoreboard players get #cz calc.dabsu
 
 data modify storage dabsu:run spawner set from block ~ ~ ~
+execute if data storage dabsu:run spawner.SpawnData.entity.id unless data storage dabsu:run spawner.SpawnPotentials[0] run function dabsu:z_private/broke/use_spawn_data
 data remove storage dabsu:run spawner.components
 data remove storage dabsu:run spawner.id
 data remove storage dabsu:run spawner.Delay
