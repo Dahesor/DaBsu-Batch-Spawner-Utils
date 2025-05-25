@@ -1,1 +1,0 @@
-$scoreboard players add $(UUID) selected.dabsu 1

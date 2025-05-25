@@ -35,4 +35,8 @@ data modify storage dabsu:run lang.zh_cn set value {\
     selecting_same_type:"[DaBsu] 正在选择所有具有相同生成数据的刷怪笼……",\
     modifying_same_type:"[DaBsu] 正在使用所有具有相同生成数据的刷怪笼修改选区……",\
     registering:"扫描并注册刷怪笼中...",\
+    selecting_nbt:"[DaBsu] 正在选择所有符合nbt=检测的刷怪笼……§b§n查看NBT",\
+    modifying_with_nbt:"[DaBsu] 正在使用所有符合nbt=检测的刷怪笼修改选区……§b§n查看NBT",\
+    selecting_nbt_warn:" - 这可能会卡上几秒……",\
+    selecting_completed:"[DaBsu] 已完成检测！",\
 }

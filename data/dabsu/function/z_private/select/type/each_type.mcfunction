@@ -1,0 +1,2 @@
+$data modify storage dabsu:run Selected[0].Chunks[0].Objects append from storage dabsu:run ram[0].Chunks[0].Objects[{type:$(this)}]
+#$say $data modify storage dabsu:run Selected[0].Chunks[0].Objects append from storage dabsu:run ram[0].Chunks[0].Objects[{type:$(this)}] 

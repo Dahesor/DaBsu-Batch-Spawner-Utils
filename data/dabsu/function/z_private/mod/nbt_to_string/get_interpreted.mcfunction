@@ -1,0 +1,2 @@
+loot spawn ~ ~ ~ loot dabsu:parse_interpreted_nbt
+execute as @n[type=item,distance=..0.1,nbt={Item:{id:"minecraft:stone",components:{"minecraft:custom_data":{dabsu:{is_temp:1b}}}}}] run function dabsu:z_private/mod/nbt_to_string/item_self

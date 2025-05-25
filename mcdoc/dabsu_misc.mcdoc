@@ -17,6 +17,7 @@ struct Misc{
         input?: any,
         output?: string,
     },
+    nbt?: struct{obj?:struct{[any]:any}},
     exe?: struct{
         command?: #[command] string,
         args?: (struct{[any]?:any}|enum(string){NONE="NONE"}),
@@ -28,7 +29,7 @@ struct Misc{
     run?: any,
     xz?: any,
     temp2?: any,
-    type?: struct{this?:int},
+    type?: struct{this?:int,list?:[int],parse?:[int]},
     in?: #[id="dimension"] string,
     temp?: any,
     test?: any,

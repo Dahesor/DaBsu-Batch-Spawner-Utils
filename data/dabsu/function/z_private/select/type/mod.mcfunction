@@ -10,4 +10,7 @@ execute store result storage dabsu:run type.this int 1 run data get storage dabs
 execute store result score $ThisType selected.dabsu run data get storage dabsu:run type.this
 function dabsu:z_private/select/if_same_type
 
+data modify storage dabsu:run type.list set value []
+data modify storage dabsu:run type.list append from storage dabsu:run type.this
+
 function dabsu:z_private/select/type/expand

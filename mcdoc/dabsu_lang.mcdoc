@@ -3,47 +3,6 @@ enum(string) lang{
     zh_cn = "zh_cn",
 }
 
-enum(string) key{
-    none = "",
-    not_spawn_egg = "not_spawn_egg",
-    no_spawner_raycast = "no_spawner_raycast",
-    no_entity_raycast = "no_entity_raycast",
-    spawner_broke = "spawner_broke",
-    spawner_placed = "spawner_placed",
-    spawner_changed = "spawner_changed",
-    spawner_missed = "spawner_missed",
-    selection_complete = "selection_complete",
-    selected_nothing = "selected_nothing",
-    selecting_distance = "selecting_distance",
-    modifying_distance = "modifying_distance",
-    count_selected = "count_selected",
-    selection_cleared = "selection_cleared",
-    selecting = "selecting",
-    selection_missing = "selection_missing",
-    batch_edit_inied = "batch_edit_inied",
-    batch_edit_dimension = "batch_edit_dimension",
-    batch_edit_chunks = "batch_edit_chunks",
-    batch_edit_objs = "batch_edit_objs",
-    batch_edit_complete = "batch_edit_complete",
-    wand = "wand",
-    wand_lore = "wand_lore",
-    new_recorded = "new_recorded",
-    invalid_pointer = "invalid_pointer",
-    runtime_notice = "runtime_notice",
-    wand_select = "wand_select",
-    wand_deselect = "wand_deselect",
-    pos1_set = "pos1_set",
-    pos2_set = "pos2_set",
-    selecting_rectangle = "selecting_rectangle",
-    modifying_rectangle = "modifying_rectangle",
-    rectangle_box = "rectangle_box",
-    no_spawner_below = "no_spawner_below",
-    selecting_same_type = "selecting_same_type",
-    modifying_same_type = "modifying_same_type",
-    selecting_same_type_extra = "selecting_same_type_extra",
-    registering = "registering"
-}
-
 struct lines{
-    [key]?: string
+    [string]?: string
 }

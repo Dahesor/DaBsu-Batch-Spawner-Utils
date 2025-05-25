@@ -1,0 +1,32 @@
+{
+    "type": "command",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "stone"
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "function": "set_components",
+            "components": {
+                "max_stack_size": 1
+            }
+        },
+        {
+            "function": "set_custom_data",
+            "tag": "{dabsu:{is_temp:1b}}"
+        },
+        {
+            "function": "set_name",
+            "entity": "this",
+            "target": "item_name",
+            "name": {"nbt": "nbt_to_string.input","storage": "dabsu:run","interpret": true}
+        }
+    ]
+}

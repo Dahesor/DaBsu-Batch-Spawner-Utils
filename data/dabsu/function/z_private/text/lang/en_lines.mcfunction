@@ -35,4 +35,8 @@ data modify storage dabsu:run lang.en set value {\
     selecting_same_type:"[DaBsu] Selecting all spawners with the same potential...",\
     modifying_same_type:"[DaBsu] Modifying selection with spawners with the same potential...",\
     registering:"Scanning and Registering Spawners...",\
+    selecting_nbt:"[DaBsu] Selecting all spawners that matches nbt...§b§nSee NBT",\
+    modifying_with_nbt:"[DaBsu] Modifying selection with all spawners that matches nbt...§b§nSee NBT",\
+    selecting_nbt_warn:" - This might lag for a few seconds……",\
+    selecting_completed:"[DaBsu] Completed Checking!",\
 }
