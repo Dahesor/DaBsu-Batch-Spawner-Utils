@@ -9,6 +9,6 @@ execute unless score #cx calc.dabsu = #cx2 calc.dabsu run return fail
 execute unless score #cz calc.dabsu = #cz2 calc.dabsu run return fail
 scoreboard players add %completed_obj calc.dabsu 1
 
-execute if data storage dabsu:run exe{args:"NONE"} run return run function dabsu:z_private/execute/__run_any with storage dabsu:run exe
 
-function dabsu:z_private/execute/__run_any_args with storage dabsu:run exe
+
+function dabsu:z_private/execute/run/marker_self

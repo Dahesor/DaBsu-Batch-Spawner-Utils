@@ -1,0 +1,24 @@
+{
+    "criteria": {
+        "changed":{
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["ghast_tear"],
+                        "predicates": {
+                            "custom_data": {
+                                "dabsu": {
+                                    "is_wand": 1
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "dabsu:z_priq/inv"
+    }
+}

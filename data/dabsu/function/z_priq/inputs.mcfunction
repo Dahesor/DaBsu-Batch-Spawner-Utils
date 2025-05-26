@@ -1,0 +1,1 @@
+execute if score @s waiting.dabsu matches 10 run return run function dabsu:z_priq/menu/gen/index

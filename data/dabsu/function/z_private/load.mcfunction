@@ -10,6 +10,7 @@ scoreboard objectives add input.dabsu trigger
 scoreboard objectives add waiting.dabsu dummy
 scoreboard objectives add dropWand.dabsu dropped:ghast_tear
 scoreboard objectives add register_range.dabsu trigger
+scoreboard objectives add timeStamp.dabsu dummy
 
 scoreboard players set #-1 calc.dabsu -1
 scoreboard players set #2 calc.dabsu 2
@@ -38,3 +39,8 @@ execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard p
 
 scoreboard players set run.ChunkReadingRate Option.dabsu 10
 #execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10
+
+
+return 1
+tag @s add dabsu.analyzer
+tag @s add dabsu.analyzing

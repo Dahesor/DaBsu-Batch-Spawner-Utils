@@ -12,17 +12,19 @@ data modify storage dabsu:run lang.en set value {\
     selecting:"[DaBsu] Selecting Spawners... Count: ",\
     selection_missing:"[ERROR] You must select at least 1 spawner before executing this",\
     batch_edit_inied:"[DaBsu] Initialized Batch Editing...",\
-    batch_edit_dimension:"[DaBsu - Batch Edit] Started Scanning dimension: ",\
+    batch_edit_dimension:"[DaBsu - §bBatch Edit§r] Started Scanning dimension: ",\
     batch_edit_chunks:" - Total Chunks: ",\
     batch_edit_objs:" - Total Objects: ",\
-    batch_edit_complete:"[DaBsu] Batch Edit Completed in ",\
-    wand: "Spawner CTRL Wand",\
+    batch_edit_complete:"[DaBsu] §bBatch Edit§r Completed in ",\
+    wand: "DaBsu Wand",\
     wand_lore: "Right click a spawner with it to see a list of options",\
     new_recorded: "New spawner detected and saved. Click again to select",\
     invalid_pointer:"[ERROR] Invalid pointer. Is storgae modified? Try breaking and replacing",\
     runtime_notice:"[DaBsu] This library is for development only. Before releasing the map please remeber to execute function dabsu:release",\
-    wand_select:"Spawner Selected",\
-    wand_deselect:"Spawner De-selected",\
+    wand_select:"§bBatch Edit§r: Spawner Selected",\
+    wand_deselect:"§bBatch Edit§r: Spawner De-selected",\
+    quick_select:"§dQuick Edit§r: Prepared",\
+    quick_deselect:"§dQuick Edit§r: Finished",\
     selecting_distance:"[DaBsu] Selecting loaded spawners neaby... Range: ",\
     modifying_distance:"[DaBsu] Modifying selection with loaded spawners neaby... Range: ",\
     count_selected:"[DaBsu] Spawners Selected. Count: ",\
@@ -39,4 +41,9 @@ data modify storage dabsu:run lang.en set value {\
     modifying_with_nbt:"[DaBsu] Modifying selection with all spawners that matches nbt...§b§nSee NBT",\
     selecting_nbt_warn:" - This might lag for a few seconds……",\
     selecting_completed:"[DaBsu] Completed Checking!",\
+    quick_edit_dimension:"[DaBsu - §dQuick Edit§r] Started Scanning dimension: ",\
+    quick_edit_chunks:" - Total Chunks: ",\
+    quick_edit_objs:" - Total Objects: ",\
+    quick_edit_complete:"[DaBsu] §dQuick Edit§r Completed in ",\
+    quick_edit_queue:"[DaBsu - §dQuick Edit§r] Some other player is operating...Queuing",\
 }

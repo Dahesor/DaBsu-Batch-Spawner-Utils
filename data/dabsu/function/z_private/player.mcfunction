@@ -1,6 +1,12 @@
 #Grant UID
 execute unless score @s uid.dabsu matches 1.. run function dabsu:z_private/new_uid
 
+#Reset Offhand Trigger
+tag @s remove dabsu.used_wand
+
+#Quick Edit
+execute if entity @s[tag=dabsu.quick_edit] run function dabsu:z_priq/selected/player_tick
+
 #Dialog Input
 scoreboard players enable @s trigger.dabsu
 scoreboard players enable @s register_range.dabsu
@@ -23,6 +29,6 @@ execute if score @s dropWand.dabsu matches 1.. run function dabsu:z_private/wand
 
 
 
-# Returns Below
+# Passive Raycast | /return Below
 execute if items entity @s weapon ghast_tear[custom_data~{dabsu:{is_wand:1b}}] at @s anchored eyes run return run function dabsu:z_private/wand/register/init
 execute if items entity @s weapon.offhand ghast_tear[custom_data~{dabsu:{is_wand:1b}}] at @s anchored eyes run return run function dabsu:z_private/wand/register/init

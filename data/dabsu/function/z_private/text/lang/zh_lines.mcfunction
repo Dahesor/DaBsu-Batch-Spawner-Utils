@@ -12,17 +12,19 @@ data modify storage dabsu:run lang.zh_cn set value {\
     selecting:"[DaBsu] 正在选择刷怪笼……数量：",\
     selection_missing:"错误：执行此操作前必须至少选择一个刷怪笼",\
     batch_edit_inied:"[DaBsu] 开始批量操作...",\
-    batch_edit_dimension:"[DaBsu - 批量] 现在开始扫描维度：",\
+    batch_edit_dimension:"[DaBsu - §b批量§r] 现在开始扫描维度：",\
     batch_edit_chunks:" - 总区块：",\
     batch_edit_objs:" - 总项目：",\
-    batch_edit_complete:"[DaBsu] 批量操作已完成。耗时：",\
-    wand: "刷怪笼操作杖",\
+    batch_edit_complete:"[DaBsu] §b批量操作§r已完成。耗时：",\
+    wand: "DaBsu操作杖",\
     wand_lore: "手持它右键刷怪笼以查看一系列操作",\
     new_recorded: "已记录此刷怪笼。再次点击可选择",\
     invalid_pointer:"错误：无效指针。该刷怪笼没有记录。可尝试破坏后重放",\
     runtime_notice:"[DaBsu] 本库仅为开发用。发布地图前请务必先执行function dabsu:release使其休眠!",\
-    wand_select:"已选择该刷怪笼",\
-    wand_deselect:"已将该刷怪笼从选区移除",\
+    wand_select:"§b批量编辑§r：已选择该刷怪笼",\
+    wand_deselect:"§b批量编辑§r：已将该刷怪笼从选区移除",\
+    quick_select:"§b快速编辑§r：已准备",\
+    quick_deselect:"§b快速编辑§r：已结束",\
     selecting_distance:"[DaBsu] 正在选择附近的已加载刷怪笼……范围：",\
     modifying_distance:"[DaBsu] 正在使用附近的已加载刷怪笼修改选区……范围：",\
     count_selected:"[DaBsu] 刷怪笼已选择，数量：",\
@@ -39,4 +41,9 @@ data modify storage dabsu:run lang.zh_cn set value {\
     modifying_with_nbt:"[DaBsu] 正在使用所有符合nbt=检测的刷怪笼修改选区……§b§n查看NBT",\
     selecting_nbt_warn:" - 这可能会卡上几秒……",\
     selecting_completed:"[DaBsu] 已完成检测！",\
+    quick_edit_dimension:"[DaBsu - §d快速操作§r] 现在开始扫描维度：",\
+    quick_edit_chunks:" - 总区块：",\
+    quick_edit_objs:" - 总项目：",\
+    quick_edit_complete:"[DaBsu] §d快速操作§r已完成。耗时：",\
+    quick_edit_queue:"[DaBsu - §d快速操作§r] 有其他玩家正在操纵，排队中……",\
 }

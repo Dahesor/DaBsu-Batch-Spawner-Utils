@@ -27,9 +27,6 @@ scoreboard players operation $dz z_hold.dabsu = $dz calc.dabsu
 
 function dabsu:z_private/select/rectangle/main
 
-#tellraw @a {nbt:"Selected",storage:"dabsu:run"}
-#tellraw @a {nbt:"hold",storage:"dabsu:run"}
-
 function dabsu:z_private/select/modify/entry
 scoreboard players reset $SelectedType calc.dabsu
 execute if score $SelectedType selected.dabsu matches -2147483648..2147483647 run scoreboard players operation $SelectedType calc.dabsu = $SelectedType selected.dabsu

@@ -11,11 +11,12 @@ use::java::data::dialog::Dialog
 
 
 use::mcdoc::dabsu_lang::lang
-use::mcdoc::dabsu_lang::key
 use::mcdoc::dabsu_lang::lines
 use::mcdoc::dabsu_dialog::DialogMix
 use::mcdoc::dabsu::Pos
+use::mcdoc::dabsu::form
 
+dispatch mcdoc:custom_data["from_user"] to UserData
 
 dispatch minecraft:storage["dabsu:user"] to struct {
     data?: [UserData],
@@ -37,5 +38,11 @@ struct UserData {
     select?: struct{
         pos1?: Pos,
         pos2?: Pos,
-    }
+    },
+    form?: form,
+    parser?: #[command] string,
+    history?: struct{
+        type?: int
+    },
+    target?: CustomData
 }

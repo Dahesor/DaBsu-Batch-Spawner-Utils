@@ -10,12 +10,13 @@ use::java::util::slot::SlottedItem
 use::java::data::dialog::Dialog
 use::java::util::InclusiveRange
 use::mcdoc::dabsu_lang::lang
-use::mcdoc::dabsu_lang::key
 use::mcdoc::dabsu_lang::lines
 use::mcdoc::dabsu_dialog::DialogMix
 use::mcdoc::dabsu_misc::Misc
+use::mcdoc::dabsu_misc::RunCustom
 
 dispatch mcdoc:custom_data["spawner"] to Spawner
+dispatch mcdoc:custom_data["normal"] to Spawner
 dispatch mcdoc:custom_data["UUID"] to #[uuid] [int] @ 4
 dispatch mcdoc:custom_data["in"] to #[id="dimension"] string
 dispatch mcdoc:custom_data["type"] to int
@@ -86,10 +87,14 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     element?: SpawnPotential,
     defaultSpawner?: Spawner,
     defaultElement?: SpawnPotential,
+    templist?: [SpawnPotential],
     Dimensions?: [ObjectDimension],
     ram?: [ObjectDimension],
     Chunks?: [ObjectChunk],
     Selected?: [ObjectDimension],
+    Provided?: [ObjectDimension],
+    Queue?:[QueueTask],
+    Main?: QueueTask,
     buffer?: [#[uuid] [int] @ 4],
     potential?: [SavedPotential],
     saved_potential?: SavedPotential,
@@ -108,12 +113,23 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     },
     lines?: lines,
     input?: struct{
-        key?: key
+        key?: string
     },
     dialog?: struct{
         [string]?: DialogMix
     },
     form?: form,
+}
+
+struct QueueTask{
+    targets?: [ObjectDimension],
+    cmd?: RunCustom,
+    operator?: (enum(string){SYSTEM = "SYSTEM"}|#[uuid] string),
+    type?: enum(string) QueueTaskType{
+        main = "main",
+        personal = "personal",
+        optimize = "optimize"
+    }
 }
 
 struct AnyEntity {
@@ -125,6 +141,7 @@ struct AnyEntity {
 
 struct ObjectDimension{
     in?: #[id="dimension"] string,
+    mark?: byte,
     Chunks?: [ObjectChunk],
 }
 
@@ -135,6 +152,7 @@ struct ObjectChunkForceLoad{
 
 struct ObjectChunk{
     ...ChunkCoords,
+    mark?: byte,
     Objects?: [SavedSpawner],
 }
 

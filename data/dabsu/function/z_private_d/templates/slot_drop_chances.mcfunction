@@ -1,9 +1,9 @@
 data modify storage dabsu:run dialog.test set value {type:"dialog_list",}
 
 #return 1
-
 dialog show @s {type:"minecraft:multi_action_input_form",\
     title:[{text:"§6[DaBsu]§r Edit Slot Drop Chances..."}],\
+    body:[{type:"plain_message",contents:{text:"SELECdTd",click_event:{action:"open_url",url:"https://www.google.com"},hover_event:{action:"show_text",value:"dsasdasdsd"}}}],\
     columns:2,\
     inputs:[\
         {type:"number_range",key:"mainhand",start:0,end:100,initial:0,label:"Mainhand％",step:1,width:260},\

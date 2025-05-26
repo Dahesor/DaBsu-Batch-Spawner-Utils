@@ -1,3 +1,4 @@
+execute if entity @s[type=player] run return run say ?
 execute unless block ~ ~ ~ spawner run return run function dabsu:z_private/broke/unregister_self
 function dabsu:z_private/modify/take_spawn_data
 data modify storage dabsu:run spawner set from block ~ ~ ~
@@ -16,5 +17,5 @@ execute store result score #z calc.dabsu run data get entity @s Pos[2] 1
 function dabsu:z_private/mod/get_this
 function dabsu:z_private/placed/send_types
 data modify entity @s data.type set from storage dabsu:run Dimensions[0].Chunks[0].Objects[0].type
-
+data modify storage dabsu:run Dimensions[0].Chunks[0].Objects[0].mark set value 1b
 data modify block ~ ~ ~ SpawnData set from storage dabsu:run spawner.SpawnPotentials[0].data

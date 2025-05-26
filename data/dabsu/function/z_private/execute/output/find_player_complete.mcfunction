@@ -1,0 +1,1 @@
+$execute as $(operator) run function dabsu:z_private/execute/output/queue_complete

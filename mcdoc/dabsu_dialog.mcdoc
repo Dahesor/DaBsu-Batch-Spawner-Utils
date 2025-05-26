@@ -3,6 +3,7 @@ use ::java::util::text::ClickEvent
 use ::java::data::dialog::Dialog
 use ::java::world::item::ItemStack
 
+
 struct DialogMix{
     title?: Text,
     body?: (DialogBodyMix | [DialogBodyMix]),

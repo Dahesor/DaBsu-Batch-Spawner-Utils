@@ -35,7 +35,6 @@ data modify storage dabsu:run dialog.dialog.actions[3].on_submit.template set fr
 function dabsu:z_private_d/uid/get
 data modify storage dabsu:user data[0].editing.index set from storage dabsu:run index.index
 
-scoreboard players set @s waiting.dabsu 3
 data modify storage dabsu:run dialog.dialog.actions[-3].on_submit.template set value "trigger trigger.dabsu set 1230$(none)"
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

@@ -2,7 +2,7 @@ scoreboard players reset @s dropWand.dabsu
 
 kill @e[type=item,nbt={Item:{id:"minecraft:ghast_tear",components:{"minecraft:custom_data":{dabsu:{is_wand:1b}}}}}]
 
-execute if predicate {condition:"entity_properties",entity:"this",predicate:{type_specific:{type:"player",input:{sneak:true}}}} run return fail
+execute if predicate dabsu:sneaking run return fail
 execute if items entity @s weapon * run return fail
 
 tag @s add dabsu._edit

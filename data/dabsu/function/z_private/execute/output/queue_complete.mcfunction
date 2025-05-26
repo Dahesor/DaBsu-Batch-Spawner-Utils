@@ -1,0 +1,2 @@
+function dabsu:z_private/text/tellraw {text:{text:"quick_edit_complete",color:"gray"}}
+tellraw @s [{storage:"dabsu:run",nbt:"text",interpret:true},{score:{name:"%time_cost",objective:"calc.dabsu"},color:"yellow"},"t"]

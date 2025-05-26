@@ -2,9 +2,9 @@
 scoreboard players add #index calc.dabsu 1
 data modify storage dabsu:run run set value {index:0,page:0}
 execute store result storage dabsu:run run.index int 1 run scoreboard players get #index calc.dabsu
-scoreboard players remove #index calc.dabsu 201
+scoreboard players remove #index calc.dabsu 100
 execute store result storage dabsu:run run.page int 1 run scoreboard players get #index calc.dabsu
-scoreboard players add #index calc.dabsu 201
+scoreboard players add #index calc.dabsu 100
 
 data modify storage dabsu:run dialog.dialog.actions insert -2 value {label:["",{text:"!"},{text:"?",color:"gray"}],width:90,on_click:{action:"run_command",command:"/trigger trigger.dabsu set 200"}}
 function dabsu:z_private/wand/quickedit/funcs/__insert_index with storage dabsu:run run
@@ -19,4 +19,4 @@ execute if data storage dabsu:run spawner.SpawnPotentials[0].data.entity.CustomN
 
 
 data remove storage dabsu:run spawner.SpawnPotentials[0]
-execute if data storage dabsu:run spawner.SpawnPotentials[0] run function dabsu:z_private/wand/quickedit/funcs/element
+execute if data storage dabsu:run spawner.SpawnPotentials[0] run function dabsu:z_priq/menu/gen/element

@@ -1,4 +1,4 @@
-execute if predicate {condition:"entity_properties",entity:"this",predicate:{type_specific:{type:"player",input:{sneak:true}}}} align xyz positioned ~0.5 ~0.5 ~0.5 run return run kill @e[type=#dabsu:ray_display,distance=..0.1,tag=dabsu.displayer]
+execute if predicate dabsu:sneaking align xyz positioned ~0.5 ~0.5 ~0.5 run return run kill @e[type=#dabsu:ray_display,distance=..0.1,tag=dabsu.displayer]
 
 data modify storage dabsu:run spawner set from block ~ ~ ~
 function dabsu:z_private/wand/ray/get_rotation
