@@ -31,7 +31,7 @@
                     "can_destroy_blocks_in_creative": false
                 },
                 "tooltip_display": {
-                    "hidden_components": ["damage","max_damage","max_stack_size","tool"]
+                    "hidden_components": ["damage","max_damage","max_stack_size","tool","attribute_modifiers"]
                 },
                 "consumable": {
                     "animation": "brush",
@@ -41,7 +41,19 @@
                         "range": 0,
                         "sound_id": ""
                     }
-                }
+                },
+                "attribute_modifiers": [
+                    {
+                        "amount": 1024000,
+                        "id": "dabsu:wand",
+                        "operation": "add_value",
+                        "type": "attack_speed",
+                        "display": {
+                            "type": "hidden"
+                        },
+                        "slot": "mainhand"
+                    }
+                ]
             }
         },
         {

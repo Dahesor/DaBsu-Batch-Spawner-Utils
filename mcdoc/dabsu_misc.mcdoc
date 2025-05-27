@@ -18,7 +18,7 @@ struct Misc{
         input?: any,
         output?: string,
     },
-    nbt?: struct{obj?:struct{[any]:any}},
+    nbt?: struct{obj?:struct{[any]:any},list?:[any],f?:float,f2?:float,i?:int},
     exe?: struct exe{
         command?: #[command] string,
         args?: (struct{[any]?:any}|enum(string){NONE="NONE"}),
@@ -56,4 +56,39 @@ struct Misc{
     },
     id?: #[id="entity_type"] string,
     translate?: #[translation_key] string,
+    shape?: struct{
+        this?: Transformation,
+        x?: Transformation,
+        y?: Transformation,
+        z?: Transformation,
+        w?: Transformation,
+    }
+}
+
+type Transformation = (
+	#[canonical] struct DecomposedTransformation {
+		/// Translation in [x, y, z].
+		translation?: [float] @ 3,
+		/// Using this rotation is enough for most transformations.
+		left_rotation?: Rotation,
+		/// For more complex transformations. Applied **before** scaling.
+		right_rotation?: Rotation,
+		/// Scale in [x, y, z].
+		scale?: [float] @ 3,
+	} |
+	([float] @ 16) |
+)
+
+type Rotation = (
+	// Quaternion form (used for saving) in [x, y, z, w].
+	[float] @ 4 |
+	// Axis-angle form.
+	AxisAngle |
+)
+
+struct AxisAngle {
+	/// Local position of the axis in [x, y, z].
+	axis: [float] @ 3,
+	/// Angle to rotate around axis in radians.
+	angle: float,
 }

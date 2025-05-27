@@ -1,1 +1,0 @@
-execute as @e[type=marker,tag=dabsu.marker,distance=..0.1] run function dabsu:z_private/select/add_self

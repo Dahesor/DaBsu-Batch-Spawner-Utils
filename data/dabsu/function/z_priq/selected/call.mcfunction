@@ -6,6 +6,7 @@ function dabsu:z_private_d/uid/get
 #Manage Marker
 scoreboard players operation #this uid.dabsu = @s uid.dabsu
 execute as @e[type=marker,tag=dabsu.marker,tag=dabsu.quick_edit] if score @s uid.dabsu = #this uid.dabsu at @s run function dabsu:z_priq/selected/remove_marker
+execute as @e[type=#dabsu:quick_display,tag=dabsu.gui_edit] if score @s uid.dabsu = #this uid.dabsu run kill
 execute as @e[type=marker,tag=dabsu.marker,distance=..0.1,limit=1] run function dabsu:z_priq/selected/marker_self
 
 #Save position

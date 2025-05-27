@@ -10,6 +10,7 @@ data modify storage dabsu:run run.in set from storage dabsu:run data.in
 function dabsu:z_private_d/lines/spawner_top_info with storage dabsu:run run
 data modify storage dabsu:run dialog.dialog.body[1].description.contents set from storage dabsu:run final
 data modify storage dabsu:run dialog.dialog.body[1].item.components set from block ~ ~ ~ components
+function dabsu:z_priq/menu/gen/get_type_count with storage dabsu:run run
 
 #Copy Full Data
 data modify storage dabsu:run nbt_to_string.input set from block ~ ~ ~

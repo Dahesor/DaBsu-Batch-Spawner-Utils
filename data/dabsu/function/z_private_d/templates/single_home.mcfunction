@@ -1,7 +1,7 @@
 data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_action",\
     title:"[DaBsu] Spawner Menu",\
     columns:1,\
-    body:[{type:"plain_message",contents:"§lQuick Edit"},{type:"item",description:{contents:"Spawner",width:400},item:{id:"spawner",components:{}}}],\
+    body:[{type:"plain_message",contents:"§d§lQuick Edit"},{type:"item",description:{contents:"Spawner",width:400},item:{id:"spawner",components:{}},show_decorations:true}],\
     actions:[\
         {label:{text:"Copy Full Data",color:"#fffeae"},width:240,on_click:{action:"copy_to_clipboard",value:""}},\
         {label:{text:"Copy SpawnPotentials",color:"#fffeae"},width:240,on_click:{action:"copy_to_clipboard",value:""}},\

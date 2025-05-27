@@ -19,7 +19,7 @@ data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage d
 execute if data storage dabsu:run element.data.equipment run function dabsu:z_private_d/batch/edit_page/samepot/get_equipment
 
 #Links
-data modify storage dabsu:run dialog.dialog.actions[1].on_submit.template set value "trigger trigger.dabsu set 110$(none)"
+data modify storage dabsu:run dialog.dialog.actions[1].on_submit.template set value "trigger trigger.dabsu set 105$(none)"
 
 #Edit Itself
 data modify storage dabsu:run dialog.dialog.actions[3].label set value {text:"Edit Itself",color:"green"}
@@ -31,6 +31,6 @@ data modify storage dabsu:run dialog.dialog.actions insert 4 value {id:"edit_sam
 data modify storage dabsu:run dialog.dialog.actions[4].tooltip set value "Apply edits to all the spawners that have the same SpawnPotentials with this one."
 data modify storage dabsu:run dialog.dialog.actions[4].on_submit.template set value 'function dabsu:z_priq/edit/potential/index_publish {form:{weight:$(weight),entity:$(entity),equipment:$(loot_table)}}'
 
-data modify storage dabsu:run dialog.dialog.actions[2].on_submit.template set value "trigger trigger.dabsu set 111$(none)"
+data modify storage dabsu:run dialog.dialog.actions[2].on_submit.template set value "trigger trigger.dabsu set 106$(none)"
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

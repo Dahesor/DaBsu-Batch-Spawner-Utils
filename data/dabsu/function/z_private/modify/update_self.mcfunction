@@ -16,3 +16,4 @@ function dabsu:z_private/placed/send_types
 data modify entity @s data.type set from storage dabsu:run Dimensions[0].Chunks[0].Objects[0].type
 
 data modify block ~ ~ ~ SpawnData set from storage dabsu:run spawner.SpawnPotentials[0].data
+execute if entity @s[tag=dabsu.quick_edit] run function dabsu:z_priq/gui/reboot

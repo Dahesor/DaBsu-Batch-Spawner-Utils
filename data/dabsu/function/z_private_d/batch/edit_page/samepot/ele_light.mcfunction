@@ -13,9 +13,6 @@ function dabsu:z_private/mod/__get_type with storage dabsu:run temp2
 function dabsu:z_private/wand/quickedit/funcs/__get_element with storage dabsu:run index
 
 #Intial Values
-data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dabsu:run element.data.custom_spawn_rules.block_light_limit[0]
-data modify storage dabsu:run dialog.dialog.inputs[2].initial set from storage dabsu:run element.data.custom_spawn_rules.block_light_limit[1]
-data modify storage dabsu:run dialog.dialog.inputs[3].initial set from storage dabsu:run element.data.custom_spawn_rules.sky_light_limit[0]
-data modify storage dabsu:run dialog.dialog.inputs[4].initial set from storage dabsu:run element.data.custom_spawn_rules.sky_light_limit[1]
+function dabsu:z_priq/menu/gen/initial_lights
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

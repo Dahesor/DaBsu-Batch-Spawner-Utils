@@ -8,10 +8,14 @@ execute if score #trigger trigger.dabsu matches 198 run return run function dabs
 #Need Locations
 execute if score #trigger trigger.dabsu matches 101 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/property"}
 execute if score #trigger trigger.dabsu matches 102 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/overview_potential"}
-#execute if score #trigger trigger.dabsu matches 201.. run return run function dabsu:z_private/wand/quickedit/funcs/edit_page
-#execute if score #trigger trigger.dabsu matches 104 run data modify storage dabsu:run run.cmd set value "select"
-#execute if score #trigger trigger.dabsu matches 190 run data modify storage dabsu:run run.cmd set value "all_lights"
-#execute if score #trigger trigger.dabsu matches 199 run data modify storage dabsu:run run.cmd set value "new_potential"
+execute if score #trigger trigger.dabsu matches 104 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/new_element"}
+execute if score #trigger trigger.dabsu matches 105 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/this_light"}
+execute if score #trigger trigger.dabsu matches 106 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/confirm/del_entry"}
+execute if score #trigger trigger.dabsu matches 107 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/reciver/del"}
+execute if score #trigger trigger.dabsu matches 108 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/del_publish"}
+execute if score #trigger trigger.dabsu matches 190 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/all_light"}
+execute if score #trigger trigger.dabsu matches 191 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/merge_all"}
+execute if score #trigger trigger.dabsu matches 192 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/full_nbt"}
 
 data modify storage dabsu:run proceed merge from storage dabsu:run run
 function dabsu:z_priq/edit/exe with storage dabsu:run proceed

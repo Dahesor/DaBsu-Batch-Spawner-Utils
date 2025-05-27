@@ -1,5 +1,3 @@
-#return run setblock ~ ~1 ~ glass
-
 execute unless data storage dabsu:run spawner.SpawnPotentials[0].data.entity.id run return fail
 
 data modify storage dabsu:run run set value {entity:{}}

@@ -38,3 +38,4 @@ tellraw @s ["",{text:"[DaBsu] Edited ->",color:"green"},\
 ]
 
 data modify block ~ ~ ~ {} merge from storage dabsu:run form
+execute as @e[type=marker,tag=dabsu.marker,distance=..0.1] run function dabsu:z_private/modify/update_self

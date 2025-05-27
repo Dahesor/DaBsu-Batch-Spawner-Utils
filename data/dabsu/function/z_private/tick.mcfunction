@@ -1,6 +1,7 @@
 execute unless score #loaded calc.dabsu matches 1.. run return fail
 execute store result score $gametime calc.dabsu run time query gametime
 
+scoreboard players set #has_qEdit calc.dabsu 0
 execute as @a at @s run function dabsu:z_private/player
 execute as @e[type=item] if items entity @s contents *[custom_data~{dabsu:{cart:{}}}] at @s align xyz run function dabsu:z_private/cart/thrown_item
 
@@ -26,3 +27,4 @@ execute if score #loop_5 calc.dabsu matches 1 as @e[type=#dabsu:display,tag=dabs
 
 #Marker Tick
 execute as @e[type=marker,tag=dabsu.marker] at @s run function dabsu:z_private/marker
+execute if score #has_qEdit calc.dabsu matches 1 as @e[type=#dabsu:quick_display,tag=dabsu.ctrl] at @s run function dabsu:z_priq/gui/player/update_select

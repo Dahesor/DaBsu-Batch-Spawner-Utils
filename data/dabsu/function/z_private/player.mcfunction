@@ -5,7 +5,9 @@ execute unless score @s uid.dabsu matches 1.. run function dabsu:z_private/new_u
 tag @s remove dabsu.used_wand
 
 #Quick Edit
+scoreboard players remove @s[scores={ctrl_wait.dabsu=1..}] ctrl_wait.dabsu 1
 execute if entity @s[tag=dabsu.quick_edit] run function dabsu:z_priq/selected/player_tick
+execute if score @s ctrl.dabsu matches 1.. unless score @s ctrl_wait.dabsu matches 1.. run function dabsu:z_priq/gui/player/stop
 
 #Dialog Input
 scoreboard players enable @s trigger.dabsu

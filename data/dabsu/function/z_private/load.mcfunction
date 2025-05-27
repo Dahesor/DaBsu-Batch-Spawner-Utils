@@ -11,11 +11,16 @@ scoreboard objectives add waiting.dabsu dummy
 scoreboard objectives add dropWand.dabsu dropped:ghast_tear
 scoreboard objectives add register_range.dabsu trigger
 scoreboard objectives add timeStamp.dabsu dummy
+scoreboard objectives add ctrl.dabsu dummy
+scoreboard objectives add ctrl_data.dabsu dummy
+scoreboard objectives add ctrl_wait.dabsu dummy
 
 scoreboard players set #-1 calc.dabsu -1
 scoreboard players set #2 calc.dabsu 2
 scoreboard players set #10 calc.dabsu 10
+scoreboard players set #14 calc.dabsu 14
 scoreboard players set #16 calc.dabsu 16
+scoreboard players set #39 calc.dabsu 39
 scoreboard players set #50 calc.dabsu 50
 scoreboard players set #100 calc.dabsu 100
 scoreboard players set #1000 calc.dabsu 1000

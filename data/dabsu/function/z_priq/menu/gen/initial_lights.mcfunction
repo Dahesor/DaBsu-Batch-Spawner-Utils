@@ -1,0 +1,8 @@
+data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dabsu:run element.data.custom_spawn_rules.block_light_limit[0]
+data modify storage dabsu:run dialog.dialog.inputs[2].initial set from storage dabsu:run element.data.custom_spawn_rules.block_light_limit[1]
+execute unless data storage dabsu:run element.data.custom_spawn_rules.block_light_limit[1] run data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dabsu:run element.data.custom_spawn_rules.block_light_limit
+execute unless data storage dabsu:run element.data.custom_spawn_rules.block_light_limit[1] run data modify storage dabsu:run dialog.dialog.inputs[2].initial set from storage dabsu:run element.data.custom_spawn_rules.block_light_limit
+data modify storage dabsu:run dialog.dialog.inputs[3].initial set from storage dabsu:run element.data.custom_spawn_rules.sky_light_limit[0]
+data modify storage dabsu:run dialog.dialog.inputs[4].initial set from storage dabsu:run element.data.custom_spawn_rules.sky_light_limit[1]
+execute unless data storage dabsu:run element.data.custom_spawn_rules.sky_light_limit[1] run data modify storage dabsu:run dialog.dialog.inputs[3].initial set from storage dabsu:run element.data.custom_spawn_rules.sky_light_limit
+execute unless data storage dabsu:run element.data.custom_spawn_rules.sky_light_limit[1] run data modify storage dabsu:run dialog.dialog.inputs[4].initial set from storage dabsu:run element.data.custom_spawn_rules.sky_light_limit
