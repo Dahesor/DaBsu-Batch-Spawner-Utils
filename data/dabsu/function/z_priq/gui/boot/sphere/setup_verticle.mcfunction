@@ -1,0 +1,9 @@
+scoreboard players add $math calc.dabsu 0
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/verticle_lines

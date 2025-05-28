@@ -1,0 +1,17 @@
+scoreboard players set $math calc.dabsu 0
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines
+execute summon block_display run function dabsu:z_priq/gui/boot/sphere/math/xz_lines

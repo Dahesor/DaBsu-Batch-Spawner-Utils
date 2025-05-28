@@ -1,6 +1,8 @@
 use::java::util::text::Text
 use::mcdoc::dabsu::QueueTaskType
 
+dispatch mcdoc:custom_data["shapes"] to TransformationShapes
+
 struct Misc{
     index?: struct{
         index?: int,
@@ -56,12 +58,13 @@ struct Misc{
     },
     id?: #[id="entity_type"] string,
     translate?: #[translation_key] string,
-    shape?: struct{
+    shape?: struct TransformationShapes{
         this?: Transformation,
         x?: Transformation,
         y?: Transformation,
         z?: Transformation,
         w?: Transformation,
+        list?: [Transformation],
     }
 }
 

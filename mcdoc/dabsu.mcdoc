@@ -22,6 +22,11 @@ dispatch mcdoc:custom_data["in"] to #[id="dimension"] string
 dispatch mcdoc:custom_data["type"] to int
 dispatch mcdoc:custom_data["custom_name"] to string
 dispatch mcdoc:custom_data["pos"] to Pos
+dispatch mcdoc:custom_data["last_edit"] to struct{
+    SpawnCount?: short,
+	SpawnRange?: short,
+    RequiredPlayerRange?: short,
+}
 dispatch mcdoc:custom_data["chunk"] to ChunkCoords
 dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
     Potential?: SavedPotential,

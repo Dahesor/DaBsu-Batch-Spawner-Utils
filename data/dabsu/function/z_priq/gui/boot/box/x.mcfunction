@@ -1,4 +1,4 @@
-data merge entity @s {block_state:{Name:"white_concrete"},Glowing:0b,glow_color_override:16762052,Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp"],brightness:{block:15,sky:15}}
+data merge entity @s {block_state:{Name:"white_concrete"},Glowing:0b,glow_color_override:16762052,Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.gui_edit.sr"],brightness:{block:15,sky:15}}
 
 data modify storage dabsu:run shape.this set from storage dabsu:run shape.x
 execute if score #y calc.dabsu matches -1 store result storage dabsu:run shape.this.translation[1] float -0.01 run data get storage dabsu:run shape.this.translation[1] 100

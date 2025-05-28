@@ -1,0 +1,3 @@
+execute if score #loop_40 calc.dabsu matches 39 as @e[type=block_display,tag=dabsu.ctrl.hs] if score @s ctrl_data.dabsu matches 4 run function dabsu:z_priq/gui/boot/sphere/animation/sub
+execute if score #loop_40 calc.dabsu matches 39 as @e[type=block_display,tag=dabsu.ctrl.hs] if score @s ctrl_data.dabsu matches 12 run function dabsu:z_priq/gui/boot/sphere/animation/right
+execute if score #loop_40 calc.dabsu matches 0 as @e[type=#dabsu:display,tag=dabsu.displayer,tag=dabsu.ctrl.hs] run function dabsu:z_priq/gui/boot/sphere/animation/self

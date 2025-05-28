@@ -20,6 +20,7 @@ scoreboard players set #2 calc.dabsu 2
 scoreboard players set #10 calc.dabsu 10
 scoreboard players set #14 calc.dabsu 14
 scoreboard players set #16 calc.dabsu 16
+scoreboard players set #25 calc.dabsu 25
 scoreboard players set #39 calc.dabsu 39
 scoreboard players set #50 calc.dabsu 50
 scoreboard players set #100 calc.dabsu 100

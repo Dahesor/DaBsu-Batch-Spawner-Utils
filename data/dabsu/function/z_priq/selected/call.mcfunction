@@ -13,7 +13,7 @@ execute as @e[type=marker,tag=dabsu.marker,distance=..0.1,limit=1] run function 
 data modify storage dabsu:user data[0].editing merge from storage dabsu:run data.pos
 data modify storage dabsu:user data[0].editing.uuid set from storage dabsu:run data.UUID
 data modify storage dabsu:user data[0].target set from storage dabsu:run data
-execute at @s run playsound block.note_block.harp master @s ~ ~ ~ 1 1.12 1
+execute at @s run playsound block.note_block.pling master @s ~ ~ ~ 1 1.12 1
 tag @s add dabsu.quick_edit
 
 #Visuals

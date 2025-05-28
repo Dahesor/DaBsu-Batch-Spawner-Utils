@@ -1,4 +1,4 @@
-data merge entity @s {block_state:{Name:"green_concrete"},Glowing:0b,glow_color_override:16777215,Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.ctrl.range","dabsu.ctrl"],brightness:{block:15,sky:15}}
+data merge entity @s {block_state:{Name:"green_concrete"},Glowing:0b,glow_color_override:16777215,Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.ctrl.range","dabsu.ctrl","dabsu.gui_edit.sr"],brightness:{block:15,sky:15}}
 
 data modify entity @s transformation set from storage dabsu:run shape.this
 

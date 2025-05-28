@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "s":{
+            "trigger": "any_block_use"
+        }
+    },
+    "rewards": {
+        "function": "dabsu:z",
+        "loot": [
+            "dabsu:test"
+        ]
+    }
+}
