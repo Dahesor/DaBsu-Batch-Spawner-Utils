@@ -14,10 +14,10 @@ function dabsu:z_private/mod/__get_type with storage dabsu:run temp2
 scoreboard players set #index calc.dabsu -1
 execute if data storage dabsu:run spawner.SpawnPotentials[0] run function dabsu:z_private_d/batch/initials/pots/start
 
-data modify storage dabsu:run dialog.dialog.actions[0].on_click.command set value "/trigger trigger.dabsu set 1221"
-data modify storage dabsu:run dialog.dialog.actions[1].on_click.command set value "/trigger trigger.dabsu set 1211"
-data modify storage dabsu:run dialog.dialog.actions[2].on_click.command set value "/trigger trigger.dabsu set 1212"
-data modify storage dabsu:run dialog.dialog.actions[-1].on_click.command set value "/trigger trigger.dabsu set 1220"
+data modify storage dabsu:run dialog.dialog.actions[0].action.command set value "/trigger trigger.dabsu set 1221"
+data modify storage dabsu:run dialog.dialog.actions[1].action.command set value "/trigger trigger.dabsu set 1211"
+data modify storage dabsu:run dialog.dialog.actions[2].action.command set value "/trigger trigger.dabsu set 1212"
+data modify storage dabsu:run dialog.dialog.actions[-1].action.command set value "/trigger trigger.dabsu set 1220"
 
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

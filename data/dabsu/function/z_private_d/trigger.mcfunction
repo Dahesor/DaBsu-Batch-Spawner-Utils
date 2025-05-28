@@ -1,6 +1,8 @@
 scoreboard players operation #trigger trigger.dabsu = @s trigger.dabsu
 scoreboard players set @s trigger.dabsu 0
 
+execute if score #trigger trigger.dabsu matches 1 run return run dialog clear @s
+
 execute if score #trigger trigger.dabsu matches 100..300 run return run function dabsu:z_priq/requests
 execute if score #trigger trigger.dabsu matches 1000..1100 run return run function dabsu:z_private_d/batch/dispatch/homepage
 execute if score #trigger trigger.dabsu matches 1101..1200 run return run function dabsu:z_private_d/batch/dispatch/selection

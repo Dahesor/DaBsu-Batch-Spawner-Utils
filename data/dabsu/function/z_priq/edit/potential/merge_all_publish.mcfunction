@@ -1,3 +1,4 @@
+dialog clear @s
 data modify storage dabsu:run form set from storage dabsu:user data[0].form
 data modify storage dabsu:run form.form set from storage dabsu:run form
 

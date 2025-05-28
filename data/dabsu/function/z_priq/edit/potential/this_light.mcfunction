@@ -1,3 +1,4 @@
+dialog clear @s
 data modify storage dabsu:run form set from storage dabsu:user data[0].form
 
 function dabsu:z_private_d/uid/get

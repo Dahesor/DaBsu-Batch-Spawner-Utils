@@ -1,3 +1,5 @@
+dialog clear @s
+
 execute unless score #input input.dabsu matches -32768..32767 run return run tellraw @s ["",{text:"[DaBsu] Error ->",color:"red"},\
     "\n - §cDelay not in -32768..32767",\
     "\n - §cDelay: ",{score:{name:"#input",objective:"input.dabsu"},color:"aqua"},\

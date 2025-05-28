@@ -19,14 +19,14 @@ data modify storage dabsu:run dialog.dialog.inputs append value {type:"number_ra
 
 data modify storage dabsu:run dialog.dialog.actions[0].label set value {text:"Append to Itself",color:"green"}
 
-data modify storage dabsu:run dialog.dialog.actions insert 1 value {id:"edit_potential",label:{text:"...To Same Potential",color:"yellow"},on_submit:{type:"command_template",template:'-$(none)'},width:130}
+data modify storage dabsu:run dialog.dialog.actions insert 1 value {label:{text:"...To Same Potential",color:"yellow"},action:{type:"dynamic/run_command",template:'-$(none)'},width:130}
 
 
 #Edit Itself
-data modify storage dabsu:run dialog.dialog.actions[0].on_submit.template set value 'function dabsu:z_priq/edit/potential/reciver/newel {form:{use_light:$(use_light),weight:$(weight),data:{entity:$(entity),equipment:$(equipment),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}}'
+data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_priq/edit/potential/reciver/newel {form:{use_light:$(use_light),weight:$(weight),data:{entity:$(entity),equipment:$(equipment),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}}'
 
 
 #Edit Same Potentials
-data modify storage dabsu:run dialog.dialog.actions[1].on_submit.template set value 'function dabsu:z_priq/edit/potential/new_publish {form:{use_light:$(use_light),weight:$(weight),data:{entity:$(entity),equipment:$(equipment),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}}'
+data modify storage dabsu:run dialog.dialog.actions[1].action.template set value 'function dabsu:z_priq/edit/potential/new_publish {form:{use_light:$(use_light),weight:$(weight),data:{entity:$(entity),equipment:$(equipment),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}}'
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

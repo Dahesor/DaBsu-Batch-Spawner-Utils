@@ -1,3 +1,4 @@
+dialog clear @s
 $data modify storage dabsu:run form set value $(form)
 
 execute unless data storage dabsu:run form.entity.id run return run tellraw @s ["",{text:"[DaBsu] Error ->",color:"red"},\

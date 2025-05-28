@@ -1,2 +1,2 @@
 $data modify storage dabsu:run dialog.dialog.actions[-2].label[1].text set value "$(page). "
-$data modify storage dabsu:run dialog.dialog.actions[-2].on_click.command set value "/trigger input.dabsu set $(index)"
+$data modify storage dabsu:run dialog.dialog.actions[-2].action.command set value "/trigger input.dabsu set $(index)"

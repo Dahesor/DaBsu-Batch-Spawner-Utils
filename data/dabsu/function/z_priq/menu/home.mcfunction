@@ -13,20 +13,20 @@ data modify storage dabsu:run dialog.dialog.body[1].item.components set from blo
 function dabsu:z_priq/menu/gen/get_type_count with storage dabsu:run run
 
 #Copy Full Data
-data modify storage dabsu:run nbt_to_string.input set from block ~ ~ ~
+data modify storage dabsu:run nbt_to_string.input set from block ~ ~ ~ {}
 function dabsu:z_private/mod/nbt_to_string/get
-data modify storage dabsu:run dialog.dialog.actions[0].on_click.value set from storage dabsu:run nbt_to_string.output
+data modify storage dabsu:run dialog.dialog.actions[0].action.value set from storage dabsu:run nbt_to_string.output
 
 #Copy SpawnPotentials
 data modify storage dabsu:run nbt_to_string.input set from storage dabsu:run nbt_to_string.input.SpawnData
 execute if data storage dabsu:run spawner.SpawnPotentials[0] run data modify storage dabsu:run nbt_to_string.input set from storage dabsu:run spawner.SpawnPotentials
 function dabsu:z_private/mod/nbt_to_string/get
-data modify storage dabsu:run dialog.dialog.actions[1].on_click.value set from storage dabsu:run nbt_to_string.output
+data modify storage dabsu:run dialog.dialog.actions[1].action.value set from storage dabsu:run nbt_to_string.output
 
 #Analyzer
 scoreboard players set #exist uid.dabsu 0
 scoreboard players operation #this uid.dabsu = @s uid.dabsu
 execute as @e[type=block_display,tag=dabsu.analyz_marker] if score @s uid.dabsu = #this uid.dabsu run scoreboard players set #exist uid.dabsu 1
-execute if score #exist uid.dabsu matches 1 run data modify storage dabsu:run dialog.dialog.actions[-2] set value {label:{text:"Clear Analyze Results",color:"#ff6969"},width:240,on_click:{action:"run_command",command:"/trigger trigger.dabsu set 198"},tooltip:"Clears the colored tiles from your last spawn analysis"}
+execute if score #exist uid.dabsu matches 1 run data modify storage dabsu:run dialog.dialog.actions[-2] set value {label:{text:"Clear Analyze Results",color:"#ff6969"},width:240,action:{type:"run_command",command:"/trigger trigger.dabsu set 198"},tooltip:"Clears the colored tiles from your last spawn analysis"}
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

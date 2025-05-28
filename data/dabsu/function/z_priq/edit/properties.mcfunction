@@ -1,3 +1,4 @@
+dialog clear @s
 $data modify storage dabsu:run form set value $(form)
 
 execute store result storage dabsu:run form.SpawnCount short 1 run data get storage dabsu:run form.SpawnCount

@@ -3,7 +3,7 @@ execute if score !busy calc.dabsu matches 1 run return run function dabsu:z_priv
 function dabsu:z_private_d/templates/light_rules
 
 data modify storage dabsu:run dialog.dialog.title set value {text:"§6[DaBsu]§r Change Custom Spawn Rules..."}
-data modify storage dabsu:run dialog.dialog.actions[0].on_submit.template set value 'function dabsu:z_private_d/batch/link/element/spawn_rule {form:{use:$(use),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}'
+data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_private_d/batch/link/element/spawn_rule {form:{use:$(use),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}'
 
 #Get Element
 data modify storage dabsu:run spawner set value {SpawnPotentials:[]}

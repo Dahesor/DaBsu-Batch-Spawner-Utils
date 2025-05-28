@@ -7,14 +7,14 @@ data modify storage dabsu:run dialog.dialog.inputs[0].initial set value '[]'
 data modify storage dabsu:run dialog.dialog.inputs[0].key set value 'tag'
 data modify storage dabsu:run dialog.dialog.inputs[0].label set value '§bSNBT'
 data modify storage dabsu:run dialog.dialog.inputs[0].multiline.height set value 180
-data modify storage dabsu:run dialog.dialog.actions[0].on_submit.template set value 'function dabsu:z_priq/edit/potential/reciver/nbt {form:{tag:$(tag)}}'
+data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_priq/edit/potential/reciver/nbt {form:{tag:$(tag)}}'
 
-data modify storage dabsu:run dialog.dialog.actions[1].on_submit.template set value "trigger trigger.dabsu set 102$(none)"
+data modify storage dabsu:run dialog.dialog.actions[1].action.template set value "trigger trigger.dabsu set 102$(none)"
 data modify storage dabsu:run dialog.dialog.columns set value 3
 data modify storage dabsu:run dialog.dialog.actions[].width set value 100
 
 #Edit All
-data modify storage dabsu:run dialog.dialog.actions insert 1 value {id:"edit_potential",label:{text:"Edit Same Potentials",color:"yellow"},on_submit:{type:"command_template",template:'function dabsu:z_priq/edit/potential/nbt_publish {form:{tag:$(tag)}}'}}
+data modify storage dabsu:run dialog.dialog.actions insert 1 value {label:{text:"Edit Same Potentials",color:"yellow"},action:{type:"dynamic/run_command",template:'function dabsu:z_priq/edit/potential/nbt_publish {form:{tag:$(tag)}}'}}
 
 function dabsu:z_priq/menu/gen/get_full_nbt
 

@@ -1,3 +1,4 @@
+dialog clear @s
 $data modify storage dabsu:run form set value $(form)
 
 scoreboard players set #validate calc.dabsu 0

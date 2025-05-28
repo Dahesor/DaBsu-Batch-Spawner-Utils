@@ -1,5 +1,5 @@
+dialog clear @s
 function dabsu:z_private_d/uid/get
-
 $data modify storage dabsu:run form set value $(form)
 
 #pos1

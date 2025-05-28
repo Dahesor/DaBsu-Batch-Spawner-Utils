@@ -6,7 +6,7 @@ scoreboard players add #index calc.dabsu 100
 execute store result storage dabsu:run run.index int 1 run scoreboard players get #index calc.dabsu
 scoreboard players remove #index calc.dabsu 100
 
-data modify storage dabsu:run dialog.dialog.actions insert -2 value {label:["",{text:"!"},{text:"?",color:"gray"}],width:90,on_click:{action:"run_command",command:"/trigger input.dabsu set 0"}}
+data modify storage dabsu:run dialog.dialog.actions insert -2 value {label:["",{text:"!"},{text:"?",color:"gray"}],width:90,action:{type:"run_command",command:"/trigger input.dabsu set 0"}}
 function dabsu:z_private_d/batch/initials/pots/__insert_index with storage dabsu:run run
 
 #ID

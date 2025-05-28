@@ -1,3 +1,4 @@
+dialog clear @s
 function dabsu:z_private_d/uid/get
 data modify storage dabsu:run run_custom.args set value {form:{index:0}}
 data modify storage dabsu:run run_custom.args.form.index set from storage dabsu:user data[0].editing.index
