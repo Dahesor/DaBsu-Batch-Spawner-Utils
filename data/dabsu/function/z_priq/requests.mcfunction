@@ -4,6 +4,8 @@ data modify storage dabsu:run run set from storage dabsu:user data[0].editing
 #Other
 execute if score #trigger trigger.dabsu matches 103 run return run function dabsu:z_priq/analysis/locate with storage dabsu:run run
 execute if score #trigger trigger.dabsu matches 198 run return run function dabsu:z_priq/actions/analyze_clear
+execute if score #trigger trigger.dabsu matches 199 run dialog clear @s
+execute if score #trigger trigger.dabsu matches 199 run return run function dabsu:z_priq/selected/remote_uncall
 
 #Need Locations
 execute if score #trigger trigger.dabsu matches 101 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/property"}
@@ -13,6 +15,8 @@ execute if score #trigger trigger.dabsu matches 105 run data modify storage dabs
 execute if score #trigger trigger.dabsu matches 106 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/confirm/del_entry"}
 execute if score #trigger trigger.dabsu matches 107 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/reciver/del"}
 execute if score #trigger trigger.dabsu matches 108 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/del_publish"}
+execute if score #trigger trigger.dabsu matches 110 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/common_home"}
+execute if score #trigger trigger.dabsu matches 111 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/attributes"}
 execute if score #trigger trigger.dabsu matches 190 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/all_light"}
 execute if score #trigger trigger.dabsu matches 191 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/merge_all"}
 execute if score #trigger trigger.dabsu matches 192 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/full_nbt"}

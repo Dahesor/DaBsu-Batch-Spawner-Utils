@@ -1,0 +1,1 @@
+$data modify storage dabsu:run attribute[{id:"$(id)"}].id set value "minecraft:$(id)"

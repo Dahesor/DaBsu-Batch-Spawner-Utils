@@ -20,6 +20,7 @@ execute if data storage dabsu:run element.data.equipment run function dabsu:z_pr
 
 #Links
 data modify storage dabsu:run dialog.dialog.actions[1].action.template set value "trigger trigger.dabsu set 105$(none)"
+data modify storage dabsu:run dialog.dialog.actions[0].action.template set value "trigger trigger.dabsu set 110$(none)"
 
 #Edit Itself
 data modify storage dabsu:run dialog.dialog.actions[3].label set value {text:"Edit Itself",color:"green"}
@@ -30,6 +31,7 @@ data modify storage dabsu:run dialog.dialog.actions[3].action.template set value
 data modify storage dabsu:run dialog.dialog.actions insert 4 value {label:{text:"Edit Same Potentials",color:"yellow"},action:{type:"dynamic/run_command",template:'-$(none)'},width:110}
 data modify storage dabsu:run dialog.dialog.actions[4].tooltip set value "Apply edits to all the spawners that have the same SpawnPotentials with this one."
 data modify storage dabsu:run dialog.dialog.actions[4].action.template set value 'function dabsu:z_priq/edit/potential/index_publish {form:{weight:$(weight),entity:$(entity),equipment:$(loot_table)}}'
+
 
 data modify storage dabsu:run dialog.dialog.actions[2].action.template set value "trigger trigger.dabsu set 106$(none)"
 

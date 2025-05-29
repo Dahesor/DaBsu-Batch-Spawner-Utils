@@ -6,7 +6,7 @@ data remove storage dabsu:run templist[0].data.equipment
 #Only Takes IDs
 data modify storage dabsu:run templist[0].data.entity.id set from storage dabsu:run spawner.SpawnPotentials[0].data.entity.id
 #Give Tags
-data modify storage dabsu:run templist[0].data.entity merge value {Tags:["dabsu.analyzer"],active_effects:[{id:"invisibility",ambient:0b,show_icon:0b,show_particles:0b,amplifier:0,duration:40}],Slient:1b,data:{}}
+data modify storage dabsu:run templist[0].data.entity merge value {Tags:["dabsu.analyzer"],active_effects:[{id:"invisibility",ambient:0b,show_icon:0b,show_particles:0b,amplifier:0,duration:40}],Silent:1b,data:{}}
 data modify storage dabsu:run templist[0].data.entity.data.from_user set from storage dabsu:user data[0]
 #Loop
 data remove storage dabsu:run spawner.SpawnPotentials[0]

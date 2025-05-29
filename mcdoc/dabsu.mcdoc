@@ -1,3 +1,6 @@
+use::java::data::dialog::Dialog
+use::java::util::InclusiveRange
+use::java::util::slot::SlottedItem
 use::java::util::text::Text
 use::java::world::component::CustomData
 use::java::world::item::ItemStack
@@ -6,9 +9,6 @@ use::java::world::entity::mob::MobBase
 use::java::world::entity::mob::EntityEquipment
 use::java::world::block::spawner::Spawner
 use::java::world::block::spawner::SpawnPotential
-use::java::util::slot::SlottedItem
-use::java::data::dialog::Dialog
-use::java::util::InclusiveRange
 use::mcdoc::dabsu_lang::lang
 use::mcdoc::dabsu_lang::lines
 use::mcdoc::dabsu_dialog::DialogMix
@@ -65,7 +65,12 @@ struct form{
     equipment?: SpawnEquipment,
     tag?: any,
     use?: any,
+    attribute?: struct{
+        [#[id="attribute"] string]?: (string|double)
+    }
 }
+
+
 
 
 dispatch minecraft:storage["dabsu:save"] to struct {

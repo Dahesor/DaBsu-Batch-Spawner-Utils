@@ -23,8 +23,8 @@ data modify storage dabsu:run lang.zh_cn set value {\
     runtime_notice:"[DaBsu] 本库仅为开发用。发布地图前请务必先执行function dabsu:release使其休眠!",\
     wand_select:"§b批量编辑§r：已选择该刷怪笼",\
     wand_deselect:"§b批量编辑§r：已将该刷怪笼从选区移除",\
-    quick_select:"§b快速编辑§r：已准备",\
-    quick_deselect:"§b快速编辑§r：已结束",\
+    quick_select:"§d快速编辑§r：已准备",\
+    quick_deselect:"§d快速编辑§r：已结束",\
     selecting_distance:"[DaBsu] 正在选择附近的已加载刷怪笼……范围：",\
     modifying_distance:"[DaBsu] 正在使用附近的已加载刷怪笼修改选区……范围：",\
     count_selected:"[DaBsu] 刷怪笼已选择，数量：",\
@@ -46,4 +46,5 @@ data modify storage dabsu:run lang.zh_cn set value {\
     quick_edit_objs:" - 总项目：",\
     quick_edit_complete:"[DaBsu] §d快速操作§r已完成。耗时：",\
     quick_edit_queue:"[DaBsu - §d快速操作§r] 有其他玩家正在操纵，排队中……",\
+    quick_edit_highlight_node:"已高亮可控组件",\
 }

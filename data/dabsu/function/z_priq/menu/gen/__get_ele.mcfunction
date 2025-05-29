@@ -1,0 +1,1 @@
+$data modify storage dabsu:run element set from storage dabsu:run spawner.SpawnPotentials[$(index)]

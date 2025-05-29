@@ -16,6 +16,7 @@ loot replace entity @s weapon.mainhand loot dabsu:wand_
 
 tag @s remove dabsu.offhand
 
+execute if entity @s[tag=dabsu.quick_edit] if predicate dabsu:spacebar run return run function dabsu:z_priq/gui/player/highlight/ctrl_nodes
+execute if entity @s[tag=dabsu.quick_edit] if predicate dabsu:sneaking run return run function dabsu:z_priq/menu/gen/quick_potential
 execute if entity @s[tag=dabsu.quick_edit] run scoreboard players set @s trigger.dabsu 101
-execute if entity @s[tag=dabsu.quick_edit] if predicate dabsu:sneaking run scoreboard players set @s trigger.dabsu 102
 execute if score @s trigger.dabsu matches 1.. run function dabsu:z_private_d/trigger

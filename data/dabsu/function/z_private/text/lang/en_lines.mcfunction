@@ -46,4 +46,5 @@ data modify storage dabsu:run lang.en set value {\
     quick_edit_objs:" - Total Objects: ",\
     quick_edit_complete:"[DaBsu] §dQuick Edit§r Completed in ",\
     quick_edit_queue:"[DaBsu - §dQuick Edit§r] Some other player is operating...Queuing",\
+    quick_edit_highlight_node:"Highlighting Controlable Nodes",\
 }

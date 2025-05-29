@@ -1,9 +1,11 @@
 use::java::util::text::Text
 use::mcdoc::dabsu::QueueTaskType
+use::java::world::entity::mob::Attribute
 
 dispatch mcdoc:custom_data["shapes"] to TransformationShapes
 
 struct Misc{
+    attribute?: [Attribute],
     index?: struct{
         index?: int,
     },
@@ -20,7 +22,7 @@ struct Misc{
         input?: any,
         output?: string,
     },
-    nbt?: struct{obj?:struct{[any]:any},list?:[any],f?:float,f2?:float,i?:int},
+    nbt?: struct{obj?:struct{[any]:any},list?:[any],f?:float,f2?:float,i?:int,d?:double},
     exe?: struct exe{
         command?: #[command] string,
         args?: (struct{[any]?:any}|enum(string){NONE="NONE"}),

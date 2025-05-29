@@ -1,0 +1,1 @@
+$data modify storage dabsu:run dialog.dialog.inputs[$(index)].initial set value '$(initial)'

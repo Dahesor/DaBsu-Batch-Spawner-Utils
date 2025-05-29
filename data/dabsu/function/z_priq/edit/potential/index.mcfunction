@@ -21,5 +21,3 @@ data modify storage dabsu:run form.form set from storage dabsu:run form
 
 #Edit
 execute as @e[type=marker,distance=..0.2,limit=1,tag=dabsu.marker] run function dabsu:z_private/modify/element/this with storage dabsu:run form
-
-#function dabsu:z_priq/selected/update/position
