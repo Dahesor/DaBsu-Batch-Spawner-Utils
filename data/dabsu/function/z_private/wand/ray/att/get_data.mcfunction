@@ -2,9 +2,9 @@ data modify storage dabsu:run num set value {amt_f:0,amt_i:0,arm_f:0,arm_i:0,dam
 data modify storage dabsu:run att set value {armor:0.0d,damage:0.0d,toughness:0.0d}
 
 
-execute store result storage dabsu:run att.armor double 1 run attribute @s minecraft:armor get
-execute store result storage dabsu:run att.damage double 1 run attribute @s minecraft:attack_damage get
-execute store result storage dabsu:run att.toughness double 1 run attribute @s minecraft:armor_toughness get
+execute store result storage dabsu:run att.armor double 0.1 run attribute @s minecraft:armor get 10
+execute store result storage dabsu:run att.damage double 0.1 run attribute @s minecraft:attack_damage get 10
+execute store result storage dabsu:run att.toughness double 0.1 run attribute @s minecraft:armor_toughness get 10
 
 execute store result score #var calc.dabsu run data get storage dabsu:run att.damage 10
 execute store result storage dabsu:run num.dam_i int 0.1 run scoreboard players get #var calc.dabsu

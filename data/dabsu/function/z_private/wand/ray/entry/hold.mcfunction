@@ -2,6 +2,8 @@ function dabsu:z_private/wand/ray/att/get_hp
 tag @s add dabsu.temp
 
 function dabsu:z_private/wand/ray/att/base
+data modify storage dabsu:run att merge value {toughness:0.0d}
+function dabsu:z_private/wand/ray/att/base_over
 execute positioned ~ ~10 ~ run summon creeper ~ ~ ~ {attributes:[{id:"minecraft:armor",base:0d},{id:"attack_damage",base:0d}],Silent:1b,active_effects:[{id:"invisibility",ambient:0b,amplifier:1b,duration:999,show_icon:0b,show_particles:0b}],Tags:["dabsu.temp","dabsu.displayer"],equipment:{}}
 execute positioned ~ ~10 ~ as @e[type=creeper,tag=dabsu.displayer,tag=dabsu.temp,distance=..1] at @s run function dabsu:z_private/wand/ray/att/exam
 
