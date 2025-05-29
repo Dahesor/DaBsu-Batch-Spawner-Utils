@@ -1,0 +1,1 @@
+$execute positioned $(x).0 $(y).0 $(z).0 positioned ~0.5 ~0.5 ~0.5 run data modify storage dabsu:user data[0].target set from entity @e[type=marker,tag=dabsu.marker,limit=1,distance=..0.9,sort=nearest] data
