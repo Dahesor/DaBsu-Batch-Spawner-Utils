@@ -47,4 +47,5 @@ data modify storage dabsu:run lang.zh_cn set value {\
     quick_edit_complete:"[DaBsu] §d快速操作§r已完成。耗时：",\
     quick_edit_queue:"[DaBsu - §d快速操作§r] 有其他玩家正在操纵，排队中……",\
     quick_edit_highlight_node:"已高亮可控组件",\
+    fast_cuboid:"开始快速长方体选择。下两次右键将被作为选区的两角",\
 }

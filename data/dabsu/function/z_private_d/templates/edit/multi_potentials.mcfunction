@@ -10,3 +10,10 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     ],\
     exit_action:{label:{translate:"gui.back"},action:{type:"run_command",command:"/trigger trigger.dabsu set 1004"}}\
 }
+
+data modify storage dabsu:run dialog.dialog.title[0].text set from storage dabsu:run lang.this.temp_select_potential_1
+data modify storage dabsu:run dialog.dialog.actions[0].label.text set from storage dabsu:run lang.this.temp_edit_multi_potentials_1
+data modify storage dabsu:run dialog.dialog.actions[1].label.text set from storage dabsu:run lang.this.temp_edit_multi_potentials_2
+data modify storage dabsu:run dialog.dialog.actions[2].label.text set from storage dabsu:run lang.this.temp_edit_multi_potentials_3
+data modify storage dabsu:run dialog.dialog.actions[3].label.text set from storage dabsu:run lang.this.temp_edit_multi_potentials_4
+data modify storage dabsu:run dialog.dialog.body.contents set from storage dabsu:run lang.this.temp_edit_multi_potentials_5

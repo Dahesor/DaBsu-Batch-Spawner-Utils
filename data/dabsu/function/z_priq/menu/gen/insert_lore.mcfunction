@@ -1,0 +1,1 @@
+$data modify storage dabsu:run dialog.dialog.body[1].item.components."minecraft:lore" append value {"text":"Count: $(i)","color":"#00ff00",italic:0b}

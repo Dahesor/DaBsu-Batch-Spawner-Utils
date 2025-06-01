@@ -17,6 +17,16 @@ execute if score #trigger trigger.dabsu matches 107 run data modify storage dabs
 execute if score #trigger trigger.dabsu matches 108 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/del_publish"}
 execute if score #trigger trigger.dabsu matches 110 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/common_home"}
 execute if score #trigger trigger.dabsu matches 111 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/attributes"}
+execute if score #trigger trigger.dabsu matches 112 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/equipment_overview"}
+
+execute if score #trigger trigger.dabsu matches 120..129 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/equipment/copy_home"}
+execute if score #trigger trigger.dabsu matches 130..139 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/select_item"}
+
+execute if score #trigger trigger.dabsu matches 180 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/history/sync"}
+execute if score #trigger trigger.dabsu matches 181 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/history/revert"}
+execute if score #trigger trigger.dabsu matches 182 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/history/sync"}
+execute if score #trigger trigger.dabsu matches 183 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/history/revert"}
+
 execute if score #trigger trigger.dabsu matches 190 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/all_light"}
 execute if score #trigger trigger.dabsu matches 191 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/merge_all"}
 execute if score #trigger trigger.dabsu matches 192 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/full_nbt"}

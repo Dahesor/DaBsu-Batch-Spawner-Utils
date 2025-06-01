@@ -47,4 +47,5 @@ data modify storage dabsu:run lang.en set value {\
     quick_edit_complete:"[DaBsu] §dQuick Edit§r Completed in ",\
     quick_edit_queue:"[DaBsu - §dQuick Edit§r] Some other player is operating...Queuing",\
     quick_edit_highlight_node:"Highlighting Controlable Nodes",\
+    fast_cuboid:"Using Fast Cuboid Selection. Your next 2 right clicks will define the 2 corners",\
 }

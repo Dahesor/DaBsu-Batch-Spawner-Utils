@@ -1,6 +1,7 @@
 use::java::util::text::Text
 use::mcdoc::dabsu::QueueTaskType
 use::java::world::entity::mob::Attribute
+use::java::world::entity::mob::EntityEquipment
 
 dispatch mcdoc:custom_data["shapes"] to TransformationShapes
 
@@ -17,7 +18,7 @@ struct Misc{
         run?: #[command] string,
         args?: (struct{[any]?:any}|enum(string){NONE="NONE"}),
     },
-    final?: string,
+    final?: (Text),
     nbt_to_string?: struct{
         input?: any,
         output?: string,

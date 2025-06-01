@@ -14,7 +14,8 @@ execute if score #trigger trigger.dabsu matches 1143 run return run function dab
 execute if score #trigger trigger.dabsu matches 1101 run function dabsu:select/pos_1
 execute if score #trigger trigger.dabsu matches 1102 run function dabsu:select/pos_2
 execute if score #trigger trigger.dabsu matches 1101..1102 run return run function dabsu:z_private_d/batch/select
-
+execute if score #trigger trigger.dabsu matches 1105 run return run function dabsu:select/fast_cuboid
+execute if score #trigger trigger.dabsu matches 1106 run return run function dabsu:select/fast_cuboid_modify
 execute if score #trigger trigger.dabsu matches 1103 run function dabsu:select/pos_1
 execute if score #trigger trigger.dabsu matches 1104 run function dabsu:select/pos_2
 execute if score #trigger trigger.dabsu matches 1103..1104 run return run function dabsu:z_private_d/batch/modify_select

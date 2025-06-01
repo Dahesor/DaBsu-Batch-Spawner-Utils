@@ -1,0 +1,2 @@
+$data modify storage dabsu:run dialog.dialog.body[-1].description[1].click_event.command set value "/trigger input.dabsu set $(one)"
+$data modify storage dabsu:run dialog.dialog.body[-1].description[-2].click_event.command set value "/trigger input.dabsu set $(full)"

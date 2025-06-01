@@ -10,4 +10,7 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     ],\
 }
 
-return 1
+#lang
+data modify storage dabsu:run dialog.dialog.title set from storage dabsu:run lang.this.any_command
+data modify storage dabsu:run dialog.dialog.body.contents set from storage dabsu:run lang.this.temp_edit_any_command_1
+data modify storage dabsu:run dialog.dialog.inputs[0].label set from storage dabsu:run lang.this.temp_edit_any_command_1_lab

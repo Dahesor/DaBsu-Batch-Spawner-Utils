@@ -11,3 +11,18 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
         {label:"Exit Quick Edit",width:240,action:{type:"run_command",command:"/trigger trigger.dabsu set 199"}},\
     ]\
 }
+
+## Lang
+data modify storage dabsu:run dialog.dialog.title set from storage dabsu:run lang.this.spawner_manu
+data modify storage dabsu:run dialog.dialog.body[0].contents set from storage dabsu:run lang.this.temp_single_home_4
+data modify storage dabsu:run dialog.dialog.body[1].description.contents set from storage dabsu:run lang.this.temp_single_home_5
+
+data modify storage dabsu:run dialog.dialog.actions[0].label.text set from storage dabsu:run lang.this.temp_single_home_1
+data modify storage dabsu:run dialog.dialog.actions[1].label.text set from storage dabsu:run lang.this.temp_single_home_2
+data modify storage dabsu:run dialog.dialog.actions[2].label.text set from storage dabsu:run lang.this.temp_batch_home_2
+data modify storage dabsu:run dialog.dialog.actions[3].label.text set from storage dabsu:run lang.this.temp_batch_home_3
+#Run Spawn Analysis
+data modify storage dabsu:run dialog.dialog.actions[4].label.text set from storage dabsu:run lang.this.temp_single_home_3
+data modify storage dabsu:run dialog.dialog.actions[4].tooltip set from storage dabsu:run lang.this.ana_tip
+
+data modify storage dabsu:run dialog.dialog.actions[5].label set from storage dabsu:run lang.this.temp_single_home_1_lab

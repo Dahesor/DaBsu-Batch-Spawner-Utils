@@ -67,7 +67,8 @@ struct form{
     use?: any,
     attribute?: struct{
         [#[id="attribute"] string]?: (string|double)
-    }
+    },
+    item?: SlottedItem<byte @ -106..200>,
 }
 
 
@@ -87,6 +88,7 @@ dispatch minecraft:storage["dabsu:save"] to struct {
 dispatch minecraft:storage["dabsu:run"] to struct {
     ...Misc,
     item?: SlottedItem<byte @ -106..200>,
+    item_list?: [SlottedItem<byte @ -106..200>],
     lang?: struct{[lang]?: lines, this?:lines},
     equipment?: EntityEquipment,
     hold?: [ObjectDimension],
@@ -126,7 +128,8 @@ dispatch minecraft:storage["dabsu:run"] to struct {
         key?: string
     },
     dialog?: struct{
-        [string]?: DialogMix
+        [string]?: DialogMix,
+        dialog?: DialogMix,
     },
     form?: form,
 }
@@ -138,7 +141,9 @@ struct QueueTask{
     type?: enum(string) QueueTaskType{
         main = "main",
         personal = "personal",
-        optimize = "optimize"
+        optimize = "optimize",
+        sleep = "sleep",
+        restart = "restart"
     }
 }
 

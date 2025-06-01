@@ -18,14 +18,9 @@ scoreboard players operation #target_x calc.dabsu -= #origin_x calc.dabsu
 scoreboard players operation #target_z calc.dabsu -= #origin_z calc.dabsu
 scoreboard players operation #target_x calc.dabsu /= #step_x calc.dabsu
 scoreboard players operation #target_z calc.dabsu /= #step_z calc.dabsu
-#execute if score #target_x calc.dabsu matches ..0 run scoreboard players set #target_x calc.dabsu 999999
-#execute if score #target_z calc.dabsu matches ..0 run scoreboard players set #target_z calc.dabsu 999999
-
-#execute if score #target_x calc.dabsu matches ..6 run scoreboard players operation #target_x calc.dabsu > #target_z calc.dabsu
-#execute if score #target_z calc.dabsu matches ..6 run scoreboard players operation #target_z calc.dabsu > #target_x calc.dabsu
 
 execute store result score #step_x calc.dabsu run scoreboard players operation #target_x calc.dabsu > #target_z calc.dabsu
-execute if score #step_x calc.dabsu matches 120.. run scoreboard players set #target_x calc.dabsu 120
+execute if score #step_x calc.dabsu matches 300.. run scoreboard players set #target_x calc.dabsu 300
 execute if score #step_x calc.dabsu matches ..0 run scoreboard players set #target_x calc.dabsu 0
 
 #Get Distance Traveled
@@ -38,9 +33,9 @@ scoreboard players operation #step_x calc.dabsu += #origin_y calc.dabsu
 scoreboard players operation #step_x calc.dabsu -= #target_y calc.dabsu
 
 #Get and clamp count
-scoreboard players operation #step_x calc.dabsu /= #25 calc.dabsu
+scoreboard players operation #step_x calc.dabsu /= #50 calc.dabsu
 execute if score #step_x calc.dabsu matches ..0 run scoreboard players set #step_x calc.dabsu 0
-execute if score #step_x calc.dabsu matches 101.. run scoreboard players set #step_x calc.dabsu 100
+execute if score #step_x calc.dabsu matches 51.. run scoreboard players set #step_x calc.dabsu 50
 
 
 data modify storage dabsu:run proceed set value {command:"execute as @e[type=marker,tag=dabsu.marker,distance=..0.1] at @s run function dabsu:z_priq/gui/edit/spawn_amount"}

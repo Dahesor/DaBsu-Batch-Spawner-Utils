@@ -5,3 +5,6 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:confirmat
     yes:{label:{translate:"gui.yes",color:"green"}},\
     no:{label:{translate:"gui.cancel"}},\
 }
+
+##Lang
+data modify storage dabsu:run dialog.dialog.title.text set from storage dabsu:run lang.this.menu_templates_multi_confirm_1

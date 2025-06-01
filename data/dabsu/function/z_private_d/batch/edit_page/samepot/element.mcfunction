@@ -1,3 +1,4 @@
+function dabsu:z_private/text/get
 execute if score !busy calc.dabsu matches 1 run return run function dabsu:z_private_d/batch/settings/system_busy
 
 function dabsu:z_private_d/templates/potential
@@ -23,7 +24,7 @@ execute if data storage dabsu:run element.data.equipment run function dabsu:z_pr
 
 #Links
 data modify storage dabsu:run dialog.dialog.actions[1].action.template set value "trigger trigger.dabsu set 1222$(none)"
-
+data modify storage dabsu:run dialog.dialog.actions[0] set value {label:"",tooltip:"Place Holder",width:110}
 #Edit
 data modify storage dabsu:run run set value {cmd_pre:""}
 data modify storage dabsu:run run.cmd_pre set value 'function dabsu:z_private_d/batch/link/element/modify {form:{weight:$(weight),entity:$(entity),equipment:$(loot_table),index:'

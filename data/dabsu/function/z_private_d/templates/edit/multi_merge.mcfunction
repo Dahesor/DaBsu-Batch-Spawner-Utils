@@ -11,3 +11,8 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
         {label:{translate:"gui.cancel"},action:{type:"run_command",command:"trigger trigger.dabsu set 1203"}}\
     ],\
 }
+
+data modify storage dabsu:run dialog.dialog.title.text set from storage dabsu:run lang.this.temp_edit_multi_merge_1
+data modify storage dabsu:run dialog.dialog.body.contents set from storage dabsu:run lang.this.menu_merge_all_2
+data modify storage dabsu:run dialog.dialog.inputs[0].label set from storage dabsu:run lang.this.temp_edit_multi_merge_1_lab
+data modify storage dabsu:run dialog.dialog.inputs[1].label set from storage dabsu:run lang.this.temp_edit_multi_merge_2_lab

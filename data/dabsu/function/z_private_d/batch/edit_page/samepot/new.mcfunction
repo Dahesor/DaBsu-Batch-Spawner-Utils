@@ -1,3 +1,4 @@
+function dabsu:z_private/text/get
 execute if score !busy calc.dabsu matches 1 run return run function dabsu:z_private_d/batch/settings/system_busy
 
 function dabsu:z_private_d/templates/potential
@@ -25,6 +26,15 @@ data modify storage dabsu:run dialog.dialog.inputs append value {type:"number_ra
 data modify storage dabsu:run dialog.dialog.inputs append value {type:"number_range",key:"s_min",start:0,end:15,initial:0,label:"Min Sky Light",step:1,width:200}
 data modify storage dabsu:run dialog.dialog.inputs append value {type:"number_range",key:"s_max",start:0,end:15,initial:15,label:"Max Sky Light",step:1,width:200}
 
+##Lang
+data modify storage dabsu:run dialog.dialog.title.text set from storage dabsu:run lang.this.batch_edit_page_samepot_new_1
+data modify storage dabsu:run dialog.dialog.inputs[2].label set from storage dabsu:run lang.this.menu_new_element_1_lab
+data modify storage dabsu:run dialog.dialog.inputs[3].label set from storage dabsu:run lang.this.menu_new_element_2_lab
+data modify storage dabsu:run dialog.dialog.inputs[4].label set from storage dabsu:run lang.this.menu_new_element_3_lab
+data modify storage dabsu:run dialog.dialog.inputs[5].label set from storage dabsu:run lang.this.menu_new_element_4_lab
+data modify storage dabsu:run dialog.dialog.inputs[6].label set from storage dabsu:run lang.this.menu_new_element_5_lab
+data modify storage dabsu:run dialog.dialog.inputs[7].label set from storage dabsu:run lang.this.menu_new_element_6_lab
+data modify storage dabsu:run dialog.dialog.actions[0].label.text set from storage dabsu:run lang.this.menu_new_element_2
 
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

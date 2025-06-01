@@ -1,3 +1,3 @@
 execute if entity @e[type=marker,tag=dabsu.marker,distance=..0.1,scores={selected.dabsu=1..}] unless predicate dabsu:sneaking run return run function dabsu:z_private/wand/deselect
-execute if entity @e[type=marker,tag=dabsu.marker,distance=..0.1] unless predicate dabsu:sneaking run return run function dabsu:z_private/wand/select
-execute if entity @e[type=marker,tag=dabsu.marker,distance=..0.1] run return run function dabsu:z_priq/selected/call
+execute unless entity @s[tag=dabsu.quick_edit] if entity @e[type=marker,tag=dabsu.marker,distance=..0.1] unless predicate dabsu:sneaking run return run function dabsu:z_private/wand/select
+execute if entity @e[type=marker,tag=dabsu.marker,distance=..0.1] if predicate dabsu:sneaking run return run function dabsu:z_priq/selected/call

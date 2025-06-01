@@ -1,0 +1,1 @@
+execute align xyz positioned ~0.5 ~0.5 ~0.5 summon marker run function dabsu:z_private/placed/initialize_marker

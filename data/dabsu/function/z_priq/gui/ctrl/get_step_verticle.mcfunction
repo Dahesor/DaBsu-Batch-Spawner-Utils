@@ -6,7 +6,7 @@ execute store result score #origin_y calc.dabsu run data get storage dabsu:run r
 execute store result score #origin_z calc.dabsu run data get storage dabsu:run run[2] 100
 
 #Update Location
-tp @s ^ ^ ^0.25
+tp @s ^ ^ ^0.3
 data modify storage dabsu:run run set from entity @s Pos
 
 #Step Size

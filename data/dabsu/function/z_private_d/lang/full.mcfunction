@@ -1,2 +1,0 @@
-execute if score @s lang.dabsu matches 1 run data modify storage dabsu:run lines set from storage dabsu:run lang.zh_cn
-execute unless score @s lang.dabsu matches 1.. run data modify storage dabsu:run lines set from storage dabsu:run lang.en

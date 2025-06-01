@@ -1,0 +1,1 @@
+$data modify storage dabsu:run item set from storage dabsu:user data[0].Inv[$(index)]

@@ -34,6 +34,8 @@ struct UserData {
         z?: int,
         uuid?: #[uuid] [int] @ 4,
         index?: int,
+        history?: [int],
+        slot?: int
     },
     select?: struct{
         pos1?: Pos,
@@ -41,8 +43,9 @@ struct UserData {
     },
     form?: form,
     parser?: #[command] string,
-    history?: struct{
+    histor__y?: struct{
         type?: int
     },
-    target?: CustomData
+    target?: CustomData,
+    Inv?: [SlottedItem<byte @ 0..100>]
 }

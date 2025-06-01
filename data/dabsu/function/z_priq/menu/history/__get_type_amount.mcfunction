@@ -1,0 +1,1 @@
+$return run execute if data storage dabsu:run Dimensions[].Chunks[].Objects[{type:$(i)}]
