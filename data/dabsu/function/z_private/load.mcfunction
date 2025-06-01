@@ -26,6 +26,7 @@ scoreboard players set #50 calc.dabsu 50
 scoreboard players set #100 calc.dabsu 100
 scoreboard players set #1000 calc.dabsu 1000
 scoreboard players set #10000 calc.dabsu 10000
+scoreboard players set #100000 calc.dabsu 100000
 scoreboard players set #1000000 calc.dabsu 1000000
 
 execute unless score #loaded calc.dabsu matches 1.. run function dabsu:z_private/mod/first_load
@@ -43,8 +44,7 @@ execute unless score maxDefaultSkyLight Option.dabsu matches 0.. run scoreboard 
 
 execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard players set run.SelectionRate Option.dabsu 1000
 
-scoreboard players set run.ChunkReadingRate Option.dabsu 10
-#execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10
+execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10
 
 
 return 1

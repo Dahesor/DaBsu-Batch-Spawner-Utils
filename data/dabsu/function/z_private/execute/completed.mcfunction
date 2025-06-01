@@ -1,5 +1,6 @@
 execute if data storage dabsu:run exe{work_type:"optimize"} run function dabsu:z_private/execute/run/optimize_data
 execute if data storage dabsu:run exe{work_type:"sleep"} run return run function dabsu:z_private/execute/run/sleep_complete
+execute if data storage dabsu:run exe{work_type:"restart"} run return run function dabsu:z_private/execute/run/restarted
 
 function dabsu:z_private/mod/refactor/reselect/start
 scoreboard players set %modifying calc.dabsu 0

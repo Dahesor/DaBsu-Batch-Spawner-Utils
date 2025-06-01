@@ -32,9 +32,9 @@ data modify storage dabsu:run lang.en merge value {\
     menu_gen_item_loop_2:"With Raw Stack",\
     menu_history_validate_1:"Click Here to Sync",\
     menu_history_validate_3:"Click Here to Revert",\
-    menu_history___gen_text_1:"This spawner has desynced from its original §aSpawnPotentials§r type",\
-    menu_history___gen_text_3:"(Spawner Count:",\
-    menu_history___gen_text_4:"    and formed a new type",\
+    menu_history___gen_text_1:"This spawner has desynced from its original §aSpawnPotentials§r type ",\
+    menu_history___gen_text_3:" (Spawner Count: ",\
+    menu_history___gen_text_4:"  and formed a new type ",\
     menu_templates_attribute_2:"Base Attributes §eLeave Empty To Use Default Value",\
     menu_templates_attribute_3:"§aEdit Itself",\
     menu_templates_common_tags_1:"Quick Edit",\
@@ -115,7 +115,6 @@ data modify storage dabsu:run lang.en merge value {\
     temp_edit_multi_potentials_4:"Append To All With...",\
     temp_edit_multi_potentials_5:"Since selection includes spawners with different SpawnPotentials, you cannot edit each potential in detail. You may only make overall changes.\n To edit potentials in detail for multiple spawners, make sure that your selection only contains spawners with the same SpawnPotentials",\
     temp_selection_by_nbt_1:"§6[DaBsu]§r Select by entity nbt=",\
-    temp_selection_by_nbt_modify_1:"§6[DaBsu]§r Select by entity nbt=",\
     temp_settings_busy_1:"§c§lSystem Busy",\
     temp_settings_busy_2:"§lYour request has been discarded",\
     temp_settings_busy_3:"The system is busy editing or selecting spawners",\
@@ -153,7 +152,7 @@ data modify storage dabsu:run lang.en merge value {\
     temp_wand_home_1_tip:"Select a group of spawners",\
     temp_wand_home_2_tip:"Modify existing selection by removing some of the spawners from selection or take its intersection with another selection.",\
     temp_wand_home_3_tip:"Remove selection",\
-    temp_wand_home_4_tip:"Get a placeable spawner from a spawn egg, an entity, or another spawner",\
+    temp_wand_home_4_tip:"Get a placeable spawner from a spawn egg, an entity, or another spawner\n§cIn Development",\
     temp_wand_home_5_tip:"Spawn a chest minecart.\nThis is a ender chest that is shared and synced for all players in the server in realtime.",\
     temp_wand_home_6_tip:"This updates all registered spawners and check if they have been changed. \nNew SpawnPotential type ids will be assigned as the data get regenerated to delete unused data.",\
     temp_edit_multi_potentials_1_tip:"Overwrite sky and block light limit for all potentials in all selected spawners",\

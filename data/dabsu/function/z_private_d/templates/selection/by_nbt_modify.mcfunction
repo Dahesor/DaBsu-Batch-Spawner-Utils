@@ -11,4 +11,13 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     ]\
 }
 
-return 1
+##Lang
+
+##lang
+data modify storage dabsu:run dialog.dialog.title[0].text set from storage dabsu:run lang.this.temp_selection_by_nbt_1
+data modify storage dabsu:run dialog.dialog.inputs[0].label.text set from storage dabsu:run lang.this.temp_modify_selection_4
+data modify storage dabsu:run dialog.dialog.inputs[0].options[0].display.text set from storage dabsu:run lang.this.temp_modify_selection_2
+data modify storage dabsu:run dialog.dialog.inputs[0].options[1].display.text set from storage dabsu:run lang.this.temp_modify_selection_3
+data modify storage dabsu:run dialog.dialog.inputs[1].label set from storage dabsu:run lang.this.temp_selection_by_nbt_1_lab
+data modify storage dabsu:run dialog.dialog.actions[0].tooltip set from storage dabsu:run lang.this.temp_selection_by_nbt_1_tip
+data modify storage dabsu:run dialog.dialog.actions[0].label set from storage dabsu:run lang.this.temp_selection_by_nbt_2_lab

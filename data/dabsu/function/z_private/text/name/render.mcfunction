@@ -1,4 +1,4 @@
-execute unless items entity @s weapon ghast_tear[custom_data~{dabsu:{is_wand:1b}}] run title @s actionbar [{text:"[DaBsu] ",color:"green"},{nbt:"new_name",storage:"dabsu:run",italic:false,interpret:true}]
+execute unless items entity @s weapon ghast_tear[custom_data~{dabsu:{is_wand:1b}}] unless score disableActionbar Option.dabsu matches -1 run title @s actionbar [{text:"[DaBsu] ",color:"green"},{nbt:"new_name",storage:"dabsu:run",italic:false,interpret:true}]
 execute unless items entity @s weapon ghast_tear[custom_data~{dabsu:{is_wand:1b}}] run return run function dabsu:z_private/text/name/reset
 
 tag @s[tag=!dabsu.namecaster] add dabsu.namecaster_temp

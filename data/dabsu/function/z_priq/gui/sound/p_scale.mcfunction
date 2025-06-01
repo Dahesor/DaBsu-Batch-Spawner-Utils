@@ -1,6 +1,7 @@
-title @s times 0 10 3
-title @s title ""
-title @s subtitle ["← ",{score:{name:"#step_x",objective:"calc.dabsu"},color:"aqua"}," →"]
+execute unless score disableSubtitle Option.dabsu matches -1 run title @s times 0 10 3
+execute unless score disableSubtitle Option.dabsu matches -1 run title @s title ""
+execute unless score disableSubtitle Option.dabsu matches -1 run title @s subtitle ["← ",{score:{name:"#step_x",objective:"calc.dabsu"},color:"aqua"}," →"]
+execute if score disableSubtitle Option.dabsu matches -1 run tellraw @s ["← ",{score:{name:"#step_x",objective:"calc.dabsu"},color:"aqua"}," →"]
 
 execute if score #step_x calc.dabsu matches 0 run return run playsound block.note_block.iron_xylophone master @s ~ ~ ~ 0.5 0.5 0.5
 scoreboard players remove #step_x calc.dabsu 1

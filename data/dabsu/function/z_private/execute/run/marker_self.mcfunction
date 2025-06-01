@@ -1,3 +1,3 @@
+scoreboard players add %completed_obj calc.dabsu 1
 execute if data storage dabsu:run exe{args:"NONE"} run return run function dabsu:z_private/execute/macro/__run_any with storage dabsu:run exe
-
 function dabsu:z_private/execute/macro/__run_any_args with storage dabsu:run exe
