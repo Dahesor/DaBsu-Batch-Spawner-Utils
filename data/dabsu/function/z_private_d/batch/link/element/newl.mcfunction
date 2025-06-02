@@ -1,5 +1,8 @@
 $data modify storage dabsu:run form set value $(form)
 dialog clear @s
+
+function dabsu:z_private_d/batch/read/new_element_input with storage dabsu:run form.data
+
 execute unless data storage dabsu:run form.data.entity.id run return run tellraw @s ["",{text:"[DaBsu] Error ->",color:"red"},\
     "\n - §cMissing Entity id",\
 ]

@@ -27,7 +27,7 @@ data modify storage dabsu:run dialog.dialog.actions[1].action.template set value
 data modify storage dabsu:run dialog.dialog.actions[0] set value {label:"",tooltip:"Place Holder",width:110}
 #Edit
 data modify storage dabsu:run run set value {cmd_pre:""}
-data modify storage dabsu:run run.cmd_pre set value 'function dabsu:z_private_d/batch/link/element/modify {form:{weight:$(weight),entity:$(entity),equipment:$(loot_table),index:'
+data modify storage dabsu:run run.cmd_pre set value 'function dabsu:z_private_d/batch/link/element/modify {form:{weight:$(weight),entity:"$(entity)",equipment:"$(loot_table)",index:'
 data modify storage dabsu:run run.index set from storage dabsu:run index.index
 function dabsu:z_private/wand/quickedit/funcs/__get_index with storage dabsu:run run
 

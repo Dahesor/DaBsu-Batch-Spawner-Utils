@@ -7,7 +7,7 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
         {type:"text",key:"equipment",label:"§bMerge to §7\"data.equipment\"",initial:"{}",width:400,label_visible:true,max_length:2147483647},\
     ],\
     actions:[\
-        {label:{translate:"selectServer.edit",color:"green"},action:{type:"dynamic/run_command",template:'function dabsu:z_private_d/batch/link/pots/merge_to_all {form:{entity:$(entity),equipment:$(equipment)}}'}},\
+        {label:{translate:"selectServer.edit",color:"green"},action:{type:"dynamic/run_command",template:'function dabsu:z_private_d/batch/link/pots/merge_to_all {form:{entity:"$(entity)",equipment:"$(equipment)"}}'}},\
         {label:{translate:"gui.cancel"},action:{type:"run_command",command:"trigger trigger.dabsu set 1203"}}\
     ],\
 }

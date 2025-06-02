@@ -9,7 +9,7 @@ data modify storage dabsu:run dialog.dialog.actions[2].label.translate set value
 
 #Edit
 data modify storage dabsu:run run set value {cmd_pre:""}
-data modify storage dabsu:run run.cmd_pre set value 'function dabsu:z_private_d/batch/link/element/newl {form:{use_light:$(use_light),weight:$(weight),data:{entity:$(entity),equipment:$(equipment),custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}}'
+data modify storage dabsu:run run.cmd_pre set value 'function dabsu:z_private_d/batch/link/element/newl {form:{use_light:$(use_light),weight:$(weight),data:{entity:"$(entity)",equipment:"$(equipment)",custom_spawn_rules:{block_light_limit:[$(b_min),$(b_max)],sky_light_limit:[$(s_min),$(s_max)]}}}}'
 
 
 data modify storage dabsu:run dialog.dialog.actions[-2].action.template set from storage dabsu:run run.cmd_pre
