@@ -14,7 +14,6 @@ execute if score #trigger trigger.dabsu matches 104 run data modify storage dabs
 execute if score #trigger trigger.dabsu matches 105 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/this_light"}
 execute if score #trigger trigger.dabsu matches 106 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/confirm/del_entry"}
 execute if score #trigger trigger.dabsu matches 107 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/reciver/del"}
-execute if score #trigger trigger.dabsu matches 108 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/edit/potential/del_publish"}
 execute if score #trigger trigger.dabsu matches 110 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/common_home"}
 execute if score #trigger trigger.dabsu matches 111 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/attributes"}
 execute if score #trigger trigger.dabsu matches 112 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/equipment_overview"}
