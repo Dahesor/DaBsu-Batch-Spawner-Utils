@@ -1,5 +1,4 @@
-# DaBsu Villa, Batch Spawner Utils
+# DaBsu, Dahesor's Batch Spawner Utils
 
-In Development, readme work in process. Planed to release along with Minecraft Java 1.21.6.
-
-Check out the pre-release branch for a preview
+This is a snapshot taken from the data pack while it is still in development. It is in complete and only works for 1.21.6 pre 1.
+This branch exists only for archive
