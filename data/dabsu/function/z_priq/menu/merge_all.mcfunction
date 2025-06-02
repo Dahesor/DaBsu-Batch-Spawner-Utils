@@ -9,7 +9,7 @@ data modify storage dabsu:run dialog.dialog.actions[1].action.template set value
 
 
 #Edit
-data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_priq/edit/potential/reciver/merge_all {form:{entity:$(entity),equipment:$(equipment)}}'
+data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_priq/edit/potential/reciver/merge_all {form:{entity:"$(entity)",equipment:"$(equipment)"}}'
 
 data modify storage dabsu:run dialog.dialog.actions[-1].action.command set value "trigger trigger.dabsu set 1"
 

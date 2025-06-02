@@ -46,7 +46,6 @@ execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard p
 
 execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10
 
-
 return 1
 tag @s add dabsu.analyzer
 tag @s add dabsu.analyzing

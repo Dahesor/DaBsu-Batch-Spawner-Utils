@@ -9,7 +9,7 @@ data modify storage dabsu:run dialog.dialog.inputs[0].initial set value '[]'
 data modify storage dabsu:run dialog.dialog.inputs[0].key set value 'tag'
 data modify storage dabsu:run dialog.dialog.inputs[0].label set value '§bSNBT'
 data modify storage dabsu:run dialog.dialog.inputs[0].multiline.height set value 180
-data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_private_d/batch/link/pots/rewrite_all {form:{tag:$(tag)}}'
+data modify storage dabsu:run dialog.dialog.actions[0].action.template set value 'function dabsu:z_private_d/batch/link/pots/rewrite_all {form:{tag:"$(tag)"}}'
 
 execute unless score $SelectedType selected.dabsu matches ..-1 run function dabsu:z_private_d/batch/edit_page/multipot/get_initial
 

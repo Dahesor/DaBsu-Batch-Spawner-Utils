@@ -219,5 +219,6 @@ data modify storage dabsu:run lang.en merge value {\
     optimize:"\nOptimizing the system will remove current selection, check update for every registered spawner, and re-assign potential type ids.",\
     multi_property:"§6[DaBsu]§b Batch Edit§r §nMultiple§r Spawners",\
     set_delay:"[DaBsu] Set Next Spawn Time of Selected Spawners",\
-    any_command:"[DaBsu] Run Any Command"\
+    any_command:"[DaBsu] Run Any Command",\
+    wait_for_new_spawner:"[DaBsu] Place a new spawner at this location to use data from that spawner. Exit quick edit (Wand: Shift + Q) to just destory the spawner."\
 }

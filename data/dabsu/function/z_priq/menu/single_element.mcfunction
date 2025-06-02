@@ -24,10 +24,11 @@ data modify storage dabsu:run dialog.dialog.actions[0].action.template set value
 
 #Edit Itself
 data modify storage dabsu:run dialog.dialog.actions[3].label set value {text:"Edit Itself",color:"green"}
-data modify storage dabsu:run dialog.dialog.actions[3].action.template set value 'function dabsu:z_priq/edit/potential/reciver/index {form:{weight:$(weight),entity:$(entity),equipment:$(loot_table)}}'
+data modify storage dabsu:run dialog.dialog.actions[3].action.template set value 'function dabsu:z_priq/edit/potential/reciver/index {form:{weight:$(weight),entity:"$(entity)",equipment:"$(loot_table)"}}'
 data modify storage dabsu:run dialog.dialog.actions[2].action.template set value "trigger trigger.dabsu set 106$(none)"
 
 #Lang
 data modify storage dabsu:run dialog.dialog.actions[3].label.text set from storage dabsu:run lang.this.menu_property_1
 
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog
+

@@ -1,1 +1,2 @@
 execute if block ~ ~ ~ spawner align xyz positioned ~0.5 ~0.5 ~0.5 unless entity @e[type=marker,tag=dabsu.marker,distance=..0.1] run return run function dabsu:z_private/placed/located
+execute if block ~ ~ ~ spawner align xyz positioned ~0.5 ~0.5 ~0.5 if entity @e[type=marker,tag=dabsu.marker,tag=dabsu.wait_for_new,distance=..0.1] run return 1
