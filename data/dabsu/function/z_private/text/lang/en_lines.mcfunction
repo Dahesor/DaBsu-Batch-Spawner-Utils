@@ -20,7 +20,7 @@ data modify storage dabsu:run lang.en set value {\
     wand_lore: "Right click a spawner with it to see a list of options",\
     new_recorded: "New spawner detected and saved. Click again to select",\
     invalid_pointer:"[ERROR] Invalid pointer. Is storgae modified? Try breaking and replacing",\
-    runtime_notice:"[DaBsu] This library is for development only. Before releasing the map please remeber to execute function dabsu:hibernate",\
+    runtime_notice:"[DaBsu] This library is for development only. Before releasing the map please remember to execute function dabsu:hibernate",\
     wand_select:"§bBatch Edit§r: Spawner Selected",\
     wand_deselect:"§bBatch Edit§r: Spawner De-selected",\
     quick_select:"§dQuick Edit§r: Prepared",\
