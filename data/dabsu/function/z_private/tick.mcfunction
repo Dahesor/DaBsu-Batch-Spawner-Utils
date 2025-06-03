@@ -1,4 +1,6 @@
-execute unless score #loaded calc.dabsu matches 1.. run return fail
+execute if data storage dabsu:sys {hibernate:true} run return fail
+
+
 execute store result score $gametime calc.dabsu run time query gametime
 
 scoreboard players set #has_qEdit calc.dabsu 0

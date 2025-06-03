@@ -187,7 +187,7 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     temp_select_spawners_2_lab:"选择范围 (\"距离选择\" 选项)",\
     temp_single_home_1_lab:"结束快速编辑",\
     temp_single_settings_7_lab:"取消",\
-    temp_edit_any_command_1_lab:"§b命令 §f(无斜线§a/§f；单引号§a'§f需要转义)",\
+    temp_edit_any_command_1_lab:"§b命令 §f(无斜线§a/§f；无需额外转义)",\
     temp_edit_change_delay_1_lab:"§bDelay §7(游戏刻)",\
     temp_edit_multi_merge_1_lab:"§b合并至§7 \"data.entity\"",\
     temp_edit_multi_merge_2_lab:"§b合并至§7 \"data.equipment\"",\

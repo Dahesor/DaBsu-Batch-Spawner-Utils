@@ -13,6 +13,6 @@ execute if score #Main calc.dabsu matches 1.. run function dabsu:z_private/text/
 execute if score #queue calc.dabsu matches 1.. unless score #Main calc.dabsu matches 1.. run function dabsu:z_private/text/tellraw_self {text:{text:"quick_edit_queue",color:"gray"}}
 
 #Get Operator
-function gu:generate
+function dabsu_gu:generate
 data modify storage dabsu:run Queue[-1].operator set from storage gu:main out
 scoreboard players set #queue calc.dabsu 1

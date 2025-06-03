@@ -13,7 +13,7 @@ data modify storage dabsu:run Dimensions[0].Chunks[0].Objects[0].UUID set from s
 execute store result storage dabsu:run Dimensions[0].Chunks[0].Objects[0].Pos.x int 1 run scoreboard players get #x calc.dabsu
 execute store result storage dabsu:run Dimensions[0].Chunks[0].Objects[0].Pos.y int 1 run scoreboard players get #y calc.dabsu
 execute store result storage dabsu:run Dimensions[0].Chunks[0].Objects[0].Pos.z int 1 run scoreboard players get #z calc.dabsu
-function gu:generate
+function dabsu_gu:generate
 data modify storage dabsu:run Dimensions[0].Chunks[0].Objects[0].sUUID set from storage gu:main out
 data modify storage dabsu:run data.pos set from storage dabsu:run Dimensions[0].Chunks[0].Objects[0].Pos
 data modify storage dabsu:run data.chunk set value {x:0,z:0}

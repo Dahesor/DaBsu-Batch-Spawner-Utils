@@ -193,7 +193,7 @@
     "temp_single_settings_5_lab": "§bMaxSpawnDelay§r",
     "temp_single_settings_6_lab": "§bMaxNearbyEntities§r",
     "temp_single_settings_7_lab": "cancel",
-    "temp_edit_any_command_1_lab": "§bCommand §f(No Slash; Escape needed for single qupte §a'§f)",
+    "temp_edit_any_command_1_lab": "§bCommand §f(No Slash; No Extra Escape Needed)",
     "temp_edit_change_delay_1_lab": "§bDelay §7(in ticks)",
     "temp_edit_multi_merge_1_lab": "§bMerge to§7 \"data.entity\"",
     "temp_edit_multi_merge_2_lab": "§bMerge to §7\"data.equipment\"",

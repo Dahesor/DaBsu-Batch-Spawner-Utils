@@ -1,0 +1,9 @@
+dispatch minecraft:storage["dabsu:sys"] to struct {
+    version?: int,
+    LastReload?: long,
+    VersionName?: string,
+    hibernate?: boolean,
+    MCVersionRange?: string,
+    init?: boolean,
+    pong__?: boolean,
+}

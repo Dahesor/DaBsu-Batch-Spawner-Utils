@@ -1,3 +1,5 @@
+execute if data storage dabsu:sys {hibernate:true} run return fail
+
 scoreboard objectives add calc.dabsu dummy
 scoreboard objectives add lang.dabsu trigger
 scoreboard objectives add Option.dabsu dummy
@@ -29,7 +31,7 @@ scoreboard players set #10000 calc.dabsu 10000
 scoreboard players set #100000 calc.dabsu 100000
 scoreboard players set #1000000 calc.dabsu 1000000
 
-execute unless score #loaded calc.dabsu matches 1.. run function dabsu:z_private/mod/first_load
+function dabsu:z_private/mod/version
 
 data modify storage dabsu:run input set value {key:""}
 
