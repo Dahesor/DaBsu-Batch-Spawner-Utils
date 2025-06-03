@@ -3,7 +3,7 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     columns:2,can_close_with_escape:true,after_action:"close",pause:false,\
     body:[\
         {type:"plain_message",contents:"Modify global settings for this data pack regarding compatibility and performance.",width:300},\
-        {type:"plain_message",contents:["If you are about to release your map, ",{text:"\n\nClick Here to Hibernate This Data Pack",underlined:true,color:"yellow"}]},\
+        {type:"plain_message",contents:["If you are about to release your map, ",{text:"\n\nClick Here to Hibernate This Data Pack",underlined:true,color:"yellow",click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1077"}}]},\
     ],\
     inputs:[\
         {key:"use_actionbar",type:"boolean",label:"Attempt to Use Actionbar",initial:1b,on_false:"-",on_true:""},\

@@ -1,0 +1,2 @@
+schedule function dabsu:z_private/mod/hibernate/start 5s
+execute as @a run function dabsu:z_private/text/tellraw_self {text:{text:"hibernation_notice",click_event:{action:"suggest_command",command:"/schedule clear dabsu:z_private/mod/hibernate/start"}}}

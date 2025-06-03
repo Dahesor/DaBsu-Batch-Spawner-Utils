@@ -20,7 +20,7 @@ data modify storage dabsu:run lang.zh_cn set value {\
     wand_lore: "手持它右键刷怪笼以查看一系列操作",\
     new_recorded: "已记录此刷怪笼。再次点击可选择",\
     invalid_pointer:"错误：无效指针。该刷怪笼没有记录。可尝试破坏后重放",\
-    runtime_notice:"[DaBsu] 本库仅为开发用。发布地图前请务必先执行function dabsu:release使其休眠!",\
+    runtime_notice:"[DaBsu] 本库仅为开发用。发布地图前请务必先执行function dabsu:hibernate使其休眠!",\
     wand_select:"§b批量编辑§r：已选择该刷怪笼",\
     wand_deselect:"§b批量编辑§r：已将该刷怪笼从选区移除",\
     quick_select:"§d快速编辑§r：已准备",\

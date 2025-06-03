@@ -10,3 +10,5 @@ execute if score #trigger trigger.dabsu matches 1009 run return run function dab
 execute if score #trigger trigger.dabsu matches 1010 run return run function dabsu:modify/optimize
 
 execute if score #trigger trigger.dabsu matches 1012 run return run function dabsu:z_private_d/batch/link/scan/scan
+
+execute if score #trigger trigger.dabsu matches 1077 run return run function dabsu:hibernate

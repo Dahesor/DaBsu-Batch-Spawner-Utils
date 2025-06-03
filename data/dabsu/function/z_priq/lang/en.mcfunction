@@ -220,5 +220,7 @@ data modify storage dabsu:run lang.en merge value {\
     multi_property:"§6[DaBsu]§b Batch Edit§r §nMultiple§r Spawners",\
     set_delay:"[DaBsu] Set Next Spawn Time of Selected Spawners",\
     any_command:"[DaBsu] Run Any Command",\
-    wait_for_new_spawner:"[DaBsu] Place a new spawner at this location to use data from that spawner. Exit quick edit (Wand: Shift + Q) to just destory the spawner."\
+    wait_for_new_spawner:"[DaBsu] Place a new spawner at this location to use data from that spawner. Exit quick edit (Wand: Shift + Q) to just destory the spawner.",\
+    hibernation_info:"§c§lYou are about to hibernate the DaBsu system.\n\n§c§lPlease read the following information carefully before proceeding:§r\n\n\nHibernating will stop all DaBsu activities and remove all marker entities. You will no longer be able to use any function from DaBsu.\n\nYou can resume the system later using the restart command which will re-place all the marker entites.\n\nAll scoreboards will be removed during hibernation and thus some settings will be lost.\n\nYou should remove the datapack before releasing your map so that players can no longer use the system.\n\nAre you sure you want to hibernate DaBsu?",\
+    hibernation_notice:"§c§lDaBsu is scheduled to hibernate in 5 seconds. §e§nClick here to cancel"\
 }
