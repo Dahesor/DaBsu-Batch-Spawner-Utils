@@ -1,3 +1,4 @@
+function dabsu:z_private/text/get
 function dabsu:z_private_d/templates/settings/global
 
 scoreboard players set @s waiting.dabsu 5

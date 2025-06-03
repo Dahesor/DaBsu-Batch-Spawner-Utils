@@ -1,5 +1,6 @@
 scoreboard players operation #this uid.dabsu = @s uid.dabsu
 function dabsu:z_private_d/uid/get
+execute if data storage dabsu:user data[0].settings{disableDisplayTiles:true} run return fail
 
 data modify storage dabsu:run data set from entity @s data
 data modify storage dabsu:run spawner set from block ~ ~ ~

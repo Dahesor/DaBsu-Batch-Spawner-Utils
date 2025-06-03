@@ -17,8 +17,10 @@ function dabsu:z_private/text/tellraw {text:{text:"wand",color:"green"}}
 loot replace entity @s weapon.mainhand loot dabsu:wand_
 
 tag @s remove dabsu.offhand
-
+function dabsu:z_private_d/uid/get
 execute if entity @s[tag=dabsu.quick_edit] if predicate dabsu:spacebar run return run function dabsu:z_priq/gui/player/highlight/ctrl_nodes
-execute if entity @s[tag=dabsu.quick_edit] if predicate dabsu:sneaking run return run function dabsu:z_priq/menu/gen/quick_potential
+execute if entity @s[tag=dabsu.quick_edit] if predicate dabsu:sneaking unless data storage dabsu:user data[0].settings{PrimaryQuickAction:"potential"} run return run function dabsu:z_priq/menu/gen/quick_potential
+execute if entity @s[tag=dabsu.quick_edit] unless predicate dabsu:sneaking if data storage dabsu:user data[0].settings{PrimaryQuickAction:"potential"} run return run function dabsu:z_priq/menu/gen/quick_potential
+
 execute if entity @s[tag=dabsu.quick_edit] run scoreboard players set @s trigger.dabsu 101
 execute if score @s trigger.dabsu matches 1.. run function dabsu:z_private_d/trigger

@@ -47,5 +47,12 @@ struct UserData {
         type?: int
     },
     target?: CustomData,
-    Inv?: [SlottedItem<byte @ 0..100>]
+    Inv?: [SlottedItem<byte @ 0..100>],
+    settings?: UserSettings,
+}
+
+struct UserSettings {
+    PrimaryQuickAction?: enum(string){property = "property",potential = "potential"},
+    disableBatchRightClick?: boolean,
+    disableDisplayTiles?: boolean,
 }
