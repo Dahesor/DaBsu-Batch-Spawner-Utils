@@ -1,5 +1,9 @@
 execute if score !busy calc.dabsu matches 1 run return run function dabsu:z_private_d/batch/settings/system_busy
 
+tag @a remove dabsu.quick_edit
+tag @e[type=marker,tag=dabsu.marker,tag=dabsu.quick_edit] remove dabsu.quick_edit
+kill @e[type=#dabsu:display,tag=dabsu.displayer]
+
 function dabsu:select/empty
 data modify storage dabsu:run potential set value [{Potential:[],type:0}]
 scoreboard players set #pTypes calc.dabsu 0

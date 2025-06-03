@@ -1,4 +1,3 @@
-
 execute if score @s selected.dabsu matches 1 run return fail
 data modify storage dabsu:run data set from entity @s data
 

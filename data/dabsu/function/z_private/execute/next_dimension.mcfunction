@@ -6,7 +6,7 @@ execute store result score #temp calc.dabsu if data storage dabsu:run this.dimen
 execute store result score #temp2 calc.dabsu if data storage dabsu:run this.dimension.Chunks[].Objects[]
 
 
-execute if data storage dabsu:run exe.operator run return run function dabsu:z_private/execute/output/find_player with storage dabsu:run exe
+#execute if data storage dabsu:run exe.operator run return run function dabsu:z_private/execute/output/find_player with storage dabsu:run exe
 
 function dabsu:z_private/text/tellraw {text:{text:"batch_edit_dimension",color:"gray"}}
 tellraw @a [{storage:"dabsu:run",nbt:"text",interpret:true},{nbt:"this.dimension.in",storage:"dabsu:run"}]

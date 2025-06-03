@@ -1,4 +1,5 @@
 advancement revoke @s only dabsu:place_spawner
+execute if data storage dabsu:sys {hibernate:true} run return fail
 
 scoreboard players set $recorded calc.dabsu 0
 

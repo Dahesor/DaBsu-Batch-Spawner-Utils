@@ -13,6 +13,7 @@ scoreboard objectives remove selected.dabsu
 scoreboard objectives remove register_range.dabsu
 scoreboard objectives remove Option.dabsu
 scoreboard objectives remove leave_game.dabsu
+scoreboard objectives remove lang.dabsu
 scoreboard objectives remove input.dabsu
 scoreboard objectives remove highlight.dabsu
 scoreboard objectives remove dabsu.gu.uuid.0
@@ -33,6 +34,7 @@ data remove storage dabsu:run string_to_num
 data remove storage dabsu:run spawner
 data remove storage dabsu:run shape
 data remove storage dabsu:run run_custom
+data remove storage dabsu:run run
 data remove storage dabsu:run ram
 data remove storage dabsu:run proceed
 data remove storage dabsu:run potential
@@ -66,3 +68,8 @@ data remove storage dabsu:run Queue
 data remove storage dabsu:run Selected
 data remove storage dabsu:run Main
 data remove storage dabsu:run Chunks
+
+kill @e[tag=dabsu.marker,type=marker]
+kill @e[tag=dabsu.displayer,type=#dabsu:display]
+kill @e[tag=dabsu.ctrl,type=#dabsu:display]
+#clear @a *[custom_data~{dabsu:{is_wand:1b}}]

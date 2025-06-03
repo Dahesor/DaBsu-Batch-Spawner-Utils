@@ -38,4 +38,4 @@ data modify entity @s data set from storage dabsu:run data
 function dabsu:z_private/text/tellraw {text:{text:"spawner_placed",color:"gray",extra:[{score:{objective:"calc.dabsu",name:"#x"}}," ",{score:{objective:"calc.dabsu",name:"#y"}}," ",{score:{objective:"calc.dabsu",name:"#z"}}]}}
 tellraw @a[distance=..50,tag=dabsu.get_notice] {storage:"dabsu:run",nbt:"text",interpret:true}
 
-execute align xyz summon block_display run function dabsu:z_private/placed/displayer_self
+execute unless score $restarting calc.dabsu matches 1 align xyz summon block_display run function dabsu:z_private/placed/displayer_self

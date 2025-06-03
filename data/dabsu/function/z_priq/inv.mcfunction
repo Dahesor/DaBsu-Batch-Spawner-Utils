@@ -1,4 +1,6 @@
 advancement revoke @s only dabsu:inv
+execute if data storage dabsu:sys {hibernate:true} run return fail
+
 execute if entity @s[tag=dabsu.used_wand] run return fail
 tag @s add dabsu.used_wand
 execute unless items entity @s weapon.offhand ghast_tear[custom_data~{dabsu:{is_wand:1b}}] run return fail

@@ -1,4 +1,6 @@
 advancement revoke @s only dabsu:use_wand
+execute if data storage dabsu:sys {hibernate:true} run return fail
+
 scoreboard players set @s ctrl_wait.dabsu 6
 
 execute if score @s ctrl.dabsu matches 1.. run return 1
