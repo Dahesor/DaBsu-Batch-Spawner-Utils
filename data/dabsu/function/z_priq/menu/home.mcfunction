@@ -1,3 +1,6 @@
+scoreboard players operation #this uid.dabsu = @s uid.dabsu
+execute as @e[type=marker,tag=dabsu.quick_edit,tag=dabsu.analyzing] if score @s uid.dabsu = #this uid.dabsu run return 1
+
 function dabsu:z_private/text/get
 function dabsu:z_private_d/templates/single_home
 

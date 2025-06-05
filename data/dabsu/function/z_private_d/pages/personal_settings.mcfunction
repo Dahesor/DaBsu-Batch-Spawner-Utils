@@ -13,6 +13,8 @@ execute if data storage dabsu:user data[0].settings{disableDisplayTiles:true} ru
 execute unless data storage dabsu:user data[0].settings{disableDisplayTiles:true} run data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Quick Edit Display Entities: On",color:"green",underlined:true,hover_event:{action:"show_text",value:{text:"If turned on, display entities will present \nduring quick edit to visualize spawner range \nand you may drag a node for visualized edit"}},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1319"}},width:300}
 
 
+data modify storage dabsu:run dialog.dialog.body append value {contents:{"translate": "options.language",click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1320"},color:"aqua",underlined:true,hover_event:{action:"show_text",value:["DaBsu ",{"translate": "options.language"}]}},type:"plain_message"}
+
 data modify storage dabsu:run dialog.dialog.body append value {contents:"",type:"plain_message"}
 
 

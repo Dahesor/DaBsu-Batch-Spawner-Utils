@@ -9,6 +9,7 @@ execute if score #trigger trigger.dabsu matches 1315 run data modify storage dab
 
 execute if score #trigger trigger.dabsu matches 1318 run data modify storage dabsu:user data[0].settings.disableDisplayTiles set value false
 execute if score #trigger trigger.dabsu matches 1319 run data modify storage dabsu:user data[0].settings.disableDisplayTiles set value true
+execute if score #trigger trigger.dabsu matches 1320 run return run function dabsu:z_private_d/pages/lang
 
 
 function dabsu:z_private_d/pages/personal_settings

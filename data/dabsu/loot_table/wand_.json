@@ -28,7 +28,7 @@
                             "speed": 0.000001
                         }
                     ],
-                    "can_destroy_blocks_in_creative": false
+                    "can_destroy_blocks_in_creative": true
                 },
                 "tooltip_display": {
                     "hidden_components": ["damage","max_damage","max_stack_size","tool","attribute_modifiers"]
