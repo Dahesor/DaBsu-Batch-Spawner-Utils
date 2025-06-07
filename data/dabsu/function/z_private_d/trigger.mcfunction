@@ -1,6 +1,9 @@
 scoreboard players operation #trigger trigger.dabsu = @s trigger.dabsu
 scoreboard players set @s trigger.dabsu 0
 
+execute if score @s opcd.dabsu matches 1.. run return run return fail
+scoreboard players set @s opcd.dabsu 3
+
 execute if score #trigger trigger.dabsu matches 1 run return run dialog clear @s
 execute if score #trigger trigger.dabsu matches 2 run return run function dabsu:z_private/wand/from_quick_action
 

@@ -15,6 +15,7 @@ scoreboard players enable @s register_range.dabsu
 scoreboard players enable @s lang.dabsu
 execute if score @s trigger.dabsu matches 1.. at @s run function dabsu:z_private_d/trigger
 execute if score @s input.dabsu matches -2147483648..2147483647 unless score @s input.dabsu matches 0 run function dabsu:z_private_d/input
+execute if score @s opcd.dabsu matches 1.. run scoreboard players remove @s opcd.dabsu 1
 
 #Leave Game
 execute unless score @s leave_game.dabsu matches ..0 run function dabsu:z_private/text/notice

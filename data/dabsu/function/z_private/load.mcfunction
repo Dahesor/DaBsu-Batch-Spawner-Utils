@@ -1,5 +1,4 @@
 execute if data storage dabsu:sys {hibernate:true} run return fail
-
 scoreboard objectives add calc.dabsu dummy
 scoreboard objectives add lang.dabsu trigger
 scoreboard objectives add Option.dabsu dummy
@@ -16,6 +15,7 @@ scoreboard objectives add timeStamp.dabsu dummy
 scoreboard objectives add ctrl.dabsu dummy
 scoreboard objectives add ctrl_data.dabsu dummy
 scoreboard objectives add ctrl_wait.dabsu dummy
+scoreboard objectives add opcd.dabsu dummy
 
 scoreboard players set #-1 calc.dabsu -1
 scoreboard players set #2 calc.dabsu 2
