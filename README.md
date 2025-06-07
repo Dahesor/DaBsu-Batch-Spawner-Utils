@@ -1,4 +1,4 @@
-# DaBsu, (Dahesor / Dialog) Batch Spawner Utils
+# DaBsu, Dialog Batch Spawner Utils
 
 In Development, readme work in process. Planed to release along with Minecraft Java 1.21.6.
 
