@@ -1,1 +1,1 @@
-dialog show @s dabsu:quick_action
+function dabsu:z_private_d/pages/fast_menu
