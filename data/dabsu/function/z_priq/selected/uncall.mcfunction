@@ -11,3 +11,4 @@ execute align xyz run kill @e[type=block_display,tag=dabsu.displayer,distance=..
 execute at @s run playsound block.note_block.pling master @s ~ ~ ~ 1 0.75 1
 function dabsu:z_private/text/name/quick_deselect
 tag @s remove dabsu.quick_edit
+tag @s remove dabsu.trial_marker

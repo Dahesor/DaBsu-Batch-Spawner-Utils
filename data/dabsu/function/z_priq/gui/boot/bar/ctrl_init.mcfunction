@@ -1,4 +1,4 @@
-data merge entity @s {block_state:{Name:"green_concrete"},Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.gui_edit.sc","dabsu.ctrl.count","dabsu.ctrl"],brightness:{block:15,sky:15}}
+data merge entity @s {block_state:{Name:"green_concrete"},Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.gui_edit.sc","dabsu.ctrl.count","dabsu.ctrl","dabsu.ctrl_native"],brightness:{block:15,sky:15}}
 data modify entity @s transformation set from storage dabsu:run shape.this
 
 execute store result score #current_y calc.dabsu run data get entity @s Pos[1] 100

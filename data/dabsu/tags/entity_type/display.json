@@ -1,6 +1,8 @@
 {
     "values": [
-        "#dabsu:quick_display",
+        "block_display",
+        "text_display",
+        "item_display",
         "creeper"
     ]
 }
