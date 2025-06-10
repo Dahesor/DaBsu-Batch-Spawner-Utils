@@ -23,6 +23,7 @@ execute unless score @s leave_game.dabsu matches ..0 run function dabsu:z_privat
 #Ender Chest
 execute if items entity @s container.* *[custom_data~{dabsu:{cart:{}}}] at @s run function dabsu:z_private/cart/player/check
 execute if items entity @s player.cursor *[custom_data~{dabsu:{cart:{}}}] at @s run function dabsu:z_private/cart/player/check
+execute if items entity @s weapon.offhand *[custom_data~{dabsu:{cart:{}}}] at @s run function dabsu:z_private/cart/player/check
 
 #Drop Wand
 execute if score @s dropWand.dabsu matches 1.. run function dabsu:z_private/wand/dropped/find

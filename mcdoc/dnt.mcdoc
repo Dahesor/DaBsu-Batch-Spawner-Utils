@@ -1,0 +1,33 @@
+dispatch minecraft:storage["dnt:ram"] to struct{
+    in?: any,
+    out?: string,
+    char?: string @ 1,
+    space?: string,
+    new_line?: string,
+    indent?: string,
+    brackets?: [enum(string){square = "[",curly = "{",quote = "\"",single = "'"}],
+    result?: [string],
+    provided?: string,
+    concat?: struct{
+        s1?: string,
+        s2?: string,
+        s3?: string,
+        s4?: string,
+        c1?: string,
+        c2?: string,
+        c3?: string,
+        c4?: string,
+        b1?: string,
+        b2?: string,
+        b3?: string,
+        b4?: string,
+        escape?: string,
+    },
+    temp?: any,
+    sys?: struct{
+        version?: int,
+        VersionName?: string,
+        MCVersionRange?: string,
+        pong__?: boolean
+    }
+}

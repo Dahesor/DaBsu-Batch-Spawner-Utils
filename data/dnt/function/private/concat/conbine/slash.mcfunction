@@ -1,0 +1,1 @@
+$data modify storage dnt:ram result append value '$(s1)$(b1)$(c1)$(s2)$(b2)$(c2)$(s3)$(b3)$(c3)$(s4)$(b4)$(c4)'
