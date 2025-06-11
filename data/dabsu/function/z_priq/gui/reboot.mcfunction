@@ -2,6 +2,8 @@ scoreboard players operation #this uid.dabsu = @s uid.dabsu
 function dabsu:z_private_d/uid/get
 execute if data storage dabsu:user data[0].settings{disableDisplayTiles:true} run return fail
 
+execute if entity @s[tag=dabsu.trial_marker] run return run function dabsu:z_priq/gui/trial/refresh
+
 data modify storage dabsu:run data set from entity @s data
 data modify storage dabsu:run spawner set from block ~ ~ ~
 execute store result score #current calc.dabsu run data get storage dabsu:run data.last_edit.SpawnRange

@@ -73,3 +73,7 @@ kill @e[tag=dabsu.marker,type=marker]
 kill @e[tag=dabsu.displayer,type=#dabsu:display]
 kill @e[tag=dabsu.ctrl,type=#dabsu:display]
 #clear @a *[custom_data~{dabsu:{is_wand:1b}}]
+
+tag @a remove dabsu.quick_edit
+tag @a remove dabsu.trial_marker
+tag @a remove dabsu.namecaster

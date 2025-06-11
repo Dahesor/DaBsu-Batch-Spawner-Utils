@@ -3,6 +3,7 @@
 execute if score #step_x calc.dabsu matches ..0 run scoreboard players set #step_x calc.dabsu 1
 execute if score #step_x calc.dabsu matches 96.. run scoreboard players set #step_x calc.dabsu 96
 
+execute if entity @s[tag=dabsu.trial_marker] run return run function dabsu:z_priq/gui/trial/update
 
 data modify storage dabsu:run data set from entity @s data
 execute store result score #current calc.dabsu run data get storage dabsu:run data.spawner.RequiredPlayerRange

@@ -6,6 +6,8 @@ execute if score #trigger trigger.dabsu matches 103 run return run function dabs
 execute if score #trigger trigger.dabsu matches 198 run return run function dabsu:z_priq/actions/analyze_clear
 execute if score #trigger trigger.dabsu matches 199 run dialog clear @s
 execute if score #trigger trigger.dabsu matches 199 run return run function dabsu:z_priq/selected/remote_uncall
+execute if score #trigger trigger.dabsu matches 170 run return run function dabsu:z_priq/menu/trial/copy_normal
+execute if score #trigger trigger.dabsu matches 171 run return run function dabsu:z_priq/menu/trial/copy_ominous
 
 #Need Locations
 execute if score #trigger trigger.dabsu matches 101 run data modify storage dabsu:run proceed set value {command:"function dabsu:z_priq/menu/property"}

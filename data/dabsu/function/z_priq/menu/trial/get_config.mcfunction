@@ -1,0 +1,2 @@
+execute if data block ~ ~ ~ normal_config run data modify storage dabsu:run trial.normal_config set from block ~ ~ ~ normal_config
+execute if data block ~ ~ ~ ominous_config run data modify storage dabsu:run trial.ominous_config set from block ~ ~ ~ ominous_config

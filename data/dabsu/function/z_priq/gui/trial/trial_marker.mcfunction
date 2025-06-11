@@ -12,3 +12,9 @@ execute store result storage dabsu:run data.pos.y int 1 run scoreboard players g
 execute store result storage dabsu:run data.pos.z int 1 run scoreboard players get #z calc.dabsu
 
 data modify storage dabsu:run data.UUID set from entity @s UUID
+
+execute if data storage dabsu:user data[0].settings{disableDisplayTiles:true} run return fail
+data modify storage dabsu:run spawner set value {RequiredPlayerRange:14}
+data modify storage dabsu:run spawner.RequiredPlayerRange set from block ~ ~ ~ required_player_range
+function dabsu:z_priq/gui/boot/reboot/player_range
+execute as @e[type=#dabsu:quick_display,tag=dabsu.displayer,tag=dabsu.gui_edit,tag=dabsu.temp] run function dabsu:z_priq/gui/boot/init

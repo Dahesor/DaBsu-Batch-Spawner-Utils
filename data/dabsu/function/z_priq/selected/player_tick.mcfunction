@@ -7,3 +7,4 @@ execute if score #exist uid.dabsu matches 1.. run return run function dabsu:z_pr
 
 # Spawner borken or not loaded
 tag @s remove dabsu.quick_edit
+tag @s remove dabsu.trial_marker

@@ -2,11 +2,22 @@ use::java::util::text::Text
 use::mcdoc::dabsu::QueueTaskType
 use::java::world::entity::mob::Attribute
 use::java::world::entity::mob::EntityEquipment
+use ::java::data::trial_spawner::TrialSpawnerConfig
 
 dispatch mcdoc:custom_data["shapes"] to TransformationShapes
 
 struct Misc{
     attribute?: [Attribute],
+    trial?: struct{
+        normal_config?: (
+		TrialSpawnerConfig |
+		#[id="trial_spawner"] string |
+	),
+	ominous_config?: (
+		TrialSpawnerConfig |
+		#[id="trial_spawner"] string |
+	),
+    },
     index?: struct{
         index?: int,
     },

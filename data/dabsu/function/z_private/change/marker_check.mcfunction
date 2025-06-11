@@ -3,7 +3,7 @@ execute unless loaded ~ ~ ~ run return fail
 function dabsu:z_private/mod/blink
 
 execute if entity @s[tag=dabsu.analyzing] run return fail
-execute if entity @s[tag=dabsu.trial_marker] run return fail
+execute if entity @s[tag=dabsu.trial_marker] run return run function dabsu:z_priq/gui/trial/check_destory
 execute if entity @a[distance=..8] if block ~ ~ ~ spawner run return run function dabsu:z_private/change/check_change
 
 execute if block ~ ~ ~ spawner run return 1
