@@ -22,8 +22,8 @@ execute as @e[type=marker,tag=dabsu.marker,tag=dabsu.trial_marker,distance=0..] 
 function dabsu:z_priq/menu/trial/ominous
 
 data modify storage dabsu:run dialog.dialog.body[4].contents set value {text:"LANG??",underlined:true,color:"yellow",bold:true,hover_event:{action:"show_text",value:""},click_event:{action:"copy_to_clipboard",value:""}}
-data modify storage dabsu:run dialog.dialog.body[4].contents.text set value "Copy Export Result"
-data modify storage dabsu:run dialog.dialog.body[4].contents.hover_event.value set value "§eClick to copy the result"
+data modify storage dabsu:run dialog.dialog.body[4].contents.text set from storage dabsu:run lang.this.trial_copy
+data modify storage dabsu:run dialog.dialog.body[4].contents.hover_event.value set from storage dabsu:run lang.this.trial_copy_hover
 data modify storage dabsu:run dialog.dialog.body[4].contents.click_event.value set from storage dnt:ram out
 
 

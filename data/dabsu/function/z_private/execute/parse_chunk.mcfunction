@@ -8,8 +8,11 @@ execute store result storage dabsu:run xz.x int 1 run scoreboard players get #cx
 execute store result storage dabsu:run xz.z int 1 run scoreboard players get #cz calc.dabsu
 execute store result score %load_complete calc.dabsu run function dabsu:z_private/execute/macro/__call_markers with storage dabsu:run xz
 
+execute unless score %load_complete calc.dabsu matches 1.. run function dabsu:z_private/execute/macro/__append_fprceload with storage dabsu:run xz
+
 execute unless score %load_complete calc.dabsu matches 1.. run data modify storage dabsu:run parsing.buffer append from storage dabsu:run this.buffer[0]
 
 execute if score %load_complete calc.dabsu matches 1.. run function dabsu:z_private/execute/macro/__remove_forceload with storage dabsu:run xz
+execute if score %load_complete calc.dabsu matches 1.. run scoreboard players set %progressed calc.dabsu 1
 data remove storage dabsu:run this.buffer[0]
 execute if data storage dabsu:run this.buffer[0] run function dabsu:z_private/execute/parse_chunk

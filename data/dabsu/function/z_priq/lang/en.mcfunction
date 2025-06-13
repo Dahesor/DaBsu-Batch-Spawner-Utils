@@ -67,7 +67,7 @@ data modify storage dabsu:run lang.en merge value {\
     temp_batch_home_2:"Edit Properties...",\
     temp_batch_home_3:"Edit SpawnPotentials...",\
     temp_batch_home_4:"Run Any Command...",\
-    temp_batch_home_5:"Cancel Selection",\
+    temp_batch_home_5:"§bBatch Edit:§r Cancel Selection",\
     temp_light_rules_1:"§6[DaBsu]§r Edit Light Rules...",\
     temp_modify_selection_1:"§6[DaBsu]§r Modify Selection",\
     temp_modify_selection_2:"Remove From Selection",\
@@ -95,9 +95,9 @@ data modify storage dabsu:run lang.en merge value {\
     temp_single_home_3:"Run Spawn Analysis",\
     temp_single_home_4:"§d§lQuick Edit",\
     temp_single_home_5:"Spawner",\
-    temp_wand_home_1:"Select Spawners...",\
-    temp_wand_home_2:"Modify Selection...",\
-    temp_wand_home_3:"Edit Selected Spawners...",\
+    temp_wand_home_1:"§bBatch Edit:§r Select Spawners...",\
+    temp_wand_home_2:"§bBatch Edit:§r Modify Selection...",\
+    temp_wand_home_3:"§bBatch Edit§r Selected Spawners...",\
     temp_wand_home_4:"Get Placeable Spawner",\
     temp_wand_home_5:"Spawn Server Enderchest",\
     temp_wand_home_6:"Global Settings...",\
@@ -223,5 +223,34 @@ data modify storage dabsu:run lang.en merge value {\
     wait_for_new_spawner:"[DaBsu] Place a new spawner at this location to use data from that spawner. Exit quick edit (Wand: Shift + Q) to just destory the spawner.",\
     hibernation_info:"§c§lYou are about to hibernate the DaBsu system.\n\n§c§lPlease read the following information carefully before proceeding:§r\n\n\nHibernating will stop all DaBsu activities and remove all marker entities. You will no longer be able to use any function from DaBsu.\n\nYou can resume the system later using the restart command which will re-place all the marker entites.\n\nAll scoreboards will be removed during hibernation and thus some settings will be lost.\n\nYou should remove the datapack before releasing your map so that players can no longer use the system.\n\nAre you sure you want to hibernate DaBsu?",\
     hibernation_notice:"§c§lDaBsu is scheduled to hibernate in 5 seconds. §e§nClick here to cancel",\
-    no_spawn_egg_item:"Could not find any item in you inventory or enderchest that has a valid \"entity_data\" component"\
+    no_spawn_egg_item:"Could not find any item in you inventory or enderchest that has a valid \"entity_data\" component",\
+    trial_body_0:"§7DaBsu does not support the quick or batch editing of trial spawners",\
+    trial_body_1:"Unless you have a really good reason,\n you should be using a §b§nTrial Spawner Config File§r in Datapack,\nwhich can easily manage spawn potentials of multiple trial spawners",\
+    trial_body_2:"Thanks to the §6§nDNT§r library, this page can export the current\ntrial spawner inline configuration into an equivalent JSON structure\nthat you can directly copy to a JSON config file in your data pack.",\
+    trial_body_3:"§d§l Normal Config",\
+    trial_body_5:"§d§l Ominous Config",\
+    trial_copy:"Copy Export Result",\
+    trial_copy_hover:"§eClick to copy the result",\
+    trial_export:"Export To JSON",\
+    trial_export_hover:"Click to generate JSON structure.\n§aYOU MUST CLICK AGAIN\nafter the first click to copy the result.",\
+    trial_using_json:"§7 Already Using JSON",\
+    trial_wiki:"https://minecraft.wiki/w/Trial_spawner_configuration",\
+    trial_coverter_title:"§bTRIAL_SPAWNER_CONFIG§r Converter",\
+    optimize_failed:"Optimization was not fully completed. Some of the data might be problematic right now. To fix this, run optimization again after the chunk problem is fixed.",\
+    wand_lore.0:"§eSneak + Right Click§f to open main menu",\
+    wand_lore.1:"§eSneak + Right Click§f on spawner to §dquick edit",\
+    wand_lore.2:"§d§l==During Quick Edit==",\
+    wand_lore.3:"§d  §eQ §dto open Quick Edit Menu",\
+    wand_lore.4:"§d  §eF §dto Edit Properties",\
+    wand_lore.5:"§d  §eSneak + F §dto Quick Edit SpawnPotential",\
+    wand_lore.6:"§d  §eHold right click§d, drag a green node to visually adjust property",\
+    wand_lore.7:"§d  §eSpace + F §dto hightlight draggable nodes",\
+    wand_lore.8:"§d  §eSneak Right Click §don spawner again, or §eSneak + Q §dto exit quick edit",\
+    wand_lore.9:"§b§l==For Batch Edit==",\
+    wand_lore.10:"§b  §eQ §bwhen no spawners selected for shortcut to the select menu",\
+    wand_lore.11:"§b  §eQ §bwhen spawners selected for shortcut to the batch edit menu",\
+    wand_lore.12:"§b  (Turn on in settings) §eRight Click §bto select/deselect single spawner",\
+    wand_lore.13:"§a§l==During Scan & Register==",\
+    wand_lore.14:"§a  §eQ §ato open scan & register options",\
+    wand_lore.15:"§eSneak + Q§f to remove wand"\
 }

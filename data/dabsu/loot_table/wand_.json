@@ -65,7 +65,24 @@
         {
             "function": "set_lore",
             "entity": "this",
-            "lore": [{"storage":"dabsu:run","nbt":"joint","interpret":true,"italic": false}],
+            "lore": [
+                {"storage":"dabsu:run","nbt":"joint[15]"},
+                {"storage":"dabsu:run","nbt":"joint[0]"},
+                {"storage":"dabsu:run","nbt":"joint[1]"},
+                {"storage":"dabsu:run","nbt":"joint[2]"},
+                {"storage":"dabsu:run","nbt":"joint[3]"},
+                {"storage":"dabsu:run","nbt":"joint[4]"},
+                {"storage":"dabsu:run","nbt":"joint[5]"},
+                {"storage":"dabsu:run","nbt":"joint[6]"},
+                {"storage":"dabsu:run","nbt":"joint[7]"},
+                {"storage":"dabsu:run","nbt":"joint[8]"},
+                {"storage":"dabsu:run","nbt":"joint[9]"},
+                {"storage":"dabsu:run","nbt":"joint[10]"},
+                {"storage":"dabsu:run","nbt":"joint[11]"},
+                {"storage":"dabsu:run","nbt":"joint[12]"},
+                {"storage":"dabsu:run","nbt":"joint[13]"},
+                {"storage":"dabsu:run","nbt":"joint[14]"}
+            ],
             "mode": "replace_all"
         },
         {

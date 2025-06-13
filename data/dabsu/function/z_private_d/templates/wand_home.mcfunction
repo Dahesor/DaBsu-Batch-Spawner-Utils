@@ -10,7 +10,7 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
         {label:{text:"Get Placeable Spawner",color:"#cedeff"},tooltip:"Get a placeable spawner from a spawn egg, an entity, or another spawner\n§cIn Development",width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1005"}},\
         {label:{text:"Spawn Server Enderchest",color:"#ffdefd"},tooltip:"Spawn a chest minecart.\nThis is a ender chest that is shared and synced for all players in the server in realtime.",width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1006"}},\
         {label:{text:"Global Settings..."},width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1007"}},\
-        {label:{text:"Personal Settings..."},width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1008"},tooltip:"In Development"},\
+        {label:{text:"Personal Settings..."},width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1008"}},\
         {label:{text:"Update and Optimize"},tooltip:"This updates all registered spawners and check if they have been changed. \nNew SpawnPotential type ids will be assigned as the data get regenerated to delete unused data.",width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1009"}},\
         {label:{text:"Start Scan & Registering",color:"#c2ffeb"},width:180,action:{type:"run_command",command:"/trigger trigger.dabsu set 1012"}},\
         {label:{text:"GitHub & Repot Issues",color:"#d9ffdc"},width:180,action:{type:"open_url",url:"https://github.com/Dahesor/Batch-Spawner-Utils"}},\

@@ -8,5 +8,8 @@ execute unless data storage dnt:ram in run return run function dnt:private/snbt/
 
 execute as @a[limit=1] at @s run return run function dnt:private/snbt/entity
 execute as @e[limit=1] at @s run return run function dnt:private/snbt/entity
+
+execute if loaded ~ ~ ~ summon marker run return run function dnt:private/snbt/entity_new
+
 data modify storage dnt:ram out set value "DNT ERROR: NO PARSER ENTITY"
 return 0
