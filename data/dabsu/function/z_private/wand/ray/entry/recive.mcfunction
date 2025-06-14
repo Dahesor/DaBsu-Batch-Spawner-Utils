@@ -1,5 +1,5 @@
 data modify storage dabsu:run text set value [{text:"",color:"gray"},\
-    {nbt:"id",storage:"dabsu:run",color:"gold"},"\n",\
+    {nbt:"temp3",storage:"dabsu:run",interpret:true},"\n",\
     {text:"💡",color:"yellow"},"S:"," - "," B:"," - ",\
     {text:"\n❤ ",color:"red"},{nbt:"num.hp",storage:"dabsu:run",color:"green"},\
     {text:" ⛨ ",color:"gold"},{nbt:"element.data.entity.AbsorptionAmount",storage:"dabsu:run",color:"green"},\

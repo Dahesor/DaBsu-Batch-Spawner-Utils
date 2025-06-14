@@ -11,6 +11,9 @@ data modify storage dabsu:run id set from storage dabsu:run element.data.entity.
 execute unless data storage dabsu:run element.data.entity.AbsorptionAmount run data modify storage dabsu:run element.data.entity.AbsorptionAmount set value "0"
 execute store result score $length calc.dabsu run data get storage dabsu:run id
 execute if score $length calc.dabsu matches 11.. run function dabsu:z_private/mod/remove_minecraft
+data modify storage dabsu:run temp3 set value {id:""}
+data modify storage dabsu:run temp3.id set from storage dabsu:run id
+function dabsu:z_private/wand/ray/entry/get_translate with storage dabsu:run temp3
 
 
 #Spec.

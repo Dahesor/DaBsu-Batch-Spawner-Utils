@@ -8,6 +8,7 @@ dispatch mcdoc:custom_data["shapes"] to TransformationShapes
 
 struct Misc{
     attribute?: [Attribute],
+    temp3?: any,
     trial?: struct{
         normal_config?: (
 		TrialSpawnerConfig |
