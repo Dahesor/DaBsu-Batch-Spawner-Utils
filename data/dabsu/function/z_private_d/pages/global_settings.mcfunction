@@ -1,26 +1,32 @@
 function dabsu:z_private/text/get
 function dabsu:z_private_d/templates/settings/global
 
-scoreboard players set @s waiting.dabsu 5
-scoreboard players enable @s input.dabsu
-
-execute if score disableActionbar Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.inputs[0].initial set value 0b
-execute if score disableSubtitle Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.inputs[1].initial set value 0b
-
-scoreboard players operation #temp Option.dabsu = run.SelectionRate Option.dabsu
-execute if score #temp Option.dabsu matches ..1000 run scoreboard players set #temp Option.dabsu 1000
-execute if score #temp Option.dabsu matches 5000.. run scoreboard players set #temp Option.dabsu 5000
-
-execute store result storage dabsu:run dialog.dialog.inputs[2].initial int 1 run scoreboard players get #temp Option.dabsu
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:[{text:"Use Action Bar: ",extra:["§a§nTrue"],hover_event:{action:"show_text",value:"Turn it off so that DaBsu will never \noccupy the action bar"},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1401"}},"       "],width: 400}
+data modify storage dabsu:run dialog.dialog.body[-1].contents append value {text:"Use Subtitle: ",extra:["§a§nTrue"],hover_event:{action:"show_text",value:"Turn it off so that DaBsu will never \noccupy the subtitle"},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1402"}}
+execute if score disableActionbar Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.body[-1].contents[0] merge value {extra:["§c§nFalse"]}
+execute if score disableSubtitle Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.body[-1].contents[2] merge value {extra:["§c§nFalse"]}
 
 
-scoreboard players operation #temp Option.dabsu = run.ChunkReadingRate Option.dabsu
-execute if score #temp Option.dabsu matches ..2 run scoreboard players set #temp Option.dabsu 2
-execute if score #temp Option.dabsu matches 31.. run scoreboard players set #temp Option.dabsu 30
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Spawner Active Range: ",extra:[{text:"50",color:"yellow",underlined:true,hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"When a player is at least this close \nto a registered spawner, it is activated: \n - Flashes if it is selected \n - Actively check if the spawner still exists \n - Actively check if the spawner has changed \nSetting it to §e§oGlobal§r activates all loaded spawners"},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1403"}},width: 400}
 
-execute store result storage dabsu:run dialog.dialog.inputs[3].initial int 1 run scoreboard players get #temp Option.dabsu
+execute if score MarkerActiveRange Option.dabsu matches 1 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "80"
+execute if score MarkerActiveRange Option.dabsu matches 2 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "120"
+execute if score MarkerActiveRange Option.dabsu matches -2 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "§oGlobal"
+execute if score MarkerActiveRange Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "30"
+
+
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Spawner Select Rate (Spawners/tick): ",extra:[{text:"-250",color:"red",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1410"},hover_event:{action:"show_text",value:""}},"  ",{text:"2000",color:"aqua"},"  ",{text:"+250",color:"green",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1411"},hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"The max rate that DaBsu can select spawners. \nThe default value §7(2000 spawners/tick)§r \nis enough to handle most quests within a tick"}},width: 400}
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Chunk Load Rate (Chunks/tick): ",extra:[{text:"-1",color:"red",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1412"},hover_event:{action:"show_text",value:""}},"  ",{text:"10",color:"aqua"},"  ",{text:"+1",color:"green",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1413"},hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"The max rate that DaBsu can load chunks. \nA smaller value is less performance costly, \nbut takes longer to complete a task."}},width: 400}
+
+
+data modify storage dabsu:run temp set value {select:2000,read:10}
+execute store result storage dabsu:run temp.select int 1 run scoreboard players get run.SelectionRate Option.dabsu
+execute store result storage dabsu:run temp.read int 1 run scoreboard players get run.ChunkReadingRate Option.dabsu
+function dabsu:z_private_d/pages/gen/__fill_global_settings with storage dabsu:run temp
 
 
 
 
+
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:["       "]}
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

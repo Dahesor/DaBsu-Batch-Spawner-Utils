@@ -43,5 +43,5 @@ execute unless score minDefaultBlockLight Option.dabsu matches 0.. run scoreboar
 execute unless score maxDefaultBlockLight Option.dabsu matches 0.. run scoreboard players set maxDefaultBlockLight Option.dabsu 7
 execute unless score minDefaultSkyLight Option.dabsu matches 0.. run scoreboard players set minDefaultSkyLight Option.dabsu 0
 execute unless score maxDefaultSkyLight Option.dabsu matches 0.. run scoreboard players set maxDefaultSkyLight Option.dabsu 15
-execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard players set run.SelectionRate Option.dabsu 1000
+execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard players set run.SelectionRate Option.dabsu 2000
 execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10

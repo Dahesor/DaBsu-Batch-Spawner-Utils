@@ -28,6 +28,8 @@ execute if items entity @s weapon.offhand *[custom_data~{dabsu:{cart:{}}}] at @s
 #Drop Wand
 execute if score @s dropWand.dabsu matches 1.. run function dabsu:z_private/wand/dropped/find
 
+#Home
+execute if entity @s[tag=dabsu.home] run function dabsu:z_private_d/batch/link/home_direct
 
 
 

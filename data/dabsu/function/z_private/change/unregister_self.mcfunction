@@ -10,4 +10,5 @@ execute if score @s selected.dabsu matches 1 run function dabsu:z_private/mod/de
 
 function dabsu:z_private/mod/coords
 
+kill @e[type=#dabsu:quick_display,distance=..1,tag=dabsu.displayer]
 kill @s

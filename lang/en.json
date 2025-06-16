@@ -237,7 +237,7 @@
     "trial_wiki":"https://minecraft.wiki/w/Trial_spawner_configuration",
     "trial_coverter_title":"§bTRIAL_SPAWNER_CONFIG§r Converter",
     "optimize_failed":"Optimization was not fully completed. Some of the data might be problematic right now. To fix this, run optimization again after the chunk problem is fixed.",
-    "wand_lore.0":"§eSneak + Right Click§f to open main menu",
+    "wand_lore.0":"§eRight Click§f to open main menu",
     "wand_lore.1":"§eSneak + Right Click§f on spawner to §dquick edit",
     "wand_lore.2":"§d§l==During Quick Edit==",
     "wand_lore.3":"§d  §eQ §dto open Quick Edit Menu",

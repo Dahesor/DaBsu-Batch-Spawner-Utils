@@ -27,7 +27,7 @@ execute if score #loop_5 calc.dabsu matches 5.. run scoreboard players set #loop
 function dabsu:z_private/mod/task_manager/ticker
 
 execute if score #loop_20 calc.dabsu matches 3 run function dabsu:z_private/second
-execute if score #loop_5 calc.dabsu matches 1 as @e[type=#dabsu:display,tag=dabsu.displayer] run function dabsu:z_private/mod/displayer/self
+execute if score #loop_5 calc.dabsu matches 1 as @e[type=#dabsu:display,tag=dabsu.displayer] at @s run function dabsu:z_private/mod/displayer/self
 execute unless score #loop_40 calc.dabsu matches 1..37 run function dabsu:z_priq/gui/boot/sphere/animation/update
 
 #Marker Tick

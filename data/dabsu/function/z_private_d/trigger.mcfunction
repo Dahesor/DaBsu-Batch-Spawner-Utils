@@ -16,3 +16,4 @@ execute if score #trigger trigger.dabsu matches 1101..1200 run return run functi
 execute if score #trigger trigger.dabsu matches 1201..1300 run return run function dabsu:z_private_d/batch/dispatch/edit
 
 execute if score #trigger trigger.dabsu matches 1301..1400 run return run function dabsu:z_private_d/batch/dispatch/settings
+execute if score #trigger trigger.dabsu matches 1401..1500 run return run function dabsu:z_private_d/lines/options/change

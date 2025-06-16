@@ -1,4 +1,3 @@
-execute if entity @s[type=player] run return run say ?
 execute unless block ~ ~ ~ spawner run return run function dabsu:z_private/change/unregister_self
 function dabsu:z_private/modify/take_spawn_data
 data modify storage dabsu:run spawner set from block ~ ~ ~

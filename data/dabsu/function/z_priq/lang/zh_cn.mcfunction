@@ -232,7 +232,7 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     trial_wiki:"https://zh.minecraft.wiki/w/?curid=143979",\
     trial_coverter_title:"§bTRIAL_SPAWNER_CONFIG§r 转换器",\
     optimize_failed:"优化未能全部完成。部分数据结构可能已经出现问题，想要解决，请在解决区块加载问题后再次运行优化",\
-    wand_lore.0:"§e蹲 + 右键§f打开主界面",\
+    wand_lore.0:"§e右键§f打开主界面",\
     wand_lore.1:"§f对准刷怪笼§e蹲 + 右键§f进行§d快速编辑",\
     wand_lore.2:"§d§l==快速编辑时==",\
     wand_lore.3:"§d  §eQ §d打开快速编辑菜单",\

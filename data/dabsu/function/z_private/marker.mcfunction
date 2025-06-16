@@ -1,2 +1,2 @@
-execute if score #loop_10 calc.dabsu matches 6 if entity @a[distance=..50] run function dabsu:z_private/change/marker_check
+execute if score #loop_10 calc.dabsu matches 6 run function dabsu:z_private/change/marker_ranged
 execute if entity @s[tag=dabsu.quick_edit] unless score @s input.dabsu = $gametime calc.dabsu run function dabsu:z_priq/selected/remove_marker

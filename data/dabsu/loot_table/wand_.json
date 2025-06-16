@@ -66,8 +66,8 @@
             "function": "set_lore",
             "entity": "this",
             "lore": [
-                {"storage":"dabsu:run","nbt":"joint[15]"},
                 {"storage":"dabsu:run","nbt":"joint[0]"},
+                {"storage":"dabsu:run","nbt":"joint[15]"},
                 {"storage":"dabsu:run","nbt":"joint[1]"},
                 {"storage":"dabsu:run","nbt":"joint[2]"},
                 {"storage":"dabsu:run","nbt":"joint[3]"},
