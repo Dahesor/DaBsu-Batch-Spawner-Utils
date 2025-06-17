@@ -23,7 +23,7 @@ data modify storage dabsu:run lang.en set value {\
     runtime_notice:"[DaBsu] This library is for development only. Before releasing the map please remember to execute function dabsu:hibernate",\
     wand_select:"§bBatch Edit§r: Spawner Selected",\
     wand_deselect:"§bBatch Edit§r: Spawner De-selected",\
-    quick_select:"§dQuick Edit§r: Prepared",\
+    quick_select:"§dQuick Edit§r: Prepared (§eQ to open menu§r)",\
     quick_deselect:"§dQuick Edit§r: Finished",\
     selecting_distance:"[DaBsu] Selecting loaded spawners neaby... Range: ",\
     modifying_distance:"[DaBsu] Modifying selection with loaded spawners neaby... Range: ",\

@@ -23,7 +23,7 @@ data modify storage dabsu:run lang.zh_cn set value {\
     runtime_notice:"[DaBsu] 本库仅为开发用。发布地图前请务必先执行function dabsu:hibernate使其休眠!",\
     wand_select:"§b批量编辑§r：已选择该刷怪笼",\
     wand_deselect:"§b批量编辑§r：已将该刷怪笼从选区移除",\
-    quick_select:"§d快速编辑§r：已准备",\
+    quick_select:"§d快速编辑§r：已准备 (§eQ打开面板§r)",\
     quick_deselect:"§d快速编辑§r：已结束",\
     selecting_distance:"[DaBsu] 正在选择附近的已加载刷怪笼……范围：",\
     modifying_distance:"[DaBsu] 正在使用附近的已加载刷怪笼修改选区……范围：",\
