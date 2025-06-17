@@ -1,6 +1,6 @@
 # DaBsu, Dialog Batch Spawner Utils
 
-[简体中文](/readme/zh_cn.md)
+[简体中文](/readme/zh/README.md)
 
 ## Introduction
 
@@ -57,6 +57,8 @@ By default you will see a box representing the spawner's `SpawnRange`, a sphere 
 
 There are several little green cubes attached to these displays, and you may change the corresponding values by **holding down right click with the wand and dragging**.
 
+![Visual Edit](/readme/en/img/0.png)
+
 ### Dialog Edit Properties
 
 During quick edit, **pressing Q** while hoding the wand will open the **Quick Edit Menu** dialog window.\
@@ -70,6 +72,8 @@ Clicking **Edit Itself** will modify this spawner with your input, and Clicking 
 During quick edit, **pressing Q** will open the **Quick Edit Menu** dialog window.\
 From there, you may select **Edit SpawnPotentials** to manage the spawner's `SpawnPotentials` entries.
 
+![Select Potentials](/readme/en/img/1.png)
+
 You will first be taken to the **Select Potential** menu, which is a page that lists all of the spawner's `SpawnPotentials` entries in order:
  * Clicking the **[+]** button can append an new entry to `SpawnPotentials`.
  * **Light Limit...** changes the custom spawn rules for all entries
@@ -81,6 +85,8 @@ A shurtcut exists as **Sneak + F**. If your spawner has only one spawn option, t
 
 When editing a particular entry, you may freely edit the Spawning Entity `data.entity`, the Equipment Loot Table `data.equipment` or the Weight `weight` of this entry. Click **Edit Itself** to apply your changes.\
 You may also choose to **Delete** this entry or **Edit its Light Levels**.
+
+![Single Potential](/readme/en/img/2.png)
 
 #### Quick Change Common Tags
 
@@ -122,6 +128,8 @@ Batch editing is a more advanced editing methods. You can select multiple spawne
 ### Batch Edit Selecting Spawners
 
 To select spawners for batch editing, open main menu by Sneak + Right Click with DaBsu wand, Then click **Batch Edit: Select Spawners**. If there are currently no selected spawners, pressing `Q` with the wand takes you here directly (if you are not in quick edit).
+
+![Select](/readme/en/img/3.png)
 
 There are 5 different method of selection provided:
 - **Cuboid Selection**
