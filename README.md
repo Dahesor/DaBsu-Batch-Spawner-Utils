@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**DaBsu** is a dialog based Spawner Editor for Minecraft Java 1.21.6+. It is designed for map makers to manage a large amount of spawners conveniently and visually.
+**DaBsu** is a dialog based Spawner Editor for Minecraft Java 1.21.6+. It is designed for map makers to manage a large amount of spawners conveniently and visually. DaBsu's quick edit allows users to conveniently modify a single spawner or a family of spawners, and DaBsu's batch edit allows you select multiple spawners in highly comprehensive ways and edit them at the same time.
 
 ## Language
 
@@ -114,4 +114,120 @@ To finish quick edit, do any of the following:
 * Press the **Exit Quick Edit** button in the **Quick Edit Menu**
 * Leave the server
 
+## Register Pre-Existing Spawners
+
+The DaBsu system will only keep track of registered spawners. After the data pack is installed, all player placed spawners will be automatically registered.
+
+To register spawners existed before DaBsu is installed or spawners that are not placed by hand, use the **Start Scanning & Registering** function from DaBsu main menu. This is a very "thick" raycast that runs every other tick to check if there are any un-registered spawners along your line of sight.
+
+During this is enabled, pressing Q while holding the wand will take you to its options that you can choose how long the ray is, how thick it is and if it can pierce through blocks.
+
+Additionally, right clicking an unregistered spawner with DaBsu wand will register it.
+
 ## Batch Edit
+
+Batch editing is a more advanced editing methods. You can select multiple spawners in highly comprehensive ways and edit them at the same time.
+
+### Batch Edit Selecting Spawners
+
+To select spawners for batch editing, open main menu by Sneak + Right Click with DaBsu wand, Then click **Batch Edit: Select Spawners**. If there are currently no selected spawners, pressing `Q` with the wand takes you here directly (if you are not in quick edit).
+
+There are 5 different method of selection provided:
+- **Cuboid Selelection**
+
+Define 2 corners and all registered spawners within the cuboid they form will be selected. It is the same logic as the `/fill` command. This works across unloaded chunks.
+
+To define the 2 coordinates, you can either type them in the input box, click **Set Cuboid Pos 1/2** to set it to your current location, or click **Fast Cuboid Position** then right click with the wand to define 2 positions, kind of like WordEdit.
+
+- **Range Selection**
+
+Select all spawners within a given range from you. This is the only selection methond that cannot select spawners in unloaded chunks.
+
+To adjust the slidebar on the top of the page to change this range.
+
+- **Select by nbt= check**
+
+This is the same logic as the `nbt=` selector argument. You will be promoted to enter a compound tag, and the system will select all spawners that have at least one entity containing the tag you entered. For example. `{id:"minecraft:zombie"}` will select all spawners that spawn zombies. This selection works across dimensions and unloaded chunks.
+
+- **Select Same Potential**
+
+You must be standing on a spawner to use this one. Select all spanwers that have the same `SpawnPotentials` as the spawner you are standing on. This selection works across dimensions and unloaded chunks.
+
+- **Select All**
+
+All registered spawners will be selected, works across dimensions and unloaded chunks.
+
+- **Adding Selections**
+
+On the top of the page there is a check box "Add to selection instead of replace". If checked, the new selected spawners will be added to the pre-existing selection instead of making a new selection.
+
+### Batch Edit Modify Selection
+
+You are allowed to modify your selection by removing some spawners from it or taking intersection with another selection, kind of like PhotoShop. To do that,  open main menu by Sneak + Right Click with DaBsu wand, Then click **Batch Edit: Modify Selection**.
+
+Choose your mode to be either **Remove From Selection** or **Take Intersetion** with the button on the top, and everything else is the same as the Selecting Spawners page.
+
+### Clear Selection
+
+To Empty your selection, Click the **Batch Edit: Cancel Selection** button in the main menu.
+
+### Batch Edit Selected Spawners
+
+To Edit your selected spawners, Click the **Batch Edit Selected Spawners** button in the main menu. As long as you have at least one spawner selected, pressing Q while holding the wand will also take you here, as a shortcut.
+
+There are 4 different ways you can modify these selected spawners:
+
+- **Set Next Spawn Time**
+
+This sets the `Delay` tag of the spawner to your input. (i.e., prime the spawners)
+
+- **Edit Properties**
+
+Set the properties of this spawners except `SpawnPotentials`. Leaving a box empty will not change the original value. Changing the mode to "**Add or Subtract**" will do math on the original value with your input instead of replacing them; this way you can make general adjustments like reduce all selected spawber's `SpawnCount` by 1.
+
+- **Edit Potentials**
+
+Manage the spawner's `SpawnPotentials`. Depending on what you selected, you will see different available functions.
+
+If all spawners in your selection has the exact same `SpawnPotentials`, then you can freely go into and edit each entry just like Quick Edit. If not, you can only do very general edits like replacing all light rules or merge a tag into every single entry.
+
+- **Run Any Command**
+
+This allows you to run any command at the location of the spawner as its marker entity.
+
+Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.
+
+## Custom Options
+
+DaBsu provides users with a few options, split into 2 categories: **Global settings**, which affects the compatibility and performance of DaBsu, and **Personal Settings**, which are preferences only affecting yourself.
+
+Both categories can be accessed through the DaBsu menu (Shift Right Click with DaBsu wand)
+
+Users can also change their language in Personal Settings.
+
+## Hibernating (Uninstalling)
+
+If you are about to release your work into the public, you **must** hibernate DaBsu.
+
+Do it by clicking the option in **Global settings** or running `function dabsu:hibernate`.
+
+This removes all marker entities, scoreboards, and just about everything that DaBsu uses except storage files. After the data pack is hibernated, remove DaBsu from the datapacks folder so players cannot access it.
+
+You can always resume DaBsu by putting it back into datapacks, `reload`, and run `function dabsu:resume`. All registered spawners will remain registered, provided that you did not remove DaBsu's storage file.
+
+## Misc Funcions
+
+A few other "little" things added:
+
+- **Server Ender Chest**
+
+An (almost) infinite storage **shared** and **synced** in real time for all users.\
+This is intended for devs to share commonly used items quickly.
+
+- **Self Check and Optimize**
+
+You can access this from the main menu. This forces all registered spawners to check if they have been changed and update their information in the DaBsu system. Normally spawners will only do this if they just got edited or a player is nearby.
+
+- **Spawn Analyzer**
+
+During quick edit you can choose to run a 5 seconds long spawn analysis that visually shows you where mobs can spawn with your current space, light, and special conditions. This works by forcing the spawner to spawn a special version of the same mob at high frequency and documenting where they spawns.

@@ -102,7 +102,7 @@
     "temp_wand_home_5": "Spawn Server Enderchest",
     "temp_wand_home_6": "Global Settings...",
     "temp_wand_home_7": "Personal Settings...",
-    "temp_wand_home_8": "Update and Optimize",
+    "temp_wand_home_8": "Self Check and Optimize",
     "temp_wand_home_9": "Start Scan & Registering",
     "temp_wand_home_10": "GitHub & Repot Issues",
     "temp_wand_home_11": "§lMain Menu",
@@ -283,5 +283,6 @@
     "hold_rmb":"Hold Right Button",
     "register_warn":"Warning: High values are VERY performance costly. Increase with caution.",
     "obtain_egg":"From Spawn Egg",
-    "obtain_egg_tip":"Get a spawner from a custom spawn egg in your inventory or enderchest"
+    "obtain_egg_tip":"Get a spawner from a custom spawn egg in your inventory or enderchest",
+    "any_command_warn":"Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system."
 }
