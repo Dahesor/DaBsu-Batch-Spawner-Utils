@@ -11,7 +11,8 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
         {label:{translate:"gui.done",color:"aqua"},action:{type:"dynamic/run_command",template:"trigger input.dabsu set $(pierce)$(hit_range)$(path_range)$(distance)"}},\
         {label:"Stop Scanning",action:{type:"dynamic/run_command",template:"trigger trigger.dabsu set 1012$(none)"}},\
         {label:{translate:"gui.back"},action:{type:"run_command",command:"/trigger trigger.dabsu set 1"}},\
-    ]\
+    ],\
+    body:[{type:"plain_message",contents:{text:"...",color:"gold"}}]\
 }
 ##Lang
 data modify storage dabsu:run dialog.dialog.title[0].text set from storage dabsu:run lang.this.temp_settings_scan_1
@@ -20,3 +21,4 @@ data modify storage dabsu:run dialog.dialog.inputs[1].label set from storage dab
 data modify storage dabsu:run dialog.dialog.inputs[2].label set from storage dabsu:run lang.this.temp_settings_scan_3_lab
 data modify storage dabsu:run dialog.dialog.inputs[3].label set from storage dabsu:run lang.this.temp_settings_scan_4_lab
 data modify storage dabsu:run dialog.dialog.actions[1].label set from storage dabsu:run lang.this.temp_settings_scan_5_lab
+data modify storage dabsu:run dialog.dialog.body[0].contents.text set from storage dabsu:run lang.this.register_warn

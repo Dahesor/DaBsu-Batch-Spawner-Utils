@@ -113,3 +113,5 @@ To finish quick edit, do any of the following:
 * Get far enough from the spawner, or the spawner's chunk is no longer loaded.
 * Press the **Exit Quick Edit** button in the **Quick Edit Menu**
 * Leave the server
+
+## Batch Edit

@@ -275,5 +275,8 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     poption_shrc_off:"下蹲 + 右键打开主界面: §n关",\
     poption_shrc_qe:"下蹲 + 右键打开主界面: §n快速编辑时",\
     poption_shrc_tip:"若关闭，无需下蹲直接右键\n就可以打开大别墅主界面",\
-    hold_rmb:"按住右键"\
+    hold_rmb:"按住右键",\
+    register_warn:"警告：高数值极度占用性能！请谨慎调高参数",\
+    obtain_egg:"……读取刷怪蛋",\
+    obtain_egg_tip:"通过物品栏或末影箱中的一个刷怪蛋生成刷怪笼物品"\
 }

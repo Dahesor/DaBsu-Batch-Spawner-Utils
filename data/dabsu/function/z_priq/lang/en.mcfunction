@@ -280,5 +280,8 @@ data modify storage dabsu:run lang.en merge value {\
     poption_shrc_off:"Shift Click for Main Menu: §nOff",\
     poption_shrc_qe:"Shift Click for Main Menu: §nDuring Quick Edit",\
     poption_shrc_tip:"If turned off, you can open DaBsu main menu \njust by right click without sneaking",\
-    hold_rmb:"Hold Right Button"\
+    hold_rmb:"Hold Right Button",\
+    register_warn:"Warning: High values are VERY performance costly. Increase with caution.",\
+    obtain_egg:"From Spawn Egg",\
+    obtain_egg_tip:"Get a spawner from a spawn egg in your inventory or enderchest"\
 }
