@@ -43,6 +43,7 @@ function dabsu:wand
 - 服务器末影箱
 - 生成分析器
 
+---
 
 ## 快速编辑
 
@@ -103,6 +104,8 @@ function dabsu:wand
 * 在**快速编辑面板**中点击**结束快速编辑**
 * 离开服务器
 
+---
+
 ## 注册刷怪笼
 
 大别墅只能追踪和修改注册的刷怪笼。在大别墅安装后，所有玩家手动放置的刷怪笼都会自动注册。
@@ -113,124 +116,152 @@ function dabsu:wand
 
 此外，拿着操作杖右键未注册的刷怪笼也会注册它。
 
-## Batch Edit
+---
 
-Batch editing is a more advanced editing methods. You can select multiple spawners in highly comprehensive ways and edit them at the same time.
+## 批量编辑
 
-### Batch Edit Selecting Spawners
+批量编辑是一种更加高级的编辑方法。你可以以非常全面多样的方式精细地选取任意数量的刷怪笼然后一起编辑它们。
 
-To select spawners for batch editing, open main menu by Sneak + Right Click with DaBsu wand, Then click **Batch Edit: Select Spawners**. If there are currently no selected spawners, pressing `Q` with the wand takes you here directly (if you are not in quick edit).
+### 批量编辑：选择刷怪笼
 
-There are 5 different method of selection provided:
-- **Cuboid Selection**
+要选择刷怪笼以进行批量编辑，使用大别墅操作杖**潜行 + 右键**打开主菜单，然后点击 **批量编辑：选择刷怪笼**以进入选择界面。如果当前没有已选中的刷怪笼，使用魔杖按`Q`键可以直接进入该界面。
 
-Define 2 corners and all registered spawners within the cuboid they form will be selected. It is the same logic as the `/fill` command. This works across unloaded chunks.
+系统提供了五种不同的选择方式：
 
-To define the 2 coordinates, you can either type them in the input box, click **Set Cuboid Pos 1/2** to set it to your current location, or click **Fast Cuboid Position** then right click with the wand to define 2 positions, kind of like WordEdit.
+* **长方体选择**
 
-- **Range Selection**
+定义两个角落，系统会选中这两个点构成的立方体内的所有已注册刷怪笼，逻辑与`/fill`命令相同。可作用于未加载区块。
 
-Select all spawners within a given range from you. This is the only selection method that cannot select spawners in unloaded chunks.
+你可以通过以下方式设置这两个坐标：可以在输入框中手动输入；可以点击**设置长方体选择位置1/2**以将其设为你当前的位置；或点击**快速立方体选则**后，用操作杖右键点击两个位置（有点类似WorldEdit的操作）。
 
-To adjust the slidebar on the top of the page to change this range.
+* **距离选择**
 
-- **Select by nbt= check**
+选中距离你一定范围内的所有刷怪笼。这是唯一无法选中未加载区块中刷怪笼的方式。
+你可以通过页面顶部的滑块来调整这个范围。
 
-This is the same logic as the `nbt=` selector argument. You will be prompted to enter a compound tag, and the system will select all spawners that have at least one entity containing the tag you entered. For example. `{id:"minecraft:zombie"}` will select all spawners that spawn zombies. This selection works across dimensions and unloaded chunks.
+* **nbt=检查**
 
-- **Select Same Potential**
+其逻辑与`nbt=`选择器参数相同。系统会提示你输入一个复合标签，所有包含该NBT的实体的刷怪笼都会被选中。例如，输入`{id:"minecraft:zombie"}`将选中所有生成僵尸的刷怪笼。该选择可跨维度与未加载区块生效。
 
-You must be standing on a spawner to use this one. Select all spawners that have the same `SpawnPotentials` as the spawner you are standing on. This selection works across dimensions and unloaded chunks.
+* **选择相同生成项**
 
-- **Select All**
+你必须站在一个刷怪笼上才能使用此选择方式。系统会选中所有与你脚下刷怪笼的`SpawnPotentials`相同的刷怪笼。该选择可跨维度与未加载区块生效。
 
-All registered spawners will be selected, works across dimensions and unloaded chunks.
+* **选择全部**
 
-- **Adding Selections**
+选中所有已注册的刷怪笼。该选择跨维度与未加载的区块。
 
-On the top of the page there is a check box "Add to selection instead of replace". If checked, the new selected spawners will be added to the pre-existing selection instead of making a new selection.
+* **添加选择**
 
-### Batch Edit Modify Selection
+勾选页面顶部的**添加至选区而非替换**后，新选中的刷怪笼将被加入到现有的选择列表中，而不是替换原有的选择。
 
-You are allowed to modify your selection by removing some spawners from it or taking intersection with another selection, kind of like PhotoShop. To do that,  open main menu by Sneak + Right Click with DaBsu wand, Then click **Batch Edit: Modify Selection**.
+所有被选中的刷怪笼都会闪烁蓝色。
 
-Choose your mode to be either **Remove From Selection** or **Take Intersetion** with the button on the top, and everything else is the same as the Selecting Spawners page.
+### 批量编辑：修改选区
 
-### Clear Selection
+你可以像使用PhotoShop那样，对已有的选择进行修改，例如移除部分刷怪笼，或与另一组刷怪笼取交集。
+使用大别墅操作杖**潜行 + 右键**打开主菜单，然后点击**批量编辑：编辑选区**。
 
-To Empty your selection, Click the **Batch Edit: Cancel Selection** button in the main menu.
+点击页面顶部的按钮可以在**从选择中移除**和**取重叠部分**模式之间进行选择。其余操作方式与“选择刷怪笼”页面相同。
 
-### Batch Edit Selected Spawners
+### 批量编辑：取消选择
 
-To Edit your selected spawners, Click the **Batch Edit Selected Spawners** button in the main menu. As long as you have at least one spawner selected, pressing Q while holding the wand will also take you here, as a shortcut.
+想要清空选区，在主界面中点击**批量编辑：取消选择**。
 
-There are 4 different ways you can modify these selected spawners:
+### 批量编辑选中的刷怪笼
 
-- **Set Next Spawn Time**
+要编辑选中的刷怪笼，在主菜单中点击**批量编辑所选刷怪笼**。只要你已经选择了至少一个刷怪笼，在拿着操作杖时按`Q`也可以作为快捷方式直接进入该页面。
 
-This sets the `Delay` tag of the spawner to your input. (i.e., prime the spawners)
+你可以通过以下四种方式对选中的刷怪笼进行修改：
 
-- **Edit Properties**
+* **设置下次生成时间**
 
-Set the properties of this spawners except `SpawnPotentials`. Leaving a box empty will not change the original value. Changing the mode to "**Add or Subtract**" will do math on the original value with your input instead of replacing them; this way you can make general adjustments like reduce all selected spawner's `SpawnCount` by 1.
+将刷怪笼的`Delay`标签设置为你输入的数值（即刷怪笼下次生成的时间）。
 
-- **Edit Potentials**
+* **编辑属性**
 
-Manage the spawner's `SpawnPotentials`. Depending on what you selected, you will see different available functions.
+设置刷怪笼除了`SpawnPotentials`之外的属性。将一个输入留空不会修改原始值。将模式切换为“**增加或减少**”后，系统会将你的输入值加在原始值上，而不是进行替换。比如说，你可以将所有选中刷怪笼的`SpawnCount`减少1。
 
-If all spawners in your selection has the exact same `SpawnPotentials`, then you can freely go into and edit each entry just like Quick Edit. If not, you can only do very general edits like replacing all light rules or merge a tag into every single entry.
+* **管理SpawnPotentials**
 
-- **Run Any Command**
+管理刷怪笼的`SpawnPotentials`。根据你选中的刷怪笼的情况，系统会显示不同的操作选项：
 
-This allows you to run any command at the location of the spawner as its marker entity.
+如果所有选中刷怪笼具有完全相同的`SpawnPotentials`，你就可以像快速编辑一样自由地编辑每一项内容；\
+如果不同，则只能进行一些通用操作，例如替换所有的光照规则。
 
-Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.
+* **执行任意指令**
 
-## Custom Options
+你可以在刷怪笼的位置，以其标记实体的身份运行任意命令。
 
-DaBsu provides users with a few options, split into 2 categories: **Global settings**, which affects the compatibility and performance of DaBsu, and **Personal Settings**, which are preferences only affecting yourself.
+注意：如果你运行的指令修改了刷怪笼的NBT，啧必须在编辑后从大别墅主菜单中运行**自检与优化**功能，以确保你所做的更改被大别墅系统正确同步。
 
-Both categories can be accessed through the DaBsu menu (Shift Right Click with DaBsu wand)
+---
 
-Users can also change their language in Personal Settings.
+## 自定义选项
 
-## Hibernating (Uninstalling)
+大别墅为用户提供了一些可调整的选项，分为两个类别：**全局设置**和**个人设置**。
 
-If you are about to release your work into the public, you **must** hibernate DaBsu.
+* **全局设置**管理大别墅的兼容性与性能；
+* **个人设置**仅影响你自己的偏好设置。
 
-Do it by clicking the option in **Global settings** or running `function dabsu:hibernate`.
+你可以从大别墅主菜单进入这两个设置界面。
 
-This removes all marker entities, scoreboards, and just about everything that DaBsu uses except storage files. After the data pack is hibernated, remove DaBsu from the datapacks folder so players cannot access it.
+在**个人设置**中，你还可以更改语言。
 
-You can always resume DaBsu by putting it back into datapacks, `reload`, and run `function dabsu:resume`. All registered spawners will remain registered, provided that you did not remove DaBsu's storage file.
+---
 
-## Misc Functions
+## 休眠（卸载）
 
-A few other "little" things added:
+如果你即将发布地图，那么你**必须**使大别墅休眠。
 
-- **Server Ender Chest**
+你可以在**全局设置**中点击休眠的选项，也可以运行命令`function dabsu:hibernate`。
 
-An (almost) infinite storage **shared** and **synced** in real time for all users.\
-This is intended for devs to share commonly used items quickly.
+这会移除所有标记实体、记分板以及几乎所有大别墅用到的组件（除了storage文件）。\
+在数据包进入休眠状态后，请将大别墅从datapacks文件夹中删除，以防玩家使用它。
 
-- **Self Check and Optimize**
+你可以随时唤醒大别墅：将其放回datapacks，`reload`，然后执行`function dabsu:resume`。\
+只要你没有删除大别墅的storage文件，所有已注册的刷怪笼都会保留。
 
-You can access this from the main menu. This forces all registered spawners to check if they have been changed and update their information in the DaBsu system. Normally spawners will only do this if they just got edited or a player is nearby.
+---
 
-- **Spawn Analyzer**
+## 多人游戏
 
-During quick edit you can choose to run a 5 seconds long spawn analysis that visually shows you where mobs can spawn with your current space, light, and special conditions. This works by forcing the spawner to spawn a special version of the same mob at high frequency and documenting where they spawns.
+多个玩家可以**同时**使用大别墅的快速编辑功能，**只要不尝试编辑同一个刷怪笼**，就不会互相干扰。
+但在**批量编辑**中，刷怪笼的选择是**全服共享**的，意味着同一时间**只能有一组选中的刷怪笼**，由所有玩家共同使用。
 
-- **Trial Spawner**
+---
+## 杂项
 
-DaBsu does not support trial spawners fully. Unless you have a really good reason, you should be using a **Trial Spawner Config File** in Datapack, which can easily manage spawn potentials of multiple trial spawners.
+以下是一些额外的"小"功能：
 
-DaBsu comes with a converter that can convert a trial spawner's inline NBT configuration into an equivalent JSON structure that you can directly copy to a JSON config file in your data pack. To do that enter quick edit on a trial spawner and press `Q` with your wand.
+* **服务器末影箱**
 
-## Technical Information
+可在主菜单中找到。几乎无限容量的存储空间，**实时同步共享**给所有用户。\
+适合开发者快速共享常用物品。
 
-Performance: During idle, you should be able to ignore its performance cost.
+* **自检与优化**
 
-With Quick Actions: In the releases, 2 different versions of DaBsu are provided. The one labled "With Quick Action" has a dialog defined with JSON and can be called from the pause menu or by pressing G. If this does not interference with your game then using this version could be more convenient.
+可在主菜单中找到。该功能会强制所有已注册刷怪笼检查自身是否被更改，并将信息同步更新至大别墅系统。\
+正常情况下，刷怪笼仅在被编辑或附近有玩家时才会自动更新。
 
-Running `function dabsu:version` will tell you its current version. It also returns the numeric verions and set `storage dabsu:sys pong__` to `true`.
+* **生成分析器**
+
+在快速编辑时，你可以在快速编辑面板中选择运行一个持续5秒的生成分析。该分析将以可视化方式展示当前空间、光照与其他条件下，怪物可能的生成位置。\
+原理是让刷怪笼高频生成一个特殊版本的相同生物，并记录其生成点。
+
+* **试炼刷怪笼**
+
+大别墅并不完全支持试炼刷怪笼。除非你有非常具体的原因，否则您应该使用数据包中的**试炼刷怪笼配置文件**。它能高效地管理大量试炼刷怪笼的生成项。
+
+大别墅附带一个转换器，可将试炼刷怪笼内联的NBT配置转换为等价的JSON结构，可以直接复制粘贴进数据包的JSON配置文件中。
+想要使用本功能，对着试炼刷怪笼进入快速编辑模式，然后按下`Q`打开试炼刷怪笼转换面板。
+
+---
+
+## 技术信息
+
+* **性能消耗**：在空闲状态下。开发环境中，大别墅的性能开销可忽略不计。
+
+* **快速操作版本**：大别墅发布包中包含两个版本。其中标注为"With Quick Action"的版本使用了一个用JSON定义的对话框，可通过暂停菜单或按`G`键随时快速唤出。如果你的地图没有使用这些位置，建议使用这个版本以提高便捷性。
+
+* **查看版本号**：运行命令 `function dabsu:version`可查看当前版本信息。该命令还会返回数值版本号，并将 `storage dabsu:sys pong__` 设置为 `true`。

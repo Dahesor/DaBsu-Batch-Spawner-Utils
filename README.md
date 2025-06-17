@@ -152,6 +152,8 @@ All registered spawners will be selected, works across dimensions and unloaded c
 
 On the top of the page there is a check box "Add to selection instead of replace". If checked, the new selected spawners will be added to the pre-existing selection instead of making a new selection.
 
+All selected spawners will flash blue to indicate that.
+
 ### Batch Edit Modify Selection
 
 You are allowed to modify your selection by removing some spawners from it or taking intersection with another selection, kind of like PhotoShop. To do that,  open main menu by Sneak + Right Click with DaBsu wand, Then click **Batch Edit: Modify Selection**.
@@ -186,7 +188,7 @@ If all spawners in your selection has the exact same `SpawnPotentials`, then you
 
 This allows you to run any command at the location of the spawner as its marker entity.
 
-Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.
+Note if you run commands that changed the spawner's properties or potentials, you have to run the Self Check and Optimize function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.
 
 ## Custom Options
 
@@ -205,6 +207,10 @@ Do it by clicking the option in **Global settings** or running `function dabsu:h
 This removes all marker entities, scoreboards, and just about everything that DaBsu uses except storage files. After the data pack is hibernated, remove DaBsu from the datapacks folder so players cannot access it.
 
 You can always resume DaBsu by putting it back into datapacks, `reload`, and run `function dabsu:resume`. All registered spawners will remain registered, provided that you did not remove DaBsu's storage file.
+
+## Multiplayer
+
+Multiple players may use DaBsu's quick edit at the same time without interfering each other (as long as they are not trying to edit the same spawner). For batch edit, the selection is shared among all players so there can only be one selection at a time, used by all players.
 
 ## Misc Functions
 
