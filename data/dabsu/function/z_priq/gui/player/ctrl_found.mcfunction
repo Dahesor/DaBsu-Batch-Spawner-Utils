@@ -8,11 +8,6 @@ execute unless score #case calc.dabsu matches 1.. run return run function dabsu:
 
 execute if score @s ctrl_wait.dabsu matches 4.. unless score @s ctrl.dabsu matches 1.. run return run function dabsu:z_priq/gui/player/begin_ctrl
 
-execute if score #hover calc.dabsu matches 1 unless score disableActionbar Option.dabsu matches -1 run title @s actionbar ["← ",{text:"Spawn Range",color:"green"}," (Hold Right Button)"," →"]
-
-execute if score #hover calc.dabsu matches 2 unless score disableActionbar Option.dabsu matches -1 run title @s actionbar ["← ",{text:"Active Range",color:"aqua"}," (Hold Right Button)"," →"]
-
-execute if score #hover calc.dabsu matches 3 unless score disableActionbar Option.dabsu matches -1 run title @s actionbar ["↑ ",{text:"Spawn Count",color:"yellow"}," (Hold Right Button)"," ↓"]
-
+execute unless score disableActionbar Option.dabsu matches -1 if score #hover calc.dabsu matches 1.. run function dabsu:z_priq/gui/player/actionbar
 
 return 1

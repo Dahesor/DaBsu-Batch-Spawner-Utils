@@ -216,7 +216,7 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     set_delay:"[DaBsu] 设置已选刷怪笼的下次生成时间",\
     any_command:"[DaBsu] 执行任意命令",\
     wait_for_new_spawner:"[DaBsu] 在本位置放置新的刷怪笼以更新其数据。退出快速编辑（操作杖: 蹲+Q）直接删除刷怪笼。",\
-    hibernation_info:"§c§l正在使'大别墅'休眠\n\n§c§l请在继续前仔细阅读以下信息：§r\n\n\n休眠会移除所有数据包使用的标记实体，并停止一切活动。您将无法再使用DaBsu的任何功能\n\n您可以使用重启命令来重启系统。这会重新放置所有的标记实体并重启系统活动\n\n休眠期间数据包不会保留任何计分板，因此重启后可能需要重新设定偏好设置\n\n在发布地图前，休眠后应该移除本数据包，以免玩家有意或无意地激活大别墅\n\n确认要继续么?",\
+    hibernation_info:"§c§l正在使'大别墅'休眠\n\n§c§l请在继续前仔细阅读以下信息：§r\n\n\n休眠会移除所有数据包使用的标记实体，并停止一切活动。您将无法再使用大别墅的任何功能\n\n您可以使用重启命令来重启系统。这会重新放置所有的标记实体并重启系统活动\n\n休眠期间数据包不会保留任何计分板，因此重启后可能需要重新设定偏好设置\n\n在发布地图前，休眠后应该移除本数据包，以免玩家有意或无意地激活大别墅\n\n确认要继续么?",\
     hibernation_notice:"§c§lDaBsu '大别墅'将于5秒后休眠。§e§n点击这里取消",\
     no_spawn_egg_item:"无法从您身上找到任何带有有效\"entity_data\"组件的物品",\
     trial_body_0:"§7大别墅不支持对试炼刷怪笼进行快速或批量编辑",\
@@ -232,7 +232,7 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     trial_wiki:"https://zh.minecraft.wiki/w/?curid=143979",\
     trial_coverter_title:"§bTRIAL_SPAWNER_CONFIG§r 转换器",\
     optimize_failed:"优化未能全部完成。部分数据结构可能已经出现问题，想要解决，请在解决区块加载问题后再次运行优化",\
-    wand_lore.0:"§e右键§f打开主界面",\
+    wand_lore.0:"§e蹲 + 右键§f打开主界面",\
     wand_lore.1:"§f对准刷怪笼§e蹲 + 右键§f进行§d快速编辑",\
     wand_lore.2:"§d§l==快速编辑时==",\
     wand_lore.3:"§d  §eQ §d打开快速编辑菜单",\
@@ -247,5 +247,33 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     wand_lore.12:"§b  (需要个人设置中开启)§e右键 §b选择/取消选择单个刷怪笼",\
     wand_lore.13:"§a§l==扫描与注册时==",\
     wand_lore.14:"§a  §eQ §a打开扫描与注册选项",\
-    wand_lore.15:"§e蹲 + Q §f移除编辑杖"\
+    wand_lore.15:"§e蹲 + Q §f移除编辑杖",\
+    goption_actionbar:"使用Action Bar：",\
+    goption_actionbar_tip:"关闭时大别墅永远不会占用Action Bar",\
+    goption_subtitle:"使用副标题：",\
+    goption_subtitle_tip:"关闭时大别墅永远不会占用副标题",\
+    goption_range:"刷怪笼激活范围：",\
+    goption_range_tip:"当一个已注册刷怪笼附近有至少一个玩家时,\n该刷怪笼会被激活：\n - 若被选择，会闪烁蓝色轮廓线\n - 主动地检查刷怪笼是否还存在\n - 主动地检查刷怪笼是否被更改\n设置为 §e§oGlobal§r 会永远激活所有已加载区块中的刷怪笼",\
+    goption_select:"刷怪笼选择速率（刷怪笼/刻）：",\
+    goption_select_tip:"大别墅可以选择刷怪笼的最大速度\n默认值§7（2000刷怪笼/刻）§r足够在一刻之内\n解决你能遇上的绝大部分情况",\
+    goption_load:"区块加载速度（区块/刻）：",\
+    goption_load_tip:"大别墅可以加载并修改区块的最大速度\n较小值会消耗更长时间但减少卡顿峰值",\
+    goption_master:"修改有关性能与兼容性的全局选项",\
+    goption_hib_1:"若您即将发布地图，",\
+    goption_hib_2:"点此休眠大别墅",\
+    poption_master:"这些设置只影响您自己",\
+    poption_paction_tip:"快速编辑中，按下F应该打开\n属性编辑页面还是生成项编辑页面。\n未选择的另一项将绑定 Shift + F",\
+    poption_paction_pr:"常用快捷键：§n属性编辑",\
+    poption_paction_po:"常用快捷键：§n生成项编辑",\
+    poption_batch_click_tip:"若打开，在没有进行快速编辑时，\n可以右键刷怪笼以选择它加入\n批量编辑的选区",\
+    poption_batch_click_on:"右键控制批量编辑选区：§n开",\
+    poption_batch_click_off:"右键控制批量编辑选区：§n关",\
+    poption_dentity_on:"视觉化快速编辑：§n开",\
+    poption_dentity_off:"视觉化快速编辑：§n关",\
+    poption_dentity_tip:"打开时，快速编辑中会显示刷怪笼的\n各个范围。你可以拖动一个节点以视觉化编辑",\
+    poption_shrc_on:"下蹲 + 右键打开主界面: §n开",\
+    poption_shrc_off:"下蹲 + 右键打开主界面: §n关",\
+    poption_shrc_qe:"下蹲 + 右键打开主界面: §n快速编辑时",\
+    poption_shrc_tip:"若关闭，无需下蹲直接右键\n就可以打开大别墅主界面",\
+    hold_rmb:"按住右键"\
 }

@@ -25,8 +25,17 @@ execute store result storage dabsu:run temp.read int 1 run scoreboard players ge
 function dabsu:z_private_d/pages/gen/__fill_global_settings with storage dabsu:run temp
 
 
-
-
+##Lang
+    data modify storage dabsu:run dialog.dialog.body[2].contents[0].text set from storage dabsu:run lang.this.goption_actionbar
+    data modify storage dabsu:run dialog.dialog.body[2].contents[0].hover_event.value set from storage dabsu:run lang.this.goption_actionbar_tip
+    data modify storage dabsu:run dialog.dialog.body[2].contents[2].text set from storage dabsu:run lang.this.goption_subtitle
+    data modify storage dabsu:run dialog.dialog.body[2].contents[2].hover_event.value set from storage dabsu:run lang.this.goption_subtitle_tip
+    data modify storage dabsu:run dialog.dialog.body[3].contents.text set from storage dabsu:run lang.this.goption_range
+    data modify storage dabsu:run dialog.dialog.body[3].contents.hover_event.value set from storage dabsu:run lang.this.goption_range_tip
+    data modify storage dabsu:run dialog.dialog.body[4].contents.text set from storage dabsu:run lang.this.goption_select
+    data modify storage dabsu:run dialog.dialog.body[4].contents.hover_event.value set from storage dabsu:run lang.this.goption_select_tip
+    data modify storage dabsu:run dialog.dialog.body[5].contents.text set from storage dabsu:run lang.this.goption_load
+    data modify storage dabsu:run dialog.dialog.body[5].contents.hover_event.value set from storage dabsu:run lang.this.goption_load_tip
 
 data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:["       "]}
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

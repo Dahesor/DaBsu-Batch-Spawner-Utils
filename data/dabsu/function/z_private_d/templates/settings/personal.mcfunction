@@ -6,3 +6,6 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:notice",\
     ],\
     action:{label:{translate:"gui.done"},action:{type:"run_command",command:"/trigger trigger.dabsu set 1"}},\
 }
+
+## Lang
+data modify storage dabsu:run dialog.dialog.body[0].contents set from storage dabsu:run lang.this.poption_master

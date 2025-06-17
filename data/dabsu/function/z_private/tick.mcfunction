@@ -1,11 +1,11 @@
 execute if data storage dabsu:sys {hibernate:true} run return fail
-
-
 execute store result score $gametime calc.dabsu run time query gametime
+
+
+execute as @e[type=item] if items entity @s contents *[custom_data~{dabsu:{cart:{}}}] at @s align xyz run function dabsu:z_private/cart/thrown_item
 
 scoreboard players set #has_qEdit calc.dabsu 0
 execute as @a at @s run function dabsu:z_private/player
-execute as @e[type=item] if items entity @s contents *[custom_data~{dabsu:{cart:{}}}] at @s align xyz run function dabsu:z_private/cart/thrown_item
 
 # Spawner Analyzer
 execute if score !sanalyze calc.dabsu matches 1.. run function dabsu:z_priq/analysis/ticker

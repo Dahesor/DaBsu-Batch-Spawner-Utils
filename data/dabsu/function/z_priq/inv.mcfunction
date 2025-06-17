@@ -11,10 +11,26 @@ tag @s add dabsu.offhand
 
 item replace entity @s weapon.offhand from entity @s weapon
 clear @s ghast_tear[custom_data~{dabsu:{is_wand:1b}}]
-function dabsu:z_private/text/tellraw {text:{text:"wand_lore",color:"gray"}}
-data modify storage dabsu:run joint set from storage dabsu:run text
+function dabsu:z_private/text/get
+    data modify storage dabsu:run joint set value []
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.0"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.1"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.2"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.3"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.4"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.5"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.6"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.7"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.8"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.9"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.10"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.11"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.12"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.13"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.14"
+    data modify storage dabsu:run joint append from storage dabsu:run lang.this."wand_lore.15"
 function dabsu:z_private/text/tellraw {text:{text:"wand",color:"green"}}
-loot replace entity @s weapon.mainhand loot dabsu:wand_
+loot replace entity @s weapon loot dabsu:wand_
 
 tag @s remove dabsu.offhand
 function dabsu:z_private_d/uid/get

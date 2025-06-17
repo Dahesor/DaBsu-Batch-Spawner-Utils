@@ -1,7 +1,6 @@
 $data modify storage dabsu:run text set value $(text)
 
-execute if score @s lang.dabsu matches 1 run data modify storage dabsu:run lang.this set from storage dabsu:run lang.zh_cn
-execute unless score @s lang.dabsu matches 1.. run data modify storage dabsu:run lang.this set from storage dabsu:run lang.en
+function dabsu:z_private/text/get
 
 data modify storage dabsu:run run set value {key:""}
 data modify storage dabsu:run run.key set from storage dabsu:run text.text
