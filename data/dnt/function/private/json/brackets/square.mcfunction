@@ -13,6 +13,5 @@ function dnt:private/json/append_char with storage dnt:ram
 #data modify storage dnt:ram provided set from storage dnt:ram new_line
 #function dnt:private/json/insert_provided with storage dnt:ram
 
-
-
+function dnt:private/json/value/array_confirm
 function dnt:private/json/main

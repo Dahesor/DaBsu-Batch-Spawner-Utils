@@ -10,7 +10,7 @@ execute unless score $string calc.dnt matches 1.. if data storage dnt:ram {char:
 execute unless score $string calc.dnt matches 1.. if data storage dnt:ram {char:"]"} run return run function dnt:private/json/brackets/square_end
 execute unless score $string calc.dnt matches 1.. if data storage dnt:ram {char:"{"} run return run function dnt:private/json/brackets/curly
 execute unless score $string calc.dnt matches 1.. if data storage dnt:ram {char:"}"} run return run function dnt:private/json/brackets/curly_end
-execute if score $list calc.dnt matches 1 unless score $bracket calc.dnt matches 1.. run scoreboard players set $key calc.dnt 0
+execute if score $list calc.dnt matches 1.. unless score $bracket calc.dnt matches 1.. run scoreboard players set $key calc.dnt 0
 #Splits
 
 #Key
@@ -20,7 +20,6 @@ execute if score $key calc.dnt matches 2 if score $bracket calc.dnt matches 1 if
 execute if score $key calc.dnt matches 2 if score $bracket calc.dnt matches 1 if score $quoted calc.dnt matches 2 if data storage dnt:ram {char:"'"} run return run function dnt:private/json/key/end_quoted_single
 
 execute if score $key calc.dnt matches 2 if score $bracket calc.dnt matches 1 if score $quoted calc.dnt matches 2 if data storage dnt:ram {char:'"'} run function dnt:private/json/content/slash_insert
-
 
 # Value
 execute if score $key calc.dnt matches 0 run function dnt:private/json/value/quote_starts

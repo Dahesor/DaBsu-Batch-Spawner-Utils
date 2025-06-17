@@ -1,5 +1,6 @@
 execute if score $processed calc.dnt matches 1 run return fail
-execute unless data storage dnt:ram {char:"0"} \
+execute unless data storage dnt:ram {char:"-"} \
+        unless data storage dnt:ram {char:"0"} \
         unless data storage dnt:ram {char:"1"} \
         unless data storage dnt:ram {char:"2"} \
         unless data storage dnt:ram {char:"3"} \
