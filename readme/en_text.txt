@@ -1,0 +1,236 @@
+===== §b§lIntroduction§r =====
+
+§lDaBsu§r is a dialog based Spawner Editor for Minecraft Java 1.21.6+. It is designed for map makers to manage a large amount of spawners conveniently and visually. DaBsu's quick edit allows users to conveniently modify a single spawner or a family of spawners, and DaBsu's batch edit allows you select multiple spawners in highly comprehensive ways and edit them at the same time.
+
+===== §b§lLanguage§r =====
+
+DaBsu comes with support of multi-language. When a player joins the server for the first time, the data pack will ask them to select their language (currently supports §7en§r and §7zh_cn§r), or one may change their language by executing §7function dabsu:lang§r.
+
+===== §b§lGet a DaBsu Wand§r =====
+
+Most functions of DaBsu is triggered with a §lDaBsu Wand§r. To obtain one, run §lany§r of the following commands:
+
+```mcfunction
+function #dabsu:a
+function dabsu:a
+function dabsu:wand
+```
+Alternativly, if you installed the "...With Fast Dialog" version, press §7G§r and open DaBsu's Quick Dialog Actions, then select §7Obtain DaBsu Debug Stick§r.
+
+* Holding the wand and §lSneak + Right Click§r will open §lDaBsu Main Menu§r.
+* Holding the wand and looks at a spawner displays information of that spawner.
+* To get rid of the wand, §lSneak + Q§r.
+
+===== §b§lFeatures§r =====
+
+Here is a list of all functionalities of DaBsu. To see detailed explanation please go to their corresponding chapter.
+
+* Quick Edit
+  * Visualized In-World Edit
+  * Dialog Edit Properties
+  * Dialog Edit §7SpawnPotentials§r
+  * Quick Change entity's §7attributes§r and §7Equipments§r (More coming)
+  * Sync §7SpawnPotentials§r changes to other spawners with the same §7SpawnPotentials§r
+* Scan & Register Pre-existed Spawners
+* Batch Edit
+  * Select Spawners
+    * Cuboid Selection
+    * Range Selection
+    * Same §7SpawnPotentials§r Selection
+    * Check nbt= Selection
+    * Select All
+    * Modify Selection (Add/Remove/Take Intersection)
+  * Edit Selected Spawners
+    * Set Next Spawn Time
+    * Replace/Adjust Properties
+    * Manage §7SpawnPotentials§r
+    * Run Any Command
+* Configurable Settings
+* Hibernate and uninstall data pack
+* Trial Spawner Toner
+* Server Ender Chest
+* Spawn Analyzer
+
+
+===== §b§lQuick Edit§r =====
+
+Quick Edit allows you to edit an single spawner on the go. You may choose to publish your changes on SpawnPotentials to all other spawners with the same §7SpawnPotentials§r.\
+To enter quick edit, §lSneak + Right Click on a spawner§r.
+
+=== §a§lVisualized In-World Edit§r ===
+
+By default you will see a box representing the spawner's §7SpawnRange§r, a sphere representing its §7RequiredPlayerRange§r, and a bar on top of the spawner representing its §7SpawnCount§r.
+
+There are serveral little green cubes attached to these displays, and you may change the corresponding values by §lholding down right click with the wand and dragging§r.
+
+=== §a§lDialog Edit Properties§r ===
+
+During quick edit, §lpressing Q§r will open the §lQuick Edit Menu§r dialog window.\
+From there, you may select §lEdit Properties§r to edit the spawner's settings except SpawnPotentials, including §7SpawnCount§r, §7SpawnRange§r, §7RequiredPlayerRange§r, §7Min/MaxSpawnDelay§r, and §7MaxNearbyEntities§r.\
+§lPressing F§r is a shortcut for getting to this page.
+
+Clicking §lEdit Itself§r will modify this spawner with your input, and Clicking §lEdit Same Potential§r will modify all spawners with the exact same §7SpawnPotentials§r with your input.
+
+=== §a§lDialog Edit SpawnPotentials§r ===
+
+During quick edit, §lpressing Q§r will open the §lQuick Edit Menu§r dialog window.\
+From there, you may select §lEdit SpawnPotentials§r to manage the spawner's §7SpawnPotentials§r entries.
+
+You will first be taken to the §lSelect Potential§r menu, which is a page that lists all of the spawner's §7SpawnPotentials§r entires in order:
+ * Clicking the §l[+]§r button can append an new entry to §7SpawnPotentials§r.
+ * §lLight Limit...§r changes the custom spawn rules for all entries
+ * §lMerge to all...§r lets you merge any compound tag into every entry in the §7SpawnPotentials§r list
+ * §lEdit Full NBT§r lets you directly edit the entire §7SpawnPotentials§r tag.
+
+You may also §lselect an entry to edit that particular spawn§r.\
+A shurtcut exists as §lSneak + F§r. If your spawner has only one spawn option, then it derectly takes you to that entry. If it has none or multiple entires, then it takes you to the §lSelect Potential§r page.
+
+When editing a particular entry, you may freely edit the Spawning Entity §7data.entity§r, the Equipment Loot Table §7data.equipment§r or the Weight §7weight§r of this entry. Click §lEdit Itself§r to apply your changes.\
+You may also choose to §lDelete§r this entry or §lEdit its Light Levels§r.
+
+§e§lQuick Change Common Tags§r
+
+Inside the §lEdit Common Tags§r option, you may change common base §lattributes§r or §lequipments§r of the entity.\
+To quickly change attributes, type the number;\
+To manage equipments, you can choose to copy one of the mob's equipment into your inventory, or replace one of the slots with an item inside your inventory or enderchest.
+
+§e§lSync SpawnPotentials changes§r
+
+After you made any changes through any means to the §7SpawnPotentials§r of the spawner being quick edited, you may §lpress Q§r to open the §lQuick Edit Menu§r dialog window and see a promote for you to §lSync Changes§r or §lRevert Edits§r
+
+§lSync Changes§r will sync your edits to this spawner to all other spawners that used to have the same §7SpawnPotentials§r with it.
+
+§lRevert Edits§r will revert all your changes to the §7SpawnPotentials§r of this spawner.
+
+=== §a§lQuiting Quick Edit§r ===
+
+To finish quick edit, do any of the following:
+* §lSneak + Right Click§r the spawner with the wand again
+* §lSneak + Q§r while hoding the wand
+* Get far enough from the spawner, or the spawner's chunk is no longer loaded.
+* Press the §lExit Quick Edit§r button in the §lQuick Edit Menu§r
+* Leave the server
+
+===== §b§lRegister Pre-Existing Spawners§r =====
+
+The DaBsu system will only keep track of registered spawners. After the data pack is installed, all player placed spawners will be automatically registered.
+
+To register spawners existed before DaBsu is installed or spawners that are not placed by hand, use the §lStart Scanning & Registering§r function from DaBsu main menu. This is a very "thick" raycast that runs every other tick to check if there are any un-registered spawners along your line of sight.
+
+During this is enabled, pressing Q while holding the wand will take you to its options that you can choose how long the ray is, how thick it is and if it can pierce through blocks.
+
+Additionally, right clicking an unregistered spawner with DaBsu wand will register it.
+
+===== §b§lBatch Edit§r =====
+
+Batch editing is a more advanced editing methods. You can select multiple spawners in highly comprehensive ways and edit them at the same time.
+
+=== §a§lBatch Edit Selecting Spawners§r ===
+
+To select spawners for batch editing, open main menu by Sneak + Right Click with DaBsu wand, Then click §lBatch Edit: Select Spawners§r. If there are currently no selected spawners, pressing §7Q§r with the wand takes you here directly (if you are not in quick edit).
+
+There are 5 different method of selection provided:
+- §lCuboid Selelection§r
+
+Define 2 corners and all registered spawners within the cuboid they form will be selected. It is the same logic as the §7/fill§r command. This works across unloaded chunks.
+
+To define the 2 coordinates, you can either type them in the input box, click §lSet Cuboid Pos 1/2§r to set it to your current location, or click §lFast Cuboid Position§r then right click with the wand to define 2 positions, kind of like WordEdit.
+
+- §lRange Selection§r
+
+Select all spawners within a given range from you. This is the only selection methond that cannot select spawners in unloaded chunks.
+
+To adjust the slidebar on the top of the page to change this range.
+
+- §lSelect by nbt= check§r
+
+This is the same logic as the §7nbt=§r selector argument. You will be promoted to enter a compound tag, and the system will select all spawners that have at least one entity containing the tag you entered. For example. §7{id:"minecraft:zombie"}§r will select all spawners that spawn zombies. This selection works across dimensions and unloaded chunks.
+
+- §lSelect Same Potential§r
+
+You must be standing on a spawner to use this one. Select all spanwers that have the same §7SpawnPotentials§r as the spawner you are standing on. This selection works across dimensions and unloaded chunks.
+
+- §lSelect All§r
+
+All registered spawners will be selected, works across dimensions and unloaded chunks.
+
+- §lAdding Selections§r
+
+On the top of the page there is a check box "Add to selection instead of replace". If checked, the new selected spawners will be added to the pre-existing selection instead of making a new selection.
+
+=== §a§lBatch Edit Modify Selection§r ===
+
+You are allowed to modify your selection by removing some spawners from it or taking intersection with another selection, kind of like PhotoShop. To do that,  open main menu by Sneak + Right Click with DaBsu wand, Then click §lBatch Edit: Modify Selection§r.
+
+Choose your mode to be either §lRemove From Selection§r or §lTake Intersetion§r with the button on the top, and everything else is the same as the Selecting Spawners page.
+
+=== §a§lClear Selection§r ===
+
+To Empty your selection, Click the §lBatch Edit: Cancel Selection§r button in the main menu.
+
+=== §a§lBatch Edit Selected Spawners§r ===
+
+To Edit your selected spawners, Click the §lBatch Edit Selected Spawners§r button in the main menu. As long as you have at least one spawner selected, pressing Q while holding the wand will also take you here, as a shortcut.
+
+There are 4 different ways you can modify these selected spawners:
+
+- §lSet Next Spawn Time§r
+
+This sets the §7Delay§r tag of the spawner to your input. (i.e., prime the spawners)
+
+- §lEdit Properties§r
+
+Set the properties of this spawners except §7SpawnPotentials§r. Leaving a box empty will not change the original value. Changing the mode to "§lAdd or Subtract§r" will do math on the original value with your input instead of replacing them; this way you can make general adjustments like reduce all selected spawber's §7SpawnCount§r by 1.
+
+- §lEdit Potentials§r
+
+Manage the spawner's §7SpawnPotentials§r. Depending on what you selected, you will see different available functions.
+
+If all spawners in your selection has the exact same §7SpawnPotentials§r, then you can freely go into and edit each entry just like Quick Edit. If not, you can only do very general edits like replacing all light rules or merge a tag into every single entry.
+
+- §lRun Any Command§r
+
+This allows you to run any command at the location of the spawner as its marker entity.
+
+Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.
+
+===== §b§lCustom Options§r =====
+
+DaBsu provides users with a few options, split into 2 categories: §lGlobal settings§r, which affects the compatibility and performance of DaBsu, and §lPersonal Settings§r, which are preferences only affecting yourself.
+
+Both categories can be accessed through the DaBsu menu (Shift Right Click with DaBsu wand)
+
+Users can also change their language in Personal Settings.
+
+===== §b§lHibernating (Uninstalling)§r =====
+
+If you are about to release your work into the public, you §lmust§r hibernate DaBsu.
+
+Do it by clicking the option in §lGlobal settings§r or running §7function dabsu:hibernate§r.
+
+This removes all marker entities, scoreboards, and just about everything that DaBsu uses except storage files. After the data pack is hibernated, remove DaBsu from the datapacks folder so players cannot access it.
+
+You can always resume DaBsu by putting it back into datapacks, §7reload§r, and run §7function dabsu:resume§r. All registered spawners will remain registered, provided that you did not remove DaBsu's storage file.
+
+===== §b§lMisc Funcions§r =====
+
+A few other "little" things added:
+
+- §lServer Ender Chest§r
+
+An (almost) infinite storage §lshared§r and §lsynced§r in real time for all users.\
+This is intended for devs to share commonly used items quickly.
+
+- §lSelf Check and Optimize§r
+
+You can access this from the main menu. This forces all registered spawners to check if they have been changed and update their information in the DaBsu system. Normally spawners will only do this if they just got edited or a player is nearby.
+
+- §lSpawn Analyzer§r
+
+During quick edit you can choose to run a 5 seconds long spawn analysis that visually shows you where mobs can spawn with your current space, light, and special conditions. This works by forcing the spawner to spawn a special version of the same mob at high frequency and documenting where they spawns.
+
+- §lTrial Spawner§r
+
+DaBsu does not support trial spawners fully. Unless you have a really good reason, you should be using a §lTrial Spawner Config File§r in Datapack, which can easily manage spawn potentials of multiple trial spawners.
+
+DaBsu comes with a converter that can convert a trial spawner's inline NBT configuration into an equivalent JSON structure that you can directly copy to a JSON config file in your data pack. To do that enter quick edit on a trial spawner and press §7Q§r with your wand.

@@ -7,12 +7,15 @@ execute if score disableActionbar Option.dabsu matches -1 run data modify storag
 execute if score disableSubtitle Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.body[-1].contents[2] merge value {extra:["§c§nFalse"]}
 
 
-data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Spawner Active Range: ",extra:[{text:"50",color:"yellow",underlined:true,hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"When a player is at least this close \nto a registered spawner, it is activated: \n - Flashes if it is selected \n - Actively check if the spawner still exists \n - Actively check if the spawner has changed \nSetting it to §e§oGlobal§r activates all loaded spawners"},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1403"}},width: 400}
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Spawner Active Range: ",extra:[{text:"50",color:"yellow",underlined:true,hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"..."},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1403"}},width: 400}
 
 execute if score MarkerActiveRange Option.dabsu matches 1 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "80"
 execute if score MarkerActiveRange Option.dabsu matches 2 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "120"
 execute if score MarkerActiveRange Option.dabsu matches -2 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "§oGlobal"
 execute if score MarkerActiveRange Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "30"
+
+data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"cname: ",extra:[{text:"true",color:"green",underlined:true,hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"..."},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1404"}},width: 400}
+execute if score disableCustomname Option.dabsu matches -1 run data modify storage dabsu:run dialog.dialog.body[-1].contents.extra[0].text set value "§c§nFalse"
 
 
 data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Spawner Select Rate (Spawners/tick): ",extra:[{text:"-250",color:"red",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1410"},hover_event:{action:"show_text",value:""}},"  ",{text:"2000",color:"aqua"},"  ",{text:"+250",color:"green",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1411"},hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"The max rate that DaBsu can select spawners. \nThe default value §7(2000 spawners/tick)§r \nis enough to handle most quests within a tick"}},width: 400}
@@ -32,10 +35,12 @@ function dabsu:z_private_d/pages/gen/__fill_global_settings with storage dabsu:r
     data modify storage dabsu:run dialog.dialog.body[2].contents[2].hover_event.value set from storage dabsu:run lang.this.goption_subtitle_tip
     data modify storage dabsu:run dialog.dialog.body[3].contents.text set from storage dabsu:run lang.this.goption_range
     data modify storage dabsu:run dialog.dialog.body[3].contents.hover_event.value set from storage dabsu:run lang.this.goption_range_tip
-    data modify storage dabsu:run dialog.dialog.body[4].contents.text set from storage dabsu:run lang.this.goption_select
-    data modify storage dabsu:run dialog.dialog.body[4].contents.hover_event.value set from storage dabsu:run lang.this.goption_select_tip
-    data modify storage dabsu:run dialog.dialog.body[5].contents.text set from storage dabsu:run lang.this.goption_load
-    data modify storage dabsu:run dialog.dialog.body[5].contents.hover_event.value set from storage dabsu:run lang.this.goption_load_tip
+    data modify storage dabsu:run dialog.dialog.body[4].contents.text set from storage dabsu:run lang.this.goption_cname
+    data modify storage dabsu:run dialog.dialog.body[4].contents.hover_event.value set from storage dabsu:run lang.this.goption_cname_tip
+    data modify storage dabsu:run dialog.dialog.body[5].contents.text set from storage dabsu:run lang.this.goption_select
+    data modify storage dabsu:run dialog.dialog.body[5].contents.hover_event.value set from storage dabsu:run lang.this.goption_select_tip
+    data modify storage dabsu:run dialog.dialog.body[6].contents.text set from storage dabsu:run lang.this.goption_load
+    data modify storage dabsu:run dialog.dialog.body[6].contents.hover_event.value set from storage dabsu:run lang.this.goption_load_tip
 
 data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:["       "]}
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog

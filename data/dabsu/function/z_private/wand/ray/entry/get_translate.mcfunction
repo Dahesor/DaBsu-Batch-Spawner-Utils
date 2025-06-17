@@ -1,2 +1,2 @@
 $data modify storage dabsu:run temp3 set value {translate:"entity.minecraft.$(id)",color:"gold"}
-execute if data storage dabsu:run element.data.entity.CustomName run data modify storage dabsu:run temp3 set from storage dabsu:run element.data.entity.CustomName
+execute unless score disableCustomname Option.dabsu matches -1 if data storage dabsu:run element.data.entity.CustomName run data modify storage dabsu:run temp3 set from storage dabsu:run element.data.entity.CustomName

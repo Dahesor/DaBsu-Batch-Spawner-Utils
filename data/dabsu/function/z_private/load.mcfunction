@@ -45,3 +45,6 @@ execute unless score minDefaultSkyLight Option.dabsu matches 0.. run scoreboard 
 execute unless score maxDefaultSkyLight Option.dabsu matches 0.. run scoreboard players set maxDefaultSkyLight Option.dabsu 15
 execute unless score run.SelectionRate Option.dabsu matches 0.. run scoreboard players set run.SelectionRate Option.dabsu 2000
 execute unless score run.ChunkReadingRate Option.dabsu matches 0.. run scoreboard players set run.ChunkReadingRate Option.dabsu 10
+
+return 1
+scoreboard players set $default lang.dabsu 0

@@ -284,5 +284,11 @@
     "register_warn":"Warning: High values are VERY performance costly. Increase with caution.",
     "obtain_egg":"From Spawn Egg",
     "obtain_egg_tip":"Get a spawner from a custom spawn egg in your inventory or enderchest",
-    "any_command_warn":"Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system."
+    "any_command_warn":"Note if you run commands that changed the spawner's properties or potentials, you have to run the §eSelf Check and Optimize§r function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.",
+    "goption_cname":"Use CustomName: ",
+    "goption_cname_tip":"If turned off, DaBsu will not show \na spawn entry's name using the entity CustomName even if it has one.\n\nIf your name contains oversized fonts \nyou may want to turn this off",
+    "promot":"Welcome to DaBsu, ",
+    "current_lang":"You are currently reading in §nEnglish",
+    "lang":"English",
+    "help":"See Documentation"
 }
