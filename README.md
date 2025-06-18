@@ -146,7 +146,9 @@ Adjust the slidebar on the top of the page to change this range.
 
 - **Select by nbt= check**
 
-This is the same logic as the `nbt=` selector argument. You will be prompted to enter a compound tag, and the system will select all spawners that have at least one entity containing the tag you entered. For example. `{id:"minecraft:zombie"}` will select all spawners that spawn zombies. This selection works across dimensions and unloaded chunks.
+This is the same logic as the `nbt=` selector argument. You will be prompted to enter a compound tag, and the system will select all spawners that have at least one entity containing the tag you entered. For example, `{id:"minecraft:zombie"}` will select all spawners that spawn zombies (Not quite, actually. Since Minecraft does not check NBT inside spawner entity, you will have to select again with `{id:"zombie"}` and add it to the previous selection *(See Below)* for it to actually select all zombies).
+
+This selection works across dimensions and unloaded chunks.
 
 - **Select Same Potential**
 
