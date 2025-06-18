@@ -3,7 +3,7 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     columns:3,can_close_with_escape:true,after_action:"none",pause:false,\
     inputs:[\
         {type:"number_range",key:"weight",start:1,end:1000,initial:100,label:"weight",step:1,width:400},\
-        {type:"text",key:"entity",label:"§bEntity§7 (data.entity)",initial:"{}",width:400,label_visible:true,multiline:{height:150,max_lines:1},max_length:2147483647},\
+        {type:"text",key:"entity",label:"§bEntity§7 (data.entity)",initial:"{}",width:400,label_visible:true,multiline:{height:150},max_length:2147483647},\
         {type:"text",key:"loot_table",label:"§bEquipment§7 (data.equipment) §a Leave it to §7\"{}\"§a to omit",initial:"{}",width:400,label_visible:true,max_length:2147483647},\
     ],\
     actions:[\

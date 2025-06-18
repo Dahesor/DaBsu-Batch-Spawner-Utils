@@ -17,6 +17,10 @@ scoreboard objectives add ctrl_data.dabsu dummy
 scoreboard objectives add ctrl_wait.dabsu dummy
 scoreboard objectives add opcd.dabsu dummy
 
+execute store result score #maxCommand calc.dabsu run gamerule maxCommandChainLength
+execute unless score #maxCommand calc.dabsu matches 6553500.. run gamerule maxCommandChainLength 6553500
+scoreboard players reset #maxCommand calc.dabsu
+
 scoreboard players set #-1 calc.dabsu -1
 scoreboard players set #2 calc.dabsu 2
 scoreboard players set #10 calc.dabsu 10
