@@ -19,7 +19,7 @@ function #dabsu:a
 function dabsu:a
 function dabsu:wand
 ```
-Alternatively, if you installed the "...With Fast Dialog" version, press `G` and open DaBsu's Quick Dialog Actions, then select `Obtain DaBsu Debug Stick`.
+Alternatively, if you installed the "...With Fast Dialog" version, you can press `G` and open DaBsu's Quick Dialog Actions, then select `Obtain DaBsu Debug Stick`.
 
 * Holding the wand and **Sneak + Right Click** will open **DaBsu Main Menu**.
 * Holding the wand and look at a spawner displays information of that spawner.
@@ -48,7 +48,7 @@ Here is a list of all functionalities of DaBsu. To see detailed explanation plea
 
 ## Quick Edit
 
-Quick Edit allows you to edit an single spawner on the go. You may choose to publish your changes on SpawnPotentials to all other spawners with the same `SpawnPotentials`.\
+Quick Edit allows you to edit a single spawner on the go. You may choose to publish your changes on SpawnPotentials to all other spawners with the same `SpawnPotentials`.\
 To enter quick edit, **Sneak + Right Click on a spawner**.
 
 ### Visualized In-World Edit
@@ -75,13 +75,13 @@ From there, you may select **Edit SpawnPotentials** to manage the spawner's `Spa
 ![Select Potentials](/readme/en/img/1.png)
 
 You will first be taken to the **Select Potential** menu, which is a page that lists all of the spawner's `SpawnPotentials` entries in order:
- * Clicking the **[+]** button can append an new entry to `SpawnPotentials`.
+ * Clicking the **[+]** button can append a new entry to `SpawnPotentials`.
  * **Light Limit...** changes the custom spawn rules for all entries
  * **Merge to all...** lets you merge any compound tag into every entry in the `SpawnPotentials` list
  * **Edit Full NBT** lets you directly edit the entire `SpawnPotentials` tag.
 
 You may also **select an entry to edit that particular spawn**.\
-A shurtcut exists as **Sneak + F**. If your spawner has only one spawn option, then it derectly takes you to that entry. If it has none or multiple entries, then it takes you to the **Select Potential** page.
+A shurtcut exists as **Sneak + F**. If your spawner has only one spawn option, then it directly takes you to that entry. If it has none or multiple entries, then it takes you to the **Select Potential** page.
 
 When editing a particular entry, you may freely edit the Spawning Entity `data.entity`, the Equipment Loot Table `data.equipment` or the Weight `weight` of this entry. Click **Edit Itself** to apply your changes.\
 You may also choose to **Delete** this entry or **Edit its Light Levels**.
@@ -142,7 +142,7 @@ To define the 2 coordinates, you can either type them in the input box, click **
 
 Select all spawners within a given range from you. This is the only selection method that cannot select spawners in unloaded chunks.
 
-To adjust the slidebar on the top of the page to change this range.
+Adjust the slidebar on the top of the page to change this range.
 
 - **Select by nbt= check**
 
@@ -176,7 +176,7 @@ To Empty your selection, Click the **Batch Edit: Cancel Selection** button in th
 
 To Edit your selected spawners, Click the **Batch Edit Selected Spawners** button in the main menu. As long as you have at least one spawner selected, pressing Q while holding the wand will also take you here, as a shortcut.
 
-There are 4 different ways you can modify these selected spawners:
+There are 4 different ways you can modify these selected spawners. All of them applies to all selected spawners across dimensions and unloaded chunks:
 
 - **Set Next Spawn Time**
 
