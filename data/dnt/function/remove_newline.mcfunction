@@ -7,6 +7,7 @@
 execute unless data storage dnt:ram in run return run function dnt:private/snbt/no_input
 data modify storage dnt:ram result set value []
 data modify storage dnt:ram out set value ""
+scoreboard objectives remove calc.dnt
 scoreboard objectives add calc.dnt dummy
 scoreboard players set $remove_n calc.dnt 1
 function dnt:private/split/loop
