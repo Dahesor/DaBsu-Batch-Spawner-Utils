@@ -3,7 +3,7 @@ execute unless data storage dabsu:sys {init:true} run scoreboard players set #pT
 
 data modify storage dabsu:sys init set value true
 data modify storage dabsu:sys version set value 2
-data modify storage dabsu:sys VersionName set value "1.0.1"
+data modify storage dabsu:sys VersionName set value "1.0.2"
 data modify storage dabsu:sys MCVersionRange set value "Minecraft Java 1.21.6"
 data modify storage dabsu:sys LastReload set value -1L
 execute store result storage dabsu:sys LastReload long 1 run time query gametime
