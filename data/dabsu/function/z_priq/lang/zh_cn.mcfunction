@@ -285,5 +285,6 @@ data modify storage dabsu:run lang.zh_cn merge value {\
     promot:"欢迎使用大别墅，",\
     current_lang:"您当前使用的语言是§n简体中文",\
     lang:"简体中文",\
-    help:"查看说明文档"\
+    help:"查看说明文档",\
+    run_command_warn:"注意：如果你运行的指令修改了刷怪笼的NBT，则必须在编辑后从大别墅主菜单中运行§f自检与优化§6功能，以确保你所做的更改被大别墅系统正确同步。"\
 }

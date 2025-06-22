@@ -290,5 +290,6 @@
     "promot":"Welcome to DaBsu, ",
     "current_lang":"You are currently reading in §nEnglish",
     "lang":"English",
-    "help":"See Documentation"
+    "help":"See Documentation",
+    "run_command_warn":"If you run commands that changes the spawner's properties or potentials, you have to run the §fSelf Check and Optimize§6 function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system."
 }
