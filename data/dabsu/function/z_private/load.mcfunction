@@ -1,4 +1,7 @@
 execute if data storage dabsu:sys {hibernate:true} run return fail
+
+schedule function dabsu:z_private/mod/version_warning 2s
+
 scoreboard objectives add calc.dabsu dummy
 scoreboard objectives add lang.dabsu trigger
 scoreboard objectives add Option.dabsu dummy
