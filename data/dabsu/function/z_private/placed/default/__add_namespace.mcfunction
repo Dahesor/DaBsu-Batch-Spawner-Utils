@@ -1,0 +1,1 @@
+$data modify storage dabsu:run spawner.SpawnPotentials[0].data.entity.id set value "minecraft:$(id)"
