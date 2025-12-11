@@ -1,6 +1,7 @@
 {
     "values": [
-        "dabsu:z_private/load",
-        "dabsu_gu:zzz/load"
+        "dabsu:z_private/load_load",
+        "dabsu_gu:zzz/load",
+        "dabsu:z_private/mod/v_w_load"
     ]
 }
