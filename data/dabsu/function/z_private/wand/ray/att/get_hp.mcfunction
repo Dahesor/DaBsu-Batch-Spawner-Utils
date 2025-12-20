@@ -86,3 +86,9 @@ execute if data storage dabsu:run {id:"zombie"} run return run data modify stora
 execute if data storage dabsu:run {id:"zombie_horse"} run return run data modify storage dabsu:run num.hp set value 15
 execute if data storage dabsu:run {id:"zombie_villager"} run return run data modify storage dabsu:run num.hp set value 20
 execute if data storage dabsu:run {id:"zombified_piglin"} run return run data modify storage dabsu:run num.hp set value 20
+
+execute if data storage dabsu:run {id:copper_golem} run return run data modify storage dabsu:run num.hp set value 12
+execute if data storage dabsu:run {id:nautilus} run return run data modify storage dabsu:run num.hp set value 15
+execute if data storage dabsu:run {id:zombie_nautilus} run return run data modify storage dabsu:run num.hp set value 15
+execute if data storage dabsu:run {id:camel_husk} run return run data modify storage dabsu:run num.hp set value 32
+execute if data storage dabsu:run {id:parched} run return run data modify storage dabsu:run num.hp set value 16

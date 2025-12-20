@@ -85,6 +85,11 @@ execute if data storage dabsu:run item{id:"minecraft:zombie_spawn_egg"} run data
 execute if data storage dabsu:run item{id:"minecraft:zombie_horse_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_horse"}
 execute if data storage dabsu:run item{id:"minecraft:zombie_villager_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_villager"}
 execute if data storage dabsu:run item{id:"minecraft:zombified_piglin_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:zombified_piglin"}
+execute if data storage dabsu:run item{id:"minecraft:copper_golem_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:copper_golem"}
+execute if data storage dabsu:run item{id:"minecraft:nautilus_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:nautilus"}
+execute if data storage dabsu:run item{id:"minecraft:zombie_nautilus_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_nautilus"}
+execute if data storage dabsu:run item{id:"minecraft:camel_husk_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:camel_husk"}
+execute if data storage dabsu:run item{id:"minecraft:parched_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:parched"}
 
 execute if data storage dabsu:run item.components."minecraft:entity_data" run data modify storage dabsu:run entity_data merge from storage dabsu:run item.components."minecraft:entity_data"
 data modify storage dabsu:run entity_list append from storage dabsu:run entity_data

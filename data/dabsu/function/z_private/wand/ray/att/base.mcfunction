@@ -51,4 +51,10 @@ execute if data storage dabsu:run {id:zombie} run return run data modify storage
 execute if data storage dabsu:run {id:zombie_villager} run return run data modify storage dabsu:run att set value {armor:2d,damage:3d}
 execute if data storage dabsu:run {id:zombified_piglin} run return run data modify storage dabsu:run att set value {armor:2d,damage:5d}
 
+execute if data storage dabsu:run {id:copper_golem} run return run data modify storage dabsu:run att set value {armor:0d,damage:0d}
+execute if data storage dabsu:run {id:nautilus} run return run data modify storage dabsu:run att set value {armor:0d,damage:3d}
+execute if data storage dabsu:run {id:zombie_nautilus} run return run data modify storage dabsu:run att set value {armor:0d,damage:3d}
+execute if data storage dabsu:run {id:camel_husk} run return run data modify storage dabsu:run att set value {armor:0d,damage:0d}
+execute if data storage dabsu:run {id:parched} run return run data modify storage dabsu:run att set value {armor:0d,damage:2d}
+
 return run data modify storage dabsu:run att set value {armor:0d,damage:0d}

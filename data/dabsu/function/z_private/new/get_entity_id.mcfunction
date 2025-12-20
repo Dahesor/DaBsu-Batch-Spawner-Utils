@@ -142,3 +142,7 @@ execute if entity @s[type=minecraft:zombie] run data modify storage dabsu:run en
 execute if entity @s[type=minecraft:zombie_horse] run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_horse"}
 execute if entity @s[type=minecraft:zombie_villager] run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_villager"}
 execute if entity @s[type=minecraft:zombified_piglin] run data modify storage dabsu:run entity_data set value {id:"minecraft:zombified_piglin"}
+execute if entity @s[type=zombie_nautilus] run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_nautilus"}
+execute if entity @s[type=nautilus] run data modify storage dabsu:run entity_data set value {id:"minecraft:nautilus"}
+execute if entity @s[type=parched] run data modify storage dabsu:run entity_data set value {id:"minecraft:parched"}
+execute if entity @s[type=copper_golem] run data modify storage dabsu:run entity_data set value {id:"minecraft:copper_golem"}
