@@ -20,15 +20,15 @@ function dabsu:z_priq/menu/gen/get_type_count with storage dabsu:run run
 function dabsu:z_priq/menu/history/validate
 
 #Copy Full Data
-data modify storage dabsu:run nbt_to_string.input set from block ~ ~ ~ {}
-function dabsu:z_private/mod/nbt_to_string/get
-data modify storage dabsu:run dialog.dialog.actions[0].action.value set from storage dabsu:run nbt_to_string.output
+data modify storage dnt:ram in set from block ~ ~ ~ {}
+function dnt:get_snbt
+data modify storage dabsu:run dialog.dialog.actions[0].action.value set from storage dnt:ram out
 
 #Copy SpawnPotentials
-data modify storage dabsu:run nbt_to_string.input set from storage dabsu:run nbt_to_string.input.SpawnData
-execute if data storage dabsu:run spawner.SpawnPotentials[0] run data modify storage dabsu:run nbt_to_string.input set from storage dabsu:run spawner.SpawnPotentials
-function dabsu:z_private/mod/nbt_to_string/get
-data modify storage dabsu:run dialog.dialog.actions[1].action.value set from storage dabsu:run nbt_to_string.output
+data modify storage dnt:ram in set from storage dabsu:run nbt_to_string.input.SpawnData
+execute if data storage dabsu:run spawner.SpawnPotentials[0] run data modify storage dnt:ram in set from storage dabsu:run spawner.SpawnPotentials
+function dnt:get_snbt
+data modify storage dabsu:run dialog.dialog.actions[1].action.value set from storage dnt:ram out
 
 #Analyzer
 scoreboard players set #exist uid.dabsu 0

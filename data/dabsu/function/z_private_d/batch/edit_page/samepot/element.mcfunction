@@ -15,9 +15,9 @@ function dabsu:z_private/wand/quickedit/funcs/__get_element with storage dabsu:r
 data modify storage dabsu:run dialog.dialog.inputs[0].initial set from storage dabsu:run element.weight
 
 #entity
-data modify storage dabsu:run nbt_to_string.input set from storage dabsu:run element.data.entity
-function dabsu:z_private/mod/nbt_to_string/get
-data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dabsu:run nbt_to_string.output
+data modify storage dnt:ram in set from storage dabsu:run element.data.entity
+function dnt:get_snbt
+data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dnt:ram out
 
 #loot table
 execute if data storage dabsu:run element.data.equipment run function dabsu:z_private_d/batch/edit_page/samepot/get_equipment
