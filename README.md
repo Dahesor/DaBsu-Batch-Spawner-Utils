@@ -6,7 +6,7 @@
 
 | Minecraft | DaBsu |
 | -------- | -------- |
-| 1.21.6~1.21.10 | [v1.0.6](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/edit/v1.0.6) |
+| 1.21.6~1.21.10 | [v1.0.6](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/tag/v1.0.6) |
 | 1.21.11 | [v1.0.7](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/tag/v1.0.7) |
 | 26.1 | [v1.1.0](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/tag/v1.1.0) |
 
