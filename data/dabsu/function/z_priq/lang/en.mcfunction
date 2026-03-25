@@ -106,7 +106,7 @@ data modify storage dabsu:run lang.en merge value {\
     temp_wand_home_9:"Start Scan & Registering",\
     temp_wand_home_10:"GitHub & Repot Issues",\
     temp_wand_home_11:"§lMain Menu",\
-    temp_edit_any_command_1:"Run any command. Context: positioned at each spawner, as each spawner's marker entity",\
+    temp_edit_any_command_1:"Run any command. Context: positioned at each spawner, as each spawner's marker entity.",\
     temp_edit_change_delay_1:"This sets the §7Delay§r tag, or ticks until nex spawn for all selected spawners",\
     temp_edit_multi_merge_1:"§6[DaBsu]§r Merge to Each Potential...",\
     temp_edit_multi_potentials_1:"Overwrite All Light Requirements...",\
@@ -291,5 +291,11 @@ data modify storage dabsu:run lang.en merge value {\
     current_lang:"You are currently reading in §nEnglish",\
     lang:"English",\
     help:"See Documentation",\
-    run_command_warn:"If you run commands that changes the spawner's properties or potentials, you have to run the §fSelf Check and Optimize§6 function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system."\
+    run_command_warn:"If you run commands that changes the spawner's properties or potentials, you have to run the §fSelf Check and Optimize§6 function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.",\
+    format_spawner:"Describe Spawner",\
+    format_spawner_tip:"Read an existing spawner item, give a new spawner that has what it spawns written in its name and lore",\
+    no_spawner_item:"Could not find any spawner item in your inventory or enderchest",\
+    run_cmd_for_each_lable:"§bRun for each SpawnPotential§r",\
+    run_cmd_for_each:"If the §bRun for each SpawnPotential§r is selected, the command will be run once for each SpawnPotential entry of each spawner, §nSee more",\
+    run_cmd_for_each_hover:"Every time the command is executed,\n the SpawnPotential data will be available as\n§astorage §adabsu:var §adata§r\nWhatever changes you make to this data will be applied to the spawner."\
 }

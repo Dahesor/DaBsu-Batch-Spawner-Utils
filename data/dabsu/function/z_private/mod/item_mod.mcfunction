@@ -1,17 +1,38 @@
 data modify storage dabsu:run item.components."minecraft:item_name" set value [{translate:"block.minecraft.spawner"}," ",{translate:"",color:"aqua"},{text:""},{text:""}]
 data modify storage dabsu:run item.components."minecraft:lore" set value []
 
+execute if data storage dabsu:run item.components."minecraft:block_entity_data".SpawnData.data unless data storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[0].data run function dabsu:z_private/mod/add_spawn_pot
+
 data modify storage dabsu:run id set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[0].data.entity.id
 function dabsu:z_private/mod/get_translate
 data modify storage dabsu:run item.components."minecraft:item_name"[2].translate set from storage dabsu:run translate
-
+execute unless score disableCustomname Option.dabsu matches -1 if data storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[0].data.entity.CustomName run data modify storage dabsu:run item.components."minecraft:item_name"[2] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[0].data.entity.CustomName
 
 execute if data storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[1].data.entity.id run data modify storage dabsu:run item.components."minecraft:item_name"[3].text set value "..."
 
 data modify storage dabsu:run item.components."minecraft:lore" append from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.id
 
+data modify storage dabsu:run item_list_stack prepend value [{id:"structure_void"},{id:"structure_void"},{id:"structure_void"},{id:"structure_void"},{id:"structure_void"},{id:"structure_void"}]
+data modify storage dabsu:run item_list_stack[0][0] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.equipment.mainhand
+data modify storage dabsu:run item_list_stack[0][1] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.equipment.offhand
+data modify storage dabsu:run item_list_stack[0][2] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.equipment.head
+data modify storage dabsu:run item_list_stack[0][3] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.equipment.chest
+data modify storage dabsu:run item_list_stack[0][4] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.equipment.legs
+data modify storage dabsu:run item_list_stack[0][5] set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[].data.entity.equipment.feet
+data modify storage dabsu:run text_stack prepend value [{text:"",color:"white",shadow_color:0}]
+function dabsu:z_private/mod/item_mod_atlas
+data modify storage dabsu:run item.components."minecraft:lore" append value ""
+data modify storage dabsu:run item.components."minecraft:lore" append from storage dabsu:run text_stack[0]
+
+data remove storage dabsu:run text_stack[0]
+data remove storage dabsu:run item_list_stack[0]
+
 data modify storage dabsu:run element set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials
 data modify storage dabsu:run item.components."minecraft:custom_data".dabsu.Potential.Potential set from storage dabsu:run element
 data modify storage dabsu:run item.components."minecraft:custom_data".dabsu.Potential.type set value -1
 data modify storage dabsu:run item.components."minecraft:custom_data".dabsu.saved_potential set value 1b
+
+
+
+
 execute store result storage dabsu:run item.components."minecraft:custom_data".dabsu.Potential.type int 1 run return run function dabsu:z_private/mod/check_type/this

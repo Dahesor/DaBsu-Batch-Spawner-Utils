@@ -1,0 +1,2 @@
+data modify storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials set value [{data:{},weight:100}]
+data modify storage dabsu:run item.components."minecraft:block_entity_data".SpawnPotentials[0].data set from storage dabsu:run item.components."minecraft:block_entity_data".SpawnData

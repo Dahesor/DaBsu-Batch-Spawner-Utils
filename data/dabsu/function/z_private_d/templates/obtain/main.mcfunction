@@ -4,6 +4,7 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     body:[{type:"plain_message",contents:"",width:400}],\
     actions:[\
         {label:{text:"From Spawn Egg",color:"#fffdd3"},width:240,action:{type:"run_command",command:"/trigger trigger.dabsu set 1050"}},\
+        {label:{text:"Format Spawner",color:"#fffdd3"},width:240,action:{type:"run_command",command:"/trigger trigger.dabsu set 1051"}},\
         {label:{text:"",color:"#cdffff"},width:240},\
     ],\
     exit_action:{label:{translate:"gui.back"},action:{type:"run_command",command:"/trigger trigger.dabsu set 1000"}}\
@@ -13,3 +14,5 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
 #data modify storage dabsu:run dialog.dialog.title set from storage dabsu:run lang.this.batch_title
 data modify storage dabsu:run dialog.dialog.actions[0].label.text set from storage dabsu:run lang.this.obtain_egg
 data modify storage dabsu:run dialog.dialog.actions[0].tooltip set from storage dabsu:run lang.this.obtain_egg_tip
+data modify storage dabsu:run dialog.dialog.actions[1].label.text set from storage dabsu:run lang.this.format_spawner
+data modify storage dabsu:run dialog.dialog.actions[1].tooltip set from storage dabsu:run lang.this.format_spawner_tip

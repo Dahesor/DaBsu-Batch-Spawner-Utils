@@ -38,7 +38,7 @@ struct Misc{
     nbt?: struct{obj?:struct{[any]:any},list?:[any],f?:float,f2?:float,i?:int,d?:double},
     exe?: struct exe{
         command?: #[command] string,
-        args?: (struct{[any]?:any}|enum(string){NONE="NONE"}),
+        args?: (struct{[any]?:any}|"NONE"),
         x?: int,
         y?: int,
         z?: int,

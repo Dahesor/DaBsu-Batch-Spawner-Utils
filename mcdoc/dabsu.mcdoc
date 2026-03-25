@@ -89,6 +89,7 @@ dispatch minecraft:storage["dabsu:run"] to struct {
     ...Misc,
     item?: SlottedItem<byte @ -106..200>,
     item_list?: [SlottedItem<byte @ -106..200>],
+    item_list_stack?: [[SlottedItem<byte @ -106..200>]],
     lang?: struct{[lang]?: lines, this?:lines},
     equipment?: EntityEquipment,
     hold?: [ObjectDimension],
@@ -132,6 +133,8 @@ dispatch minecraft:storage["dabsu:run"] to struct {
         dialog?: DialogMix,
     },
     form?: form,
+    text_stack?: [(Text|[Text])],
+    stack?: [any]
 }
 
 struct QueueTask{

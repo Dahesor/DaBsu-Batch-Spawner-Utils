@@ -15,5 +15,6 @@ execute if score #trigger trigger.dabsu matches 1012 run return run function dab
 
 
 execute if score #trigger trigger.dabsu matches 1050 run return run function dabsu:z_private_d/pages/obtain_spawn_egg
+execute if score #trigger trigger.dabsu matches 1051 run return run function dabsu:z_private_d/pages/format_spawner
 
 execute if score #trigger trigger.dabsu matches 1077 run return run function dabsu:hibernate

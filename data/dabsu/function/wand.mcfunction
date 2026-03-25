@@ -21,3 +21,4 @@ data modify storage dabsu:run joint append from storage dabsu:run lang.this."wan
 
 function dabsu:z_private/text/tellraw {text:{text:"wand",color:"green"}}
 loot give @s loot dabsu:wand_
+

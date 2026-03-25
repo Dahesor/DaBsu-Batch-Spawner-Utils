@@ -7,3 +7,7 @@ dispatch minecraft:storage["dabsu:sys"] to struct {
     init?: boolean,
     pong__?: boolean,
 }
+
+dispatch minecraft:storage["dabsu:var"] to struct {
+    data: ::java::world::block::spawner::SpawnPotential,
+}
