@@ -1,5 +1,13 @@
 # 大别墅，对话框批量刷怪笼管理工具 (DaBsu)
 
+## 版本信息
+
+| Minecraft | DaBsu |
+| -------- | -------- |
+| 1.21.6~1.21.10 | [v1.0.6](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/edit/v1.0.6) |
+| 1.21.11 | [v1.0.7](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/tag/v1.0.7) |
+| 26.1 | [v1.1.0](https://github.com/Dahesor/DaBsu-Batch-Spawner-Utils/releases/tag/v1.1.0) |
+
 ## 简介
 
 **大别墅** 是一个基于新版本dialog的刷怪笼编辑工具，适用于Minecraft Java 1.21.6+。它为地图制作者提供了方便直观的方式来管理大量刷怪笼。通过“大别墅”的快速编辑功能，用户可以轻松地修改单个刷怪笼或所有相同配置的刷怪笼；通过批量编辑功能，用户可以使用多种筛选方式选中多个刷怪笼并一起编辑它们。
