@@ -2,6 +2,14 @@
 
 [简体中文](/readme/zh/README.md)
 
+## Version
+
+| Minecraft | DaBsu |
+| -------- | -------- |
+| 1.21.6~1.21.10 | v1.0.6 |
+| 1.21.11 | v1.0.7 |
+| 26.1 | v1.1.0 |
+
 ## Introduction
 
 **DaBsu** is a dialog based Spawner Editor for Minecraft Java 1.21.6+. It is designed for map makers to manage a large amount of spawners conveniently and visually. DaBsu's quick edit allows users to conveniently modify a single spawner or a family of spawners, and DaBsu's batch edit allows you select multiple spawners in highly comprehensive ways and edit them together.
