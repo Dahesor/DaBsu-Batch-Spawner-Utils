@@ -13,8 +13,7 @@
                     }
                 },
                 "player": {
-                    "type_specific": {
-                        "type": "player",
+                    "type_specific/player": {
                         "gamemode": ["creative","spectator"]
                     }
                 }
