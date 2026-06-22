@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Prompt version
-set /p VERSION=Enter version: 
+set /p VERSION=Enter version:
 set "BASENAME=DaBsu v%VERSION%"
 set "ZIP1_NAME=DaBsu v%VERSION%.zip"
 set "ZIP2_NAME=DaBsu_With_Quick_Action v%VERSION%.zip"

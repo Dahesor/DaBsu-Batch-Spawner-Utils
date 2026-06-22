@@ -5,3 +5,4 @@ data remove storage dabsu:run entity_data.Rotation
 data remove storage dabsu:run entity_data.Brain
 data remove storage dabsu:run entity_data.HurtTime
 data remove storage dabsu:run entity_data.HurtByTimestamp
+data remove storage dabsu:run entity_data.ticks_since_last_hurt_by_mob
