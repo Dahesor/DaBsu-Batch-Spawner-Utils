@@ -1,8 +1,11 @@
 use ::java::util::text::Text
+use ::java::util::text::TextObject
 use ::java::util::text::ClickEvent
 use ::java::data::dialog::Dialog
 use ::java::world::item::ItemStack
 
+
+type TextNullable = ([TextObject])
 
 struct DialogMix {
 	type?: #[id="dialog_type"] string,
@@ -135,7 +138,7 @@ struct DialogBodyMix {
 	description?: (struct PlainMessage {
 			/// A multiline label.
 			/// Click events in the text trigger `after_action` like any other action.
-			contents?: Text,
+			contents?: TextNullable,
 			/// Maximum width of message.
 			/// Defaults to 200.
 			width?: int @ 1..1024,
