@@ -1,5 +1,5 @@
 {
-    "function": "set_name",
+    "type": "set_name",
     "entity": "this",
     "name": {
         "storage": "dabsu:run",

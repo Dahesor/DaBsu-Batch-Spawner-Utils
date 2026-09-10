@@ -11,13 +11,13 @@
             ]
         }
     ],
-    "functions": [
+    "modifier": [
         {
-            "function": "set_custom_data",
-            "tag": "{dabsu:{cart:{button:{id:\"up\"}}}}"
+            "type": "set_custom_data",
+            "tag": {"dabsu":{"cart":{"button":{"id":"up"}}}}
         },
         {
-            "function": "set_components",
+            "type": "set_components",
             "components": {
                 "enchantment_glint_override": false,
                 "max_stack_size": 1,
@@ -25,12 +25,12 @@
             }
         },
         {
-            "function": "set_name",
+            "type": "set_name",
             "name": {"translate": "spectatorMenu.previous_page","color": "green","italic": false},
             "target": "custom_name"
         },
         {
-            "function": "set_lore",
+            "type": "set_lore",
             "mode": "replace_all",
             "entity": "this",
             "lore": [
