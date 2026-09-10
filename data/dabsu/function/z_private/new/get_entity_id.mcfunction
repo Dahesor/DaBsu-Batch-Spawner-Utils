@@ -146,3 +146,4 @@ execute if entity @s[type=zombie_nautilus] run data modify storage dabsu:run ent
 execute if entity @s[type=nautilus] run data modify storage dabsu:run entity_data set value {id:"minecraft:nautilus"}
 execute if entity @s[type=parched] run data modify storage dabsu:run entity_data set value {id:"minecraft:parched"}
 execute if entity @s[type=copper_golem] run data modify storage dabsu:run entity_data set value {id:"minecraft:copper_golem"}
+execute if entity @s[type=sulfur_cube] run data modify storage dabsu:run entity_data set value {id:"minecraft:sulfur_cube"}

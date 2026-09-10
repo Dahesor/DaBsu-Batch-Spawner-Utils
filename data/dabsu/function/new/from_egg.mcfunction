@@ -90,6 +90,7 @@ execute if data storage dabsu:run item{id:"minecraft:nautilus_spawn_egg"} run da
 execute if data storage dabsu:run item{id:"minecraft:zombie_nautilus_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:zombie_nautilus"}
 execute if data storage dabsu:run item{id:"minecraft:camel_husk_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:camel_husk"}
 execute if data storage dabsu:run item{id:"minecraft:parched_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:parched"}
+execute if data storage dabsu:run item{id:"minecraft:sulfur_cube_spawn_egg"} run data modify storage dabsu:run entity_data set value {id:"minecraft:sulfur_cube"}
 
 execute if data storage dabsu:run item.components."minecraft:entity_data" run data modify storage dabsu:run entity_data merge from storage dabsu:run item.components."minecraft:entity_data"
 data modify storage dabsu:run entity_list append from storage dabsu:run entity_data

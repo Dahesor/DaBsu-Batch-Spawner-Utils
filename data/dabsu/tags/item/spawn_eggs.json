@@ -78,6 +78,12 @@
         "zombie_spawn_egg",
         "zombie_horse_spawn_egg",
         "zombie_villager_spawn_egg",
-        "zombified_piglin_spawn_egg"
+        "zombified_piglin_spawn_egg",
+        "copper_golem_spawn_egg",
+        "zombie_nautilus_spawn_egg",
+        "nautilus_spawn_egg",
+        "parched_spawn_egg",
+        "sulfur_cube_spawn_egg",
+        "happy_ghast_spawn_egg"
     ]
 }

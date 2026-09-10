@@ -33,6 +33,4 @@ data modify storage dabsu:run item.components."minecraft:custom_data".dabsu.Pote
 data modify storage dabsu:run item.components."minecraft:custom_data".dabsu.saved_potential set value 1b
 
 
-
-
 execute store result storage dabsu:run item.components."minecraft:custom_data".dabsu.Potential.type int 1 run return run function dabsu:z_private/mod/check_type/this

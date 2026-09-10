@@ -40,6 +40,7 @@ execute if data storage dabsu:run {id:"illusioner"} run return run data modify s
 execute if data storage dabsu:run {id:"iron_golem"} run return run data modify storage dabsu:run num.hp set value 100
 execute if data storage dabsu:run {id:"llama"} run return run data modify storage dabsu:run num.hp set value "?"
 execute if data storage dabsu:run {id:"magma_cube"} run return run function dabsu:z_private/wand/ray/att/slime_hp
+execute if data storage dabsu:run {id:"sulfur_cube"} run return run function dabsu:z_private/wand/ray/att/slime_hp
 execute if data storage dabsu:run {id:"mooshroom"} run return run data modify storage dabsu:run num.hp set value 10
 execute if data storage dabsu:run {id:"mule"} run return run data modify storage dabsu:run num.hp set value "?"
 execute if data storage dabsu:run {id:"ocelot"} run return run data modify storage dabsu:run num.hp set value 10
@@ -86,7 +87,6 @@ execute if data storage dabsu:run {id:"zombie"} run return run data modify stora
 execute if data storage dabsu:run {id:"zombie_horse"} run return run data modify storage dabsu:run num.hp set value 15
 execute if data storage dabsu:run {id:"zombie_villager"} run return run data modify storage dabsu:run num.hp set value 20
 execute if data storage dabsu:run {id:"zombified_piglin"} run return run data modify storage dabsu:run num.hp set value 20
-
 execute if data storage dabsu:run {id:copper_golem} run return run data modify storage dabsu:run num.hp set value 12
 execute if data storage dabsu:run {id:nautilus} run return run data modify storage dabsu:run num.hp set value 15
 execute if data storage dabsu:run {id:zombie_nautilus} run return run data modify storage dabsu:run num.hp set value 15

@@ -142,6 +142,14 @@
         "zombie",
         "zombie_horse",
         "zombie_villager",
-        "zombified_piglin"
+        "zombified_piglin",
+        "sulfur_cube",
+        "parched",
+        "camel_husk",
+        "zombie_nautilus",
+        "nautilus",
+        "copper_golem",
+        "mannequin",
+        "happy_ghast"
     ]
 }
