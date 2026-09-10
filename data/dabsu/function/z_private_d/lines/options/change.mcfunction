@@ -7,6 +7,8 @@ execute if score #trigger trigger.dabsu matches 1410 run scoreboard players remo
 execute if score #trigger trigger.dabsu matches 1411 run scoreboard players add run.SelectionRate Option.dabsu 250
 execute if score #trigger trigger.dabsu matches 1412 run scoreboard players remove run.ChunkReadingRate Option.dabsu 1
 execute if score #trigger trigger.dabsu matches 1413 run scoreboard players add run.ChunkReadingRate Option.dabsu 1
+execute if score #trigger trigger.dabsu matches 1414 run gamerule spawner_blocks_work false
+execute if score #trigger trigger.dabsu matches 1415 run gamerule spawner_blocks_work true
 
 
 execute if score run.SelectionRate Option.dabsu matches ..500 run scoreboard players set run.SelectionRate Option.dabsu 500

@@ -15,9 +15,14 @@ function dabsu:z_private/wand/quickedit/funcs/__get_element with storage dabsu:r
 data modify storage dabsu:run dialog.dialog.inputs[0].initial set from storage dabsu:run element.weight
 
 #entity
+data modify storage dnt:ram args set value 0
+data modify storage dnt:ram in set from storage dabsu:run element.data.entity
+execute if data storage dabsu:user data[0].settings{useNBTPrettyPrint:true} run function dnt:pretty_print
+execute if data storage dabsu:user data[0].settings{useNBTPrettyPrint:true} run data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dnt:ram out
 data modify storage dnt:ram in set from storage dabsu:run element.data.entity
 function dnt:get_snbt
-data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dnt:ram out
+execute unless data storage dabsu:user data[0].settings{useNBTPrettyPrint:true} run data modify storage dabsu:run dialog.dialog.inputs[1].initial set from storage dnt:ram out
+data modify storage dabsu:run dialog.dialog.actions[2].action.value set from storage dnt:ram out
 
 #loot table
 execute if data storage dabsu:run element.data.equipment run function dabsu:z_private_d/batch/edit_page/samepot/get_equipment
@@ -31,7 +36,7 @@ data modify storage dabsu:run run.cmd_pre set value 'function dabsu:z_private_d/
 data modify storage dabsu:run run.index set from storage dabsu:run index.index
 function dabsu:z_private/wand/quickedit/funcs/__get_index with storage dabsu:run run
 
-data modify storage dabsu:run dialog.dialog.actions[3].action.template set from storage dabsu:run run.cmd
+data modify storage dabsu:run dialog.dialog.actions[4].action.template set from storage dabsu:run run.cmd
 
 function dabsu:z_private_d/uid/get
 data modify storage dabsu:user data[0].editing.index set from storage dabsu:run index.index

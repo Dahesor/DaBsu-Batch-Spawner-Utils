@@ -9,7 +9,7 @@ dispatch minecraft:storage["dnt:ram"] to struct{
     indent?: string,
     text?: Text,
     pt?: [Text],
-    brackets?: [enum(string){square = "[",curly = "{",quote = "\"",single = "'"}],
+    brackets?: [Brackets],
     result?: [string],
     provided?: string,
     concat?: struct{
@@ -37,4 +37,11 @@ dispatch minecraft:storage["dnt:ram"] to struct{
     },
     args?: any,
     d_e?: string,
+}
+
+type Brackets = enum(string){
+    square = "[",
+    curly = "{",
+    quote = "\"",
+    single = "'"
 }

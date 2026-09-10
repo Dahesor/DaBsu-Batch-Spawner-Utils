@@ -179,7 +179,7 @@
     "temp_modify_selection_5_lab": "Set Cuboid Pos 2",
     "temp_modify_selection_6_lab": "Fast Cuboid Selection",
     "temp_potential_1_lab": "weight",
-    "temp_potential_2_lab": "§bEntity§7 (data.entity)",
+    "temp_potential_2_lab": "§bEntity§7 (data.entity) §f Line breaks can be inserted anywhere",
     "temp_potential_3_lab": "§bEquipment§7 (data.equipment) §a Leave it to §7\"{}\"§a to omit",
     "temp_potential_4_lab": "§bEdit Common Tags",
     "temp_potential_5_lab": "§bEdit Light Levels",
@@ -297,5 +297,11 @@
     "no_spawner_item":"Could not find any spawner item in your inventory or enderchest",
     "run_cmd_for_each_lable":"§bRun for each SpawnPotential§r",
     "run_cmd_for_each":"If the §bRun for each SpawnPotential§r is selected, the command will be run once for each SpawnPotential entry of each spawner, §nSee more",
-    "run_cmd_for_each_hover":"Every time the command is executed,\n the SpawnPotential data will be available as\n§astorage §adabsu:var §adata§r\nWhatever changes you make to this data will be applied to the spawner."
+    "run_cmd_for_each_hover":"Every time the command is executed,\n the SpawnPotential data will be available as\n§astorage §adabsu:var §adata§r\nWhatever changes you make to this data will be applied to the spawner.",
+    "poption_pretty_nbt_on":"Pretty Print NBT：§n开",
+    "poption_pretty_nbt_off":"Pretty Print NBT：§n关",
+    "poption_pretty_nbt_tip":"If on, NBT will be pretty printed with indentations and new lines",
+    "bt_copy_entity_nbt":"Copy Entity Data",
+    "bt_copy_entity_nbt_tip":"Copy the original §7data.entity§r data to clipboard",
+    "goption_gamerule_spawner_tip":"Control gamerule spawner_blocks_work\nSpawners will not activate on false"
 }

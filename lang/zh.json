@@ -179,7 +179,7 @@
     "temp_modify_selection_5_lab": "设置长方体选择位置二",
     "temp_modify_selection_6_lab": "快速长方体选择",
     "temp_potential_1_lab": "权重 (weight)",
-    "temp_potential_2_lab": "§b实体§7 (data.entity)",
+    "temp_potential_2_lab": "§b实体§7 (data.entity) §f可以任意换行",
     "temp_potential_3_lab": "§b装备§7 (data.equipment) §f保持输入为\"§a{}§r\"以不使用本选项",
     "temp_potential_4_lab": "§b编辑常见NBT",
     "temp_potential_5_lab": "§b编辑亮度规则",
@@ -292,5 +292,11 @@
     "no_spawner_item":"无法从您身上或末影箱中找到任何刷怪笼物品",
     "run_cmd_for_each_lable":"§b对每个生成项执行§r",
     "run_cmd_for_each":"如果选择了§b对每个生成项执行§r的选项，则命令会对每个刷怪笼的每个生成项都执行一次。§n阅读详细信息§r。",
-    "run_cmd_for_each_hover":"每次执行命令前，\n目标生成项的数据都会被存放在\n§astorage §adabsu:var §adata§r\n你对该数据的任何修改都会被施加到刷怪笼上。"
+    "run_cmd_for_each_hover":"每次执行命令前，\n目标生成项的数据都会被存放在\n§astorage §adabsu:var §adata§r\n你对该数据的任何修改都会被施加到刷怪笼上。",
+    "poption_pretty_nbt_on":"格式化打印NBT：§n开",
+    "poption_pretty_nbt_off":"格式化打印NBT：§n关",
+    "poption_pretty_nbt_tip":"打开时，在NBT编辑界面中，NBT会使用缩进和换行",
+    "bt_copy_entity_nbt":"复制实体数据",
+    "bt_copy_entity_nbt_tip":"将§7data.entity§r的原始数据复制到剪切板",
+    "goption_gamerule_spawner_tip":"修改游戏规则spawner_blocks_work\n为false时刷怪笼不会运作"
 }

@@ -1,6 +1,6 @@
 ## Input:
 ##    storage dnt:ram in
-##    storage dnt:ram arg
+##    storage dnt:ram args
 ## Output:
 ##    storage dnt:ram out
 ## This function removes all instances of char stored in arg from the input list, then concat it.

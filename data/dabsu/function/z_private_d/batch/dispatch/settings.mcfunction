@@ -14,5 +14,8 @@ execute if score #trigger trigger.dabsu matches 1330 run data modify storage dab
 execute if score #trigger trigger.dabsu matches 1331 run data modify storage dabsu:user data[0].settings.requireShiftForMenu set value "quick"
 execute if score #trigger trigger.dabsu matches 1332 run data modify storage dabsu:user data[0].settings.requireShiftForMenu set value "off"
 
+execute if score #trigger trigger.dabsu matches 1333 run data modify storage dabsu:user data[0].settings.useNBTPrettyPrint set value true
+execute if score #trigger trigger.dabsu matches 1334 run data modify storage dabsu:user data[0].settings.useNBTPrettyPrint set value false
+
 
 function dabsu:z_private_d/pages/personal_settings

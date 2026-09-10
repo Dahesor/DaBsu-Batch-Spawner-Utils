@@ -59,4 +59,5 @@ struct UserSettings {
         off = "off",
         quick = "quick",
     },
+    useNBTPrettyPrint?: boolean,
 }

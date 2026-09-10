@@ -22,6 +22,11 @@ data modify storage dabsu:run dialog.dialog.body append value {type:"plain_messa
 data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"Chunk Load Rate (Chunks/tick): ",extra:[{text:"-1",color:"red",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1412"},hover_event:{action:"show_text",value:""}},"  ",{text:"10",color:"aqua"},"  ",{text:"+1",color:"green",underlined:true,click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1413"},hover_event:{action:"show_text",value:""}}],hover_event:{action:"show_text",value:"The max rate that DaBsu can load chunks. \nA smaller value is less performance costly, \nbut takes longer to complete a task."}},width: 400}
 
 
+execute store result score #gamerule calc.dabsu run gamerule spawner_blocks_work
+execute if score #gamerule calc.dabsu matches 1 run data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"gamerule/spawner_blocks_work: §a§utrue",hover_event:{action:"show_text",value:"..."},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1414"}},width: 400}
+execute if score #gamerule calc.dabsu matches 0 run data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:{text:"gamerule/spawner_blocks_work: §c§ufalse",hover_event:{action:"show_text",value:"..."},click_event:{action:"run_command",command:"/trigger trigger.dabsu set 1415"}},width: 400}
+
+
 data modify storage dabsu:run temp set value {select:2000,read:10}
 execute store result storage dabsu:run temp.select int 1 run scoreboard players get run.SelectionRate Option.dabsu
 execute store result storage dabsu:run temp.read int 1 run scoreboard players get run.ChunkReadingRate Option.dabsu
@@ -41,6 +46,7 @@ function dabsu:z_private_d/pages/gen/__fill_global_settings with storage dabsu:r
     data modify storage dabsu:run dialog.dialog.body[5].contents.hover_event.value set from storage dabsu:run lang.this.goption_select_tip
     data modify storage dabsu:run dialog.dialog.body[6].contents.text set from storage dabsu:run lang.this.goption_load
     data modify storage dabsu:run dialog.dialog.body[6].contents.hover_event.value set from storage dabsu:run lang.this.goption_load_tip
+    data modify storage dabsu:run dialog.dialog.body[7].contents.hover_event.value set from storage dabsu:run lang.this.goption_gamerule_spawner_tip
 
 data modify storage dabsu:run dialog.dialog.body append value {type:"plain_message",contents:["       "]}
 function dabsu:z_private_d/pages/show_any with storage dabsu:run dialog
