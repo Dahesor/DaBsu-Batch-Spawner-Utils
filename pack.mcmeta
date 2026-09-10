@@ -1,13 +1,8 @@
 {
     "pack": {
-        "min_format": 80,
+        "min_format": 107,
         "max_format": 107,
-        "pack_format": 107,
-        "description": "§bBatch Spawners Manage§6 by Dahesor",
-        "supported_formats": {
-            "min_inclusive": 80,
-            "max_inclusive": 107
-        }
+        "description": "§bBatch Spawners Manage§6 by Dahesor"
     },
   "overlays": {
     "entries": [
