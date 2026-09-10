@@ -31,7 +31,7 @@ dispatch mcdoc:custom_data["chunk"] to ChunkCoords
 dispatch mcdoc:custom_data["dabsu"] to struct DabsuData {
     Potential?: SavedPotential,
     saved_potential?: byte @ 0..,
-    is_wand?: byte @ 0..,
+    is_wand?: (byte @ 0.. | boolean),
     cart?: struct{
         button?: struct{
             id?: string
