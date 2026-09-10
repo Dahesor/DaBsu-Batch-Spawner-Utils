@@ -5,7 +5,7 @@ use ::java::data::dialog::Dialog
 use ::java::world::item::ItemStack
 
 
-type TextNullable = ([TextObject])
+type TextNullable = ([TextNullable]|TextObject|string)
 
 struct DialogMix {
 	type?: #[id="dialog_type"] string,
