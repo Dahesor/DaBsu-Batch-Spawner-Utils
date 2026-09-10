@@ -11,18 +11,18 @@
             ]
         }
     ],
-    "functions": [
+    "modifier": [
         {
-            "function": "set_custom_data",
-            "tag": "{dabsu:{cart:{button:{id:\"del\"}}}}"
+            "type": "set_custom_data",
+            "tag": {"dabsu":{"cart":{"button":{"id":"del"}}}}
         },
         {
-            "function": "set_name",
+            "type": "set_name",
             "name": [{"translate": "mco.configure.world.invites.remove.tooltip","color": "red"}," ",{"translate": "entity.minecraft.chest_minecart"}],
             "target": "item_name"
         },
         {
-            "function": "set_components",
+            "type": "set_components",
             "components": {
                 "enchantment_glint_override": false,
                 "max_stack_size": 1

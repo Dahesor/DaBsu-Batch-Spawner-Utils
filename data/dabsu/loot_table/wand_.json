@@ -11,9 +11,9 @@
             ]
         }
     ],
-    "functions": [
+    "modifier": [
         {
-            "function": "set_components",
+            "type": "set_components",
             "components": {
                 "item_model": "redstone_torch",
                 "max_damage": 1000,
@@ -57,13 +57,13 @@
             }
         },
         {
-            "function": "set_name",
+            "type": "set_name",
             "entity": "this",
             "target": "item_name",
             "name": [{"text": "DaBsu ","color": "gray"},{"storage":"dabsu:run","nbt":"text","interpret":true}]
         },
         {
-            "function": "set_lore",
+            "type": "set_lore",
             "entity": "this",
             "lore": [
                 {"storage":"dabsu:run","nbt":"joint[0]"},
@@ -86,8 +86,8 @@
             "mode": "replace_all"
         },
         {
-            "function": "set_custom_data",
-            "tag": "{dabsu:{is_wand:1b}}"
+            "type": "set_custom_data",
+            "tag": {"dabsu":{"is_wand":true}}
         }
     ]
 }

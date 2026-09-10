@@ -1,4 +1,4 @@
-data merge entity @s {block_state:{Name:"green_concrete"},Glowing:0b,glow_color_override:16777215,Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.ctrl.p_range","dabsu.ctrl","dabsu.gui_edit.pr","dabsu.ctrl.marker"],brightness:{block:15,sky:15}}
+data merge entity @s {block_state:{id:"green_concrete"},Glowing:0b,glow_color_override:16777215,Tags:["dabsu.gui_edit","dabsu.displayer","dabsu.temp","dabsu.ctrl.p_range","dabsu.ctrl","dabsu.gui_edit.pr","dabsu.ctrl.marker"],brightness:{block:15,sky:15}}
 
 
 scoreboard players operation #move_x calc.dabsu = #side calc.dabsu

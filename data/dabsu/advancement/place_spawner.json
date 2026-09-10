@@ -1,20 +1,18 @@
 {
     "criteria": {
-        "place_spawner":{
+        "place_spawner": {
             "trigger": "placed_block",
             "conditions": {
-                "location": [
-                    {
-                        "condition": "location_check",
-                        "predicate": {
-                            "block": {
-                                "blocks": [
-                                    "spawner"
-                                ]
-                            }
+                "location": {
+                    "type": "location_check",
+                    "predicate": {
+                        "block": {
+                            "blocks": [
+                                "spawner"
+                            ]
                         }
                     }
-                ]
+                }
             }
         }
     },

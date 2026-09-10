@@ -11,13 +11,13 @@
             ]
         }
     ],
-    "functions": [
+    "modifier": [
         {
-            "function": "set_custom_data",
+            "type": "set_custom_data",
             "tag": "{dnt:{snbt:1b}}"
         },
         {
-            "function": "set_name",
+            "type": "set_name",
             "name": {
                 "storage": "dnt:ram",
                 "nbt": "in",

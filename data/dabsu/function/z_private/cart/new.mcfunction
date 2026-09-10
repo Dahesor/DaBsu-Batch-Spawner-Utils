@@ -1,5 +1,5 @@
 execute as @e[type=chest_minecart,tag=dabsu.inv,distance=..6] run function dabsu:z_private/cart/destruct
-data merge entity @s {NoGravity:1b,Invulnerable:1b,DisplayState:{Name:"netherite_block"},DisplayOffset:3,CustomName:[{text:"DaBsu"}],CustomNameVisible:0b,Tags:["dabsu.inv"],Items:[]}
+data merge entity @s {NoGravity:1b,Invulnerable:1b,DisplayState:{id:"netherite_block"},DisplayOffset:3,CustomName:[{text:"DaBsu"}],CustomNameVisible:0b,Tags:["dabsu.inv"],Items:[]}
 
 scoreboard players set @s calc.dabsu 1
 scoreboard players operation @s highlight.dabsu = $gametime calc.dabsu
