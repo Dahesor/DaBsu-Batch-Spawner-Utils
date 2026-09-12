@@ -112,6 +112,10 @@ After you made any changes through any means to the `SpawnPotentials` of the spa
 
 **Revert Edits** will revert all your changes to the `SpawnPotentials` of this spawner.
 
+#### Directly Replacing Spawners
+
+You may simply break the spawner being quick edited, and place another spawner on the same position, then all changes will register.
+
 ### Quitting Quick Edit
 
 To finish quick edit, do any of the following:
