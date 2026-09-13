@@ -212,7 +212,7 @@ If all spawners in your selection has the exact same `SpawnPotentials`, then you
 
 This allows you to run any command at the location of the spawner as its marker entity.
 
-Note if you run commands that changed the spawner's properties or potentials, you have to run the Self Check and Optimize function from the DaBsu main menu after the edit, so that all the changes you made are correctly updated in the DaBsu system.
+You may also choose to run a command once for each SpawnPotential entry, and the entry will be placed in a specific storage for you edit (so if a spawner can spawn 2 kinds of mobs, it will be called twice: each time with one of the entries). See instructions in game on how to use it.
 
 ## Custom Options
 
