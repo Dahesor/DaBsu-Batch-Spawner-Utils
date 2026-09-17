@@ -16,6 +16,8 @@
 
 **DaBsu** is a dialog based Spawner Editor for Minecraft Java 1.21.6+. It is designed for map makers to manage a large amount of spawners conveniently and visually. DaBsu's quick edit allows users to conveniently modify a single spawner or a family of spawners, and DaBsu's batch edit allows you select multiple spawners in highly comprehensive ways and edit them together.
 
+[Watch This Video](https://youtu.be/bqMgRHIYjBQ) for a sneak peak
+
 ## Language
 
 DaBsu comes with support of multi-language. When a player joins the server for the first time, the data pack will ask them to select their language (currently supports `en` and `zh_cn`), or one may change their language by executing `function dabsu:lang`.
