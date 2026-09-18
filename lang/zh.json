@@ -141,8 +141,8 @@
     "temp_modify_selection_6_tip": "对所有刷怪笼中的所有生成项实体数据执行nbt=检查 (如实体选择器参数的nbt=一样)，并选择所有通过的生成项所属的刷怪笼\n§a包含未加载区块中的刷怪笼\n§a可跨维度选择",
     "temp_modify_selection_7_tip": "选择所有和§b你脚下的刷怪笼§r拥有完全相同的§7SpawnPotentials§r标签的刷怪笼§r. \n§a包含未加载区块中的刷怪笼 \n§a可跨维度选择",
     "temp_modify_selection_8_tip": "下两次使用刷怪笼编辑杖右键将会定义位置一与位置二。定义位置二后将会自动选择其中内容。",
-    "temp_potential_1_tip": "编辑常见的标签，当前包括基础属性与装备",
-    "temp_potential_2_tip": "编辑 §7data.custom_spawn_rules§r",
+    "temp_potential_1_tip": "编辑常见的标签，当前包括基础属性与装备\n§c§l警告：这会丢弃本页面的未保存更改",
+    "temp_potential_2_tip": "编辑 §7data.custom_spawn_rules§r\n§c§l警告：这会丢弃本页面的未保存更改",
     "temp_potential_3_tip": "删除本生成项",
     "temp_select_potential_1_tip": "覆盖所有生成项的天空光照与方块光照生成限制",
     "temp_select_potential_2_tip": "将一个复合标签合并至所有生成项 (data merge)",
@@ -181,7 +181,7 @@
     "temp_potential_1_lab": "权重 (weight)",
     "temp_potential_2_lab": "§b实体§7 (data.entity) §f可以任意换行",
     "temp_potential_3_lab": "§b装备§7 (data.equipment) §f保持输入为\"§a{}§r\"以不使用本选项",
-    "temp_potential_4_lab": "§b编辑常见NBT",
+    "temp_potential_4_lab": "§6编辑常见NBT",
     "temp_potential_5_lab": "§b编辑亮度规则",
     "temp_select_spawners_1_lab": "添加至选区而非重选",
     "temp_select_spawners_2_lab": "选择范围 (\"距离选择\" 选项)",
@@ -297,6 +297,6 @@
     "poption_pretty_nbt_off":"格式化打印NBT：§n关",
     "poption_pretty_nbt_tip":"打开时，在NBT编辑界面中，NBT会使用缩进和换行",
     "bt_copy_entity_nbt":"复制实体数据",
-    "bt_copy_entity_nbt_tip":"将§7data.entity§r的原始数据复制到剪切板",
+    "bt_copy_entity_nbt_tip":"将§7data.entity§r的原始数据复制到剪切板\n即使打开了格式化打印NBT，也会始终复制原始NBT数据",
     "goption_gamerule_spawner_tip":"修改游戏规则spawner_blocks_work\n为false时刷怪笼不会运作"
 }
