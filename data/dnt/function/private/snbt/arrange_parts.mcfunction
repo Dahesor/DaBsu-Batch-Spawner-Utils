@@ -6,5 +6,6 @@ execute if data storage dnt:ram text.text run return run function dnt:private/sn
 execute if data storage dnt:ram {text:""} run return run function dnt:private/snbt/next
 execute if data storage dnt:ram {text:" "} run return run function dnt:private/snbt/next
 
-data modify storage dnt:ram in append from storage dnt:ram text
+function dnt:private/snbt/new/white
+
 function dnt:private/snbt/next

@@ -16,6 +16,7 @@ data modify storage dabsu:run dialog.dialog.actions[-2].action.template set from
 data remove storage dabsu:run dialog.dialog.actions[0]
 data remove storage dabsu:run dialog.dialog.actions[0]
 data remove storage dabsu:run dialog.dialog.actions[0]
+data remove storage dabsu:run dialog.dialog.actions[0]
 
 data modify storage dabsu:run dialog.dialog.inputs[1].multiline.height set value 60
 

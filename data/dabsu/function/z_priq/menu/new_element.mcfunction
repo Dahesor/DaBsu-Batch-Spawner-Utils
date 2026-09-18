@@ -7,6 +7,7 @@ data modify storage dabsu:run dialog.dialog.title set value {text:"§6[DaBsu]§d
 data remove storage dabsu:run dialog.dialog.actions[0]
 data remove storage dabsu:run dialog.dialog.actions[0]
 data remove storage dabsu:run dialog.dialog.actions[0]
+data remove storage dabsu:run dialog.dialog.actions[0]
 
 #Inputs
 data modify storage dabsu:run dialog.dialog.inputs[1].multiline.height set value 60

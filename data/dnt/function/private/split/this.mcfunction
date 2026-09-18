@@ -1,8 +1,9 @@
 execute unless function dnt:private/split/get_next run return 1
 execute if score $process calc.dnt matches 1.. if function dnt:private/split/process run return run function dnt:private/split/this
-execute unless data storage dnt:ram {char:"'"} unless data storage dnt:ram {char:"\\"} run return run function dnt:private/split/normal_append with storage dnt:ram
+execute unless data storage dnt:ram {char:"'"} unless data storage dnt:ram {char:"\\"} run return run function dnt:private/split/normal_append
 
-data modify storage dnt:ram result append from storage dnt:ram out
+function dnt:private/split/batch
+
 execute if data storage dnt:ram {char:"'"} run data modify storage dnt:ram result append value "'"
 execute if data storage dnt:ram {char:"\\"} run data modify storage dnt:ram result append value "\\"
 data modify storage dnt:ram out set value ""

@@ -3,16 +3,23 @@
 ## Output:
 ##    storage dnt:ram out
 ## This function concat the input list of strings into a single string. This will concat any quotation marks, backslashes, and any escape characters correctly.
-## It first split your list of input strings so that escape characters are isolated. Then it calls dnt:concat_splited to concat the splited list of strings into a single string.
+## There are 2 methods to perform the concatenation. This function will choose one of them
 
-execute unless data storage dnt:ram in[] run return run function dnt:private/snbt/no_input
-data modify storage dnt:ram result set value []
-data modify storage dnt:ram out set value ""
-scoreboard objectives remove calc.dnt
 scoreboard objectives add calc.dnt dummy
-scoreboard players set $process calc.dnt 0
-function dnt:private/split/loop
-data modify storage dnt:ram result append from storage dnt:ram out
-data modify storage dnt:ram in set from storage dnt:ram result
-function dnt:concat_splited
-return 1
+execute store result score $count calc.dnt run data get storage dnt:ram in
+execute if score $count calc.dnt matches 8.. run return run function dnt:concat/by_nbt_parse
+
+scoreboard players set $total calc.dnt 0
+execute store result score $count calc.dnt run data get storage dnt:ram in[0]
+scoreboard players operation $total calc.dnt += $count calc.dnt
+execute store result score $count calc.dnt run data get storage dnt:ram in[1]
+scoreboard players operation $total calc.dnt += $count calc.dnt
+execute store result score $count calc.dnt run data get storage dnt:ram in[2]
+scoreboard players operation $total calc.dnt += $count calc.dnt
+execute if score $total calc.dnt matches 9.. run return run function dnt:concat/by_nbt_parse
+execute store result score $count calc.dnt run data get storage dnt:ram in[3]
+scoreboard players operation $total calc.dnt += $count calc.dnt
+execute store result score $count calc.dnt run data get storage dnt:ram in[4]
+scoreboard players operation $total calc.dnt += $count calc.dnt
+execute if score $total calc.dnt matches 12.. run return run function dnt:concat/by_nbt_parse
+return run function dnt:concat/by_char_read

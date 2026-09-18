@@ -1,0 +1,5 @@
+data modify storage dnt:ram pcat.concat.0 set from storage dnt:ram concat.in[0]
+data modify storage dnt:ram pcat.concat.1 set from storage dnt:ram concat.in[1]
+data modify storage dnt:ram pcat.concat.2 set from storage dnt:ram concat.in[2]
+data modify storage dnt:ram pcat.concat.3 set from storage dnt:ram concat.in[3]
+function dnt:private/pcat/concat/macro/4 with storage dnt:ram pcat.concat

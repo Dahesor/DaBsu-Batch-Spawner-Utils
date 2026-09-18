@@ -16,7 +16,6 @@ data modify storage dabsu:run dialog.dialog set value {type:"minecraft:multi_act
     ]\
 }
 
-
 ##Lang
 
 data modify storage dabsu:run dialog.dialog.title[0].text set from storage dabsu:run lang.this.temp_potential_1
